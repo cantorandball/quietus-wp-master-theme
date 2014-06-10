@@ -13,7 +13,7 @@ get_header(); ?>
 		<h3 class="post__category-title"><?php the_category(); ?></h3>
 		<h2><?php the_title(); ?></h2>
 		<div class="byline">
-			<address><?php the_author_link(); ?></address>
+			<address><?php the_author_posts_link(); ?></address>
 			<time pubdate datetime="<?php the_time( 'Y-m-d H:i' ); ?>"><?php the_time('F jS, Y'); ?></time>
 		</div>
 	</header>
