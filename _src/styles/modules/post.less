@@ -20,39 +20,6 @@
     margin-bottom: 1rem;
   }
 
-  > p {
-    text-indent: 1em;
-    text-align: justify;
-    &:first-of-type {
-      text-indent: 0;
-      &:first-letter {
-        font-size: 1.4em;
-      }
-    }
-    &:last-of-type {
-      &:after {
-        content: '✧';
-        padding-left: 1ex;
-        .font-small;
-      }
-    }
-  }
-
-  time, address {
-    .font-very-small;
-  }
-
-  address {
-    display: inline;
-    &:before {
-      content: 'by ';
-      font-style: italic;
-    }
-    &:after {
-      content: ' \b7';
-    }
-  }
-
   .fb-like {
     line-height: 0;
     margin-top: @line-height;
@@ -77,7 +44,7 @@
     margin-top: 1rem;
     margin-bottom: 0.3rem;
     content: '';
-    background-image: url('/images/icon-divider.svg');
+    background-image: url("@{images}/icon-divider.svg");
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
@@ -89,6 +56,43 @@
     display: block;
     margin-bottom: 1ex;
     // margin-top: -1ex;
+  }
+}
+
+.post__byline {
+	time, address {
+    .font-very-small;
+  }
+
+  address {
+    display: inline;
+    &:before {
+      content: 'by ';
+      font-style: italic;
+    }
+    &:after {
+      content: ' \b7';
+    }
+  }
+}
+
+.post__content {
+	> p {
+    text-indent: 1em;
+    text-align: justify;
+    &:first-of-type {
+      text-indent: 0;
+      &:first-letter {
+        font-size: 1.4em;
+      }
+    }
+    &:last-of-type {
+      &:after {
+        content: '✧';
+        padding-left: 1ex;
+        .font-small;
+      }
+    }
   }
 }
 
