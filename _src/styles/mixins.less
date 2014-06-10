@@ -1,0 +1,18 @@
+.font-to(@size){
+  font-size: @size;
+  line-height: @size * @line-height;
+}
+.font-small() {
+  .font-to(.8rem);
+}
+.font-very-small() {
+  .font-to(.7rem);
+}
+
+.icon(@url: '', @width: auto, @height: auto){
+  .text-hide;
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: @width @height;
+}
