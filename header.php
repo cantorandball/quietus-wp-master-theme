@@ -13,4 +13,11 @@
 			<h1 id="header__logo"><?php bloginfo('name'); ?></h1>
 		</header>
 		<nav id="site-nav">
+			<ul class="site-nav__primary">
+				<?php wp_nav_menu( array(
+					'container' => false,
+					'items_wrap' => '%3$s',
+					'depth' => 0
+				) ); ?>
+		   </ul>
 		</nav>
