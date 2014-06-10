@@ -17,7 +17,7 @@ function quietus_setup() {
 	) );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
+	register_nav_menu( 'site_header_nav', __( 'Site Header Nav Menu', 'quietus' ) );
 }
 add_action( 'after_setup_theme', 'quietus_setup' );
-
 ?>
