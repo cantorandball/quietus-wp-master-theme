@@ -11,4 +11,10 @@ function quietus_nav_menu_css_class( $classes, $item ) {
 	return array();
 }
 add_filter( 'nav_menu_css_class', 'quietus_nav_menu_css_class', 10, 2 );
+
+
+/**
+ * Hide admin bar
+ */
+add_filter('show_admin_bar', '__return_false');
 ?>
