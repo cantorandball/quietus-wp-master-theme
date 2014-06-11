@@ -1,7 +1,6 @@
 <?php
 /**
- * Displays a list of latest posts
- * @var $latest_news_and_reviews wp_query object containing latest posts
+ * Displays a list of latest posts in the News and Album Reviews categories
  */
 $latest_news_and_reviews = get_latest_news_and_reviews();
 
