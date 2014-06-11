@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php
 		rewind_posts();
 		while( have_posts() ): the_post();
-			get_template_part( 'listing' );
+			get_template_part( 'listing', 'excerpt' );
 		endwhile;
 		?>
 	</ul>
