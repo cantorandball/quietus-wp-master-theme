@@ -6,7 +6,7 @@ $latest_news_and_reviews = get_latest_news_and_reviews();
 
 if ( $latest_news_and_reviews->have_posts() ): ?>
 <dl>
-	<dt>Latest News &amp; Reviews</dt>
+	<dt><?php echo( __( 'Latest News & Reviews', 'quietus' ) ); ?></dt>
 	<dd>
 		<ul>
 			<?php

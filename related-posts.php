@@ -8,7 +8,7 @@ $related_posts = get_related_posts( $post_id );
 
 if ( $related_posts->have_posts() ): ?>
 <dl>
-	<dt>Related Articles</dt>
+	<dt><?php echo( __( 'Related Articles', 'quietus' ) ); ?></dt>
 	<dd>
 		<ul>
 			<?php
