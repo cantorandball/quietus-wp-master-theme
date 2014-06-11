@@ -1,12 +1,12 @@
 // ********** MODULE **********
 
-#site-nav {
+.nav--global {
   position: absolute;
   top: @header-height;
   right: 0;
   left: 0;
   overflow: auto;
-  background-color: fade(darken(@site-nav-bg, 3%), 97%);
+  background-color: fade(darken(@nav-global-bg, 3%), 97%);
   opacity: 0;
   transition: all 150ms cubic-bezier(.23,1,.32,1);
   transform: translateY(-100%);
@@ -39,7 +39,7 @@
 
 // ********** ELEMENTS **********
 
-.site-nav__primary {
+.nav--global__primary {
   .clearfix;
   padding: 0 1rem .25rem;
   > li {
@@ -53,11 +53,11 @@
   }
 }
 
-.site-nav__secondary {
+.nav--global__secondary {
   display: none
 }
 
-.site-nav__toggle {
+.nav--global__toggle {
   .icon("@{images}/images/icon-menu.svg", 24px);
   position: absolute;
   top: 0;
@@ -66,7 +66,7 @@
   width: @header-height;
   height: @header-height;
   border: 0;
-  background-color: @site-nav-bg;
+  background-color: @nav-global-bg;
   @media (@medium){
     display: none;
   }
