@@ -12,6 +12,7 @@
  */
 function quietus_styles_and_scripts() {
 	wp_enqueue_style( 'quietus-style', get_template_directory_uri() . '/css/main.css', array(), null );
+	wp_enqueue_script( 'quietus-scripts', get_template_directory_uri() . '/js/main.js', array(), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'quietus_styles_and_scripts' );
 

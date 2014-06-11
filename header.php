@@ -16,16 +16,17 @@
 				<?php bloginfo('name'); ?>
 			</a>
 		</h1>
-		<div class="header__search">
+		<div id="header__search">
 			<?php get_search_form(); ?>
 		</div>
 	</header>
-	<nav class="nav--global">
+	<nav id="nav--global">
 		<ul class="nav--global__primary">
 			<?php wp_nav_menu( array(
 				'container' => false,
 				'items_wrap' => '%3$s',
 				'depth' => 0
 			) ); ?>
-		</ul>
+	   	</ul>
+		<button id="nav--global__toggle">Toggle navigation</button>
 	</nav>

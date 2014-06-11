@@ -12,11 +12,15 @@
 @gr: 1.61803399;
 
 @header-height: 60px;
-@nav-height: 2em;
+@nav-height: 2rem;
 
 // ********** BREAKPOINTS **********
-@large: ~'min-width: 1024px';
-@medium: ~'min-width: 768px';
-@small: ~'min-width: 480px';
+@large-in-ems: (1em * ceil(1024 / @font-size));
+@medium-in-ems: (1em * ceil(768 / @font-size));
+@small-in-ems: (1em * ceil(480 / @font-size));
+
+@large: ~'min-width: @{large-in-ems}';
+@medium: ~"min-width: @{medium-in-ems}";
+@small: ~'min-width: 36em';
 
 @images: "/wp-content/themes/quietus-wp-master-theme/images";

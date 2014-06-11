@@ -5,11 +5,18 @@
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		height: @header-height;
+		height: 6rem;
 		background-color: @white;
 		background-image: url("@{images}/logo-no_url.svg");
-		background-position: 1rem center;
-		background-size: auto 50%;
+		background-position: center;
+		background-size: auto 61%;
 		background-repeat: no-repeat;
+		@media (@small) {
+			background-position: 1rem center;
+		}
 	}
+}
+
+#header__search {
+	display: none;
 }
