@@ -11,16 +11,21 @@ get_header(); ?>
 <article role="main" class="post">
 	<header>
 		<h3 class="post__category-title"><?php the_category(); ?></h3>
-		<h2><?php the_title(); ?></h2>
-		<div class="post__byline">
-			<address><?php the_author_posts_link(); ?></address>
-			<time pubdate datetime="<?php the_time( 'Y-m-d H:i' ); ?>"><?php the_time('F jS, Y'); ?></time>
-		</div>
+		<h2 class="post__title"><?php the_title(); ?></h2>
 	</header>
 	<?php if ( has_excerpt() ): ?>
 	<section class="post__standfirst">
 		<?php the_excerpt(); ?>
 	</section>
+	<?php endif; ?>
+	<div class="post__byline">
+		<address><?php the_author_posts_link(); ?></address>
+		<time pubdate datetime="<?php the_time( 'Y-m-d H:i' ); ?>"><?php the_time('F jS, Y'); ?></time>
+	</div>
+	<?php if ( has_post_thumbnail() ): ?>
+	<figure class="post__featured-image">
+		<?php the_post_thumbnail(); ?>
+	</figure>
 	<?php endif; ?>
 	<section class="post__content">
 		<?php the_content(); ?>

@@ -1,76 +1,76 @@
 // ********** MODULE **********
 
 .nav--global {
-  position: absolute;
-  top: @header-height;
-  right: 0;
-  left: 0;
-  overflow: auto;
-  background-color: fade(darken(@nav-global-bg, 3%), 97%);
-  opacity: 0;
-  transition: all 150ms cubic-bezier(.23,1,.32,1);
-  transform: translateY(-100%);
-  @media (@medium) {
-    overflow: hidden;
-    height: @nav-height;
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  // ********** MODULE STATES **********
-  &.is-active {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  // ********** MODULE BASE **********
-  a {
-    color: #fff;
-    line-height: 2.5em;
-    @media (@medium) {
-      line-height: @nav-height;
-    }
-  }
-  li {
-    border-bottom: 1px solid #555;
-    &:last-child, &:nth-last-child(2) {
-      border: none;
-    }
-  }
+	position: absolute;
+	top: @header-height;
+	right: 0;
+	left: 0;
+	overflow: auto;
+	background-color: fade(darken(@nav-global-bg, 3%), 97%);
+	opacity: 0;
+	transition: all 150ms cubic-bezier(.23,1,.32,1);
+	transform: translateY(-100%);
+	@media (@medium) {
+		overflow: hidden;
+		height: @nav-height;
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	// ********** MODULE STATES **********
+	&.is-active {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	// ********** MODULE BASE **********
+	a {
+		color: #fff;
+		line-height: 2.5em;
+		@media (@medium) {
+			line-height: @nav-height;
+		}
+	}
+	li {
+		border-bottom: 1px solid #555;
+		&:last-child, &:nth-last-child(2) {
+			border: none;
+		}
+	}
 }
 
 // ********** ELEMENTS **********
 
 .nav--global__primary {
-  .clearfix;
-  padding: 0 1rem .25rem;
-  > li {
-    float: left;
-    width: 50%;
-    @media (@medium) {
-      @items: 5;
-      padding-right: 1rem;
-      width: auto;
-    }
-  }
+	.clearfix;
+	padding: 0 1rem .25rem;
+	> li {
+		float: left;
+		width: 50%;
+		@media (@medium) {
+			@items: 5;
+			padding-right: 1rem;
+			width: auto;
+		}
+	}
 }
 
 .nav--global__secondary {
-  display: none
+	display: none
 }
 
 .nav--global__toggle {
-  .icon("@{images}/images/icon-menu.svg", 24px);
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: @header-height;
-  height: @header-height;
-  border: 0;
-  background-color: @nav-global-bg;
-  @media (@medium){
-    display: none;
-  }
-  &:focus {
-    outline: none;
-  }
+	.icon("@{images}/images/icon-menu.svg", 24px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	width: @header-height;
+	height: @header-height;
+	border: 0;
+	background-color: @nav-global-bg;
+	@media (@medium){
+		display: none;
+	}
+	&:focus {
+		outline: none;
+	}
 }
