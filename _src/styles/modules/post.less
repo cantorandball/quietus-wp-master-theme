@@ -5,6 +5,7 @@
 	padding-top: .8rem;
 	background-color: #fff;
 	clear: both;
+	flex: 1;
 }
 
 // ********** ELEMENTS **********
@@ -95,6 +96,14 @@
 }
 
 .post__content-puffs {
+	width: auto;
+	background-color: red;
+	@media (@tablet) {
+		width: 15em;
+	}
+	@media (@desktop) {
+		width: 30em;
+	}
 	dt {
 		margin-top: 2rem;
 		font-weight: bold;
@@ -118,7 +127,7 @@
 }
 
 .post .fb-like {
-	margin-top: @line-height;
+	margin-top: 1em;
 	// border-top: 1px solid @black;
 	width: 100%;
 	line-height: 0;

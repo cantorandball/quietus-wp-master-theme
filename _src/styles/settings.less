@@ -1,6 +1,3 @@
-@font-size: 17px;
-@line-height: 1.4;
-
 @black: #222;
 @grey: #666;
 @white: #fff;
@@ -15,12 +12,8 @@
 @nav-height: 2rem;
 
 // ********** BREAKPOINTS **********
-@large-in-ems: (1em * ceil(1024 / @font-size));
-@medium-in-ems: (1em * ceil(768 / @font-size));
-@small-in-ems: (1em * ceil(480 / @font-size));
-
-@large: ~'min-width: @{large-in-ems}';
-@medium: ~"min-width: @{medium-in-ems}";
-@small: ~'min-width: 36em';
+@desktop: ~'min-width: 61rem'; // 976px
+@tablet: ~"min-width: 46rem"; // 736px
+@mobile: ~'min-width: 30rem'; // 480px
 
 @images: "/wp-content/themes/quietus-wp-master-theme/images";

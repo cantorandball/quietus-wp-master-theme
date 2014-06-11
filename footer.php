@@ -1,3 +1,4 @@
+		</div>
 		<?php wp_footer(); ?>
 
 		<div id="fb-root"></div>

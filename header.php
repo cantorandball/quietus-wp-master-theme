@@ -30,3 +30,4 @@
 	   	</ul>
 		<button id="nav--global__toggle">Toggle navigation</button>
 	</nav>
+	<div id="content">

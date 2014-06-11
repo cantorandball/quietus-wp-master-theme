@@ -134,7 +134,7 @@ table {
   box-sizing: border-box;
 }
 html {
-  font-size: 17px;
+  font-size: 100%;
 }
 body {
   background-color: #fff;
@@ -147,6 +147,15 @@ p {
 }
 a {
   text-decoration: none;
+}
+@media (min-width: 46rem) {
+  #content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 #header {
   position: relative;
@@ -168,7 +177,7 @@ a {
   background-size: auto 61%;
   background-repeat: no-repeat;
 }
-@media (min-width: 36em) {
+@media (min-width: 30rem) {
   #header__logo {
     background-position: 1rem center;
   }
@@ -272,10 +281,14 @@ a {
   padding-top: .8rem;
   background-color: #fff;
   clear: both;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .post__category-title {
-  font-size: 0.8rem;
-  line-height: 1.12rem;
+  font-size: .8rem;
   font-style: italic;
 }
 .post__title {
@@ -294,8 +307,7 @@ a {
   width: 100%;
 }
 .post__byline {
-  font-size: 0.7rem;
-  line-height: 0.98rem;
+  font-size: .7rem;
   margin-bottom: 1rem;
   padding-bottom: 1ex;
   border-bottom: 1px solid #666666;
@@ -343,18 +355,30 @@ a {
   font-size: 1.4em;
 }
 .post__content > p:last-of-type:after {
-  font-size: 0.8rem;
-  line-height: 1.12rem;
+  font-size: .8rem;
   padding-left: 1ex;
   content: '✧';
+}
+.post__content-puffs {
+  width: auto;
+  background-color: red;
+}
+@media (min-width: 46rem) {
+  .post__content-puffs {
+    width: 15em;
+  }
+}
+@media (min-width: 61rem) {
+  .post__content-puffs {
+    width: 30em;
+  }
 }
 .post__content-puffs dt {
   margin-top: 2rem;
   font-weight: bold;
 }
 .post__content-puffs dd {
-  font-size: 0.8rem;
-  line-height: 1.12rem;
+  font-size: .8rem;
   line-height: 1.2;
 }
 .post__content-puffs li {
@@ -370,7 +394,7 @@ a {
   display: block;
 }
 .post .fb-like {
-  margin-top: 1.4;
+  margin-top: 1em;
   width: 100%;
   line-height: 0;
 }
