@@ -33,6 +33,9 @@ get_header(); ?>
 	<section class="post__sharing">
 		<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 	</section>
+	<section class="post__related">
+		<?php get_template_part( 'related-posts' ); ?>
+	</section>
 </article>
 <?php endwhile; ?>
 
