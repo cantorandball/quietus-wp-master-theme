@@ -2,7 +2,7 @@
 @grey: #666;
 @white: #fff;
 @light-grey: #999;
-@link-colour: #e20025;
+@link-colour: #0074D9;
 
 @nav-global-bg: #444;
 
@@ -12,8 +12,12 @@
 @nav-height: 2rem;
 
 // ********** BREAKPOINTS **********
-@desktop: ~'min-width: 61rem'; // 976px
-@tablet: ~"min-width: 46rem"; // 736px
-@mobile: ~'min-width: 30rem'; // 480px
+@width-desktop: 61rem; // 976px
+@width-tablet: 46rem; // 736px
+@width-mobile: 30rem; // 480px
+
+@desktop: ~'min-width: @{width-desktop}';
+@tablet: ~"min-width: @{width-tablet}";
+@mobile: ~'min-width: @{width-mobile}';
 
 @images: "/wp-content/themes/quietus-wp-master-theme/images";
