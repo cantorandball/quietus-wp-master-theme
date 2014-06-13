@@ -1,6 +1,13 @@
 .side-bar {
-	min-width: 18.75em;
+	min-width: @side-bar-min-width;
 	width: 100%;
+	box-sizing: content-box;
+	@media (@tablet) {
+		width: @side-bar-min-width;
+		margin-left: auto;
+		padding-left: 2rem;
+		margin-right: 0;
+	}
 }
 
 .side-bar__skyscraper,
@@ -16,7 +23,7 @@
 .side-bar .puff {
 	.puff-row-length(2);
 	@media (@tablet) {
-		.puff-row-length(@length: 3);
+		.puff-row-length(@length: 2);
 	}
 }
 

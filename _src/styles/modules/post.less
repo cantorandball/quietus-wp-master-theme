@@ -6,11 +6,12 @@
 	clear: both;
 	margin-right: auto;
 	margin-left: auto;
-	max-width: @post-max-width;
 	width: 100%;
+	max-width: @post-max-width;
 	background-color: #fff;
 	@media (@tablet) {
 		padding-top: 1rem;
+		max-width: @side-bar-min-width + @post-max-width + 1rem;
 	}
 	@media (@desktop) {
 		// padding: 0 2rem;
@@ -48,8 +49,16 @@
 	}
 }
 
+.post__page {
+	@media (@tablet) {
+		display: flex;
+	}
+}
+
 .post__body {
+	margin: auto;
 	position: relative;
+	max-width: @post-max-width;
 }
 
 .post__byline {
