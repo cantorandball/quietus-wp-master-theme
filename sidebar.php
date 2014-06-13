@@ -9,6 +9,6 @@
 	<?php get_template_part( 'latest-news-and-reviews' ); ?>
 	<!-- PLACEHOLDER ADVERT -->
 	<div class="side-bar__skyscraper">
-	  <img src="http://pagead2.googlesyndication.com/simgad/813192542566921901" border="0" width="300" height="600" alt="" class="img_ad">
+		<img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-filmstrip.gif'; ?>" border="0" width="300" height="600" alt="" class="img_ad">
 	</div>
 </aside>
