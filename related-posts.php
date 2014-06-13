@@ -7,8 +7,8 @@ $post_id = $wp_query->post->ID;
 $related_posts = get_related_posts( $post_id );
 
 if ( $related_posts->have_posts() ): ?>
-<dl>
-	<dt><?php echo( __( 'Related Articles', 'quietus' ) ); ?></dt>
+<dl class="puffs">
+	<dt class="puff__header"><?php echo( __( 'Related Articles', 'quietus' ) ); ?></dt>
 	<dd>
 		<ul>
 			<?php

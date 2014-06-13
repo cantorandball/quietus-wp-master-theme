@@ -1,18 +1,20 @@
 .side-bar {
-	padding-top: 2rem;
-	dt {
-		font-weight: bold;
-		// .font-large;
-	}
-	li {
-		.font-small;
-		padding: 1ex 0;
-		border-bottom: 1px dotted @light-grey;
-	}
+	min-width: 18.75em;
+	width: 100%;
 }
 
-.side-bar__skyscraper {
-	display: flex;
-	margin-top: 2rem;
-	justify-content: center;
+.side-bar__skyscraper,
+.side-bar__skyscraper--mini {
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	font-size: 0;
+	line-height: 0;
+	border-bottom: 1px solid @black;
+}
+
+.side-bar .puffs {
+	border-bottom: 1px solid @black;
+	padding-bottom: 1.5rem;
+	margin-bottom: 2rem;
 }
