@@ -67,7 +67,11 @@ gulp.task('minify', function(){
     svg: $.filter('**/*.svg'),
     raster: $.filter(IMAGE_DIR + '/**/*.{png,gif,jpg,webp}')
   };
-  return gulp.src([SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*'])
+  return gulp.src([
+  		SCRIPT_DIR + '/**/*',
+  		IMAGE_DIR + '/**/*', '!' + IMAGE_DIR + '/placeholders/**/*',
+  		STYLE_DIR + '/**/*'
+  	])
     .pipe($.plumber())
 
     // minify JS
