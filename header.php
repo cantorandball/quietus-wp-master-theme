@@ -12,15 +12,6 @@
 <body>
 	<div id="leaderboard">
 	  <img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-billboard.png'; ?>" width="970" height="250">
-
-	  <script type="text/javascript">
-	    var height = $("leaderboard").getHeight();
-	    if(height >= 250)  $("leaderboard").setStyle({ position:  "static" });
-	    Event.observe(window, 'load', function() {
-	      var height = $("leaderboard").getHeight();
-	      if(height >= 250)  $("leaderboard").setStyle({ position:  "static" });
-	    });
-	  </script>
 	</div>
 	<header id="header">
 		<h1 id="header__logo">
