@@ -1,3 +1,7 @@
 node_modules
 bower_components
-/css/main.css
+
+# built by gulp
+/css
+/js
+/images
