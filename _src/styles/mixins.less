@@ -35,3 +35,10 @@
 .antialias() {
 	-webkit-font-smoothing: antialiased;
 }
+
+.puff-row-length(@length: 2) {
+	width: 100% / @length;
+	a {
+		padding-bottom: percentage(3/4);
+	}
+}

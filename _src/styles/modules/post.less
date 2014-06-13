@@ -132,6 +132,13 @@
 	border-bottom: 1px solid @black;
 }
 
+.post__related .puff {
+	.puff-row-length(@length: 2);
+	@media (@tablet) {
+		.puff-row-length(@length: 3);
+	}
+}
+
 .post .fb-like {
 	width: 100%;
 	line-height: 0;

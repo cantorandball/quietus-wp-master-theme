@@ -13,6 +13,13 @@
 	border-bottom: 1px solid @black;
 }
 
+.side-bar .puff {
+	.puff-row-length(2);
+	@media (@tablet) {
+		.puff-row-length(@length: 3);
+	}
+}
+
 .side-bar .puffs {
 	border-bottom: 1px solid @black;
 	padding-bottom: 1.5rem;
