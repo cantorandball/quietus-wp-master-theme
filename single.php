@@ -19,24 +19,32 @@ get_header(); ?>
 	</section>
 	<?php endif; ?>
 	<div class="post__byline">
-		<address><?php the_author_posts_link(); ?></address>
-		<time pubdate datetime="<?php the_time( 'Y-m-d H:i' ); ?>"><?php the_time('F jS, Y'); ?></time>
+		<address class="post__byline--author"><?php the_author_posts_link(); ?></address>
+		<time class="post__byline--date" pubdate datetime="<?php the_time( 'Y-m-d H:i' ); ?>"><?php the_time('F jS, Y'); ?></time>
 	</div>
-	<?php if ( has_post_thumbnail() ): ?>
-	<figure class="post__featured-image">
-		<?php the_post_thumbnail(); ?>
-	</figure>
-	<?php endif; ?>
-	<section class="post__content">
-		<?php the_content(); ?>
-	</section>
-	<section class="post__sharing">
-		<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-	</section>
+	<div class="post__page">
+		<div class="post__body">
+			<?php if ( has_post_thumbnail() ): ?>
+			<figure class="post__featured-image">
+				<?php the_post_thumbnail(); ?>
+			</figure>
+			<?php endif; ?>
+			<section class="post__content">
+				<?php the_content(); ?>
+			</section>
+			<section class="post__sharing">
+				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+			</section>
+			<section class="post__related">
+				<?php get_template_part( 'related-posts' ); ?>
+			</section>
+		</div>
+		<?php
+		get_sidebar();
+		get_sidebar( 'article' ); ?>
+	</div>
 </article>
 <?php endwhile; ?>
 
 <?php
-get_sidebar();
-get_sidebar( 'article' );
 get_footer(); ?>

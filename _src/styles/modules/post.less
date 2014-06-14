@@ -1,12 +1,21 @@
 // ********** MODULE **********
+@width-byline: 8rem;
 
 .post {
-	padding: 1rem;
-	padding-top: .8rem;
-	max-width: 37.625rem;
-	background-color: #fff;
+	position: relative;
 	clear: both;
-	flex: 1;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	max-width: @post-max-width;
+	background-color: #fff;
+	@media (@tablet) {
+		padding-top: 1rem;
+		max-width: @side-bar-min-width + @post-max-width + 1rem;
+	}
+	@media (@desktop) {
+		// padding: 0 2rem;
+	}
 }
 
 // ********** ELEMENTS **********
@@ -18,7 +27,7 @@
 
 .post__title {
 	// margin-top: .2rem;
-	padding-bottom: 1rem;
+	padding-bottom: 1ex;
 	font-size: 2rem;
 	line-height: 1.1;
 }
@@ -28,6 +37,10 @@
 	text-indent: 0;
 	// border-bottom: 1px solid @grey;
 	font-style: italic;
+	@media (@tablet) {
+		// margin-bottom: 1rem;
+		// padding-bottom: .5rem;
+	}
 	img {
 		display: block;
 		margin-bottom: 1ex;
@@ -36,40 +49,47 @@
 	}
 }
 
+.post__page {
+	@media (@tablet) {
+		display: flex;
+	}
+}
+
+.post__body {
+	margin: auto;
+	position: relative;
+	max-width: @post-max-width;
+}
+
 .post__byline {
 	.font-very-small;
-	margin-bottom: 1rem;
+	.clearfix;
 	padding-bottom: 1ex;
+	margin-bottom: 1rem;
 	border-bottom: 1px solid @grey;
-	address {
+	&--author {
 		display: inline;
 		&:before {
-			content: 'by '
+			content: '— ';
 		}
 		&:after {
-			content: '  ';
+			content: ', ';
+		}
+		a {
+			color: @black;
 		}
 	}
-	time {
-		float: right;
-		font-style: italic;
+	&--date {
+		&:after {
+			content: '.';
+		}
 	}
 }
 
 .post__featured-image {
-	// display: none;
+	padding-bottom: 1rem;
 	width: 100%;
-	&:after {
-		display: block;
-		width: 100%;
-		height: 0;
-		padding-bottom: 10%;
-		background-image: url("@{images}/icon-divider.svg");
-		background-position: center 63%;
-		background-size: 50% auto;
-		background-repeat: no-repeat;
-		content: '';
-	}
+	// display: none;
 	img {
 		width: 100%;
 		height: auto;
@@ -77,11 +97,15 @@
 }
 
 .post__content {
-	> p {
+	&:before {
+		.text-divider;
+		margin: .6rem 0;
+	}
+	p {
 		margin-bottom: 1em;
 		text-align: justify;
 		text-indent: 1em;
-		font-size: 1.125em;
+		font-size: 1.125rem;
 		line-height: 1.5;
 		&:first-of-type {
 			text-indent: 0;
@@ -97,41 +121,45 @@
 			}
 		}
 	}
+	hr {
+		.text-divider;
+		margin: 0;
+		margin-bottom: 1.125rem;
+		border: none;
+	}
 }
 
-.post__content-puffs {
-	width: auto;
+.post__related {
+	padding-top: 2rem;
+	padding-bottom: 1.5rem;
+	margin-bottom: 2rem;
 	@media (@tablet) {
-		width: 15em;
+		margin-bottom: 0;
+		padding-bottom: 0
 	}
-	@media (@desktop) {
-		width: 30em;
+
+	width: 100%;
+	&:before {
+		.text-divider;
+		margin-bottom: 2rem;
 	}
-	dt {
+	&:after {
+		.text-divider;
 		margin-top: 2rem;
-		font-weight: bold;
-	}
-	dd {
-		.font-small;
-		line-height: 1.2;
-	}
-	li {
-		margin-top: .5rem;
-		padding-top: .5rem;
-		border-top: 1px dotted #eee;
-		&:first-of-type {
-			padding-top: 0;
-			border-top: none;
+		@media (@tablet) {
+			display: none;
 		}
 	}
-	a {
-		display: block;
+}
+
+.post__related .puff {
+	.puff-row-length(@length: 2);
+	@media (@tablet) {
+		.puff-row-length(@length: 3);
 	}
 }
 
 .post .fb-like {
-	margin-top: 1em;
-	// border-top: 1px solid @black;
 	width: 100%;
 	line-height: 0;
 }

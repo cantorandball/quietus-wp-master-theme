@@ -5,8 +5,8 @@
 $latest_news_and_reviews = get_latest_news_and_reviews();
 
 if ( $latest_news_and_reviews->have_posts() ): ?>
-<dl>
-	<dt><?php echo( __( 'Latest News & Reviews', 'quietus' ) ); ?></dt>
+<dl class="puffs">
+	<dt class="puff__header"><?php echo( __( 'Latest News & Reviews', 'quietus' ) ); ?></dt>
 	<dd>
 		<ul>
 			<?php

@@ -12,11 +12,23 @@
 		background-size: auto 61%;
 		background-repeat: no-repeat;
 		@media (@mobile) {
-			background-position: 1rem center;
+			// background-position: 1rem center;
 		}
 	}
 }
 
 #header__search {
 	display: none;
+}
+
+#leaderboard {
+	.clearfix;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid @black;
+	& > * {
+		margin: 1rem 0;
+	}
 }

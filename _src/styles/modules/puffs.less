@@ -1,0 +1,54 @@
+.puffs {
+	.clearfix;
+}
+
+.puffs ul {
+	margin-left: -.5rem;
+}
+
+.puff {
+	position: relative;
+	float: left;
+	padding-left: .5rem;
+	margin-bottom: .5rem;
+	a {
+		display: block;
+		position: relative;
+		height: 0;
+		width: 100%;
+		background-color: @black;
+		background-position: center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+.puff__header {
+	.font-larger;
+	margin-bottom: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.puff__title {
+	.antialias;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	display: flex;
+	padding: .5rem .8rem .6rem;
+	width: 100%;
+	border-top: 1px solid fade(black, 5%);
+	background-color: fade(black, 50%);
+	color: @white;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-shadow: 0 0 1.5em fade(black, 100%);
+	font-size: .93rem;
+	line-height: 1.2;
+
+	a:hover & {
+		background-color: fade(black, 75%);
+	}
+}

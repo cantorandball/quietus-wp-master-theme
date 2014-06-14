@@ -19,15 +19,19 @@ p {
 }
 
 a {
-	// color: @link-colour;
+	color: @link-colour;
 	text-decoration: none;
+	&:visited {
+		color: @light-grey;
+	}
 	&:hover {
-		// color: lighten(@link-colour, 20%);
+		text-decoration: underline;
 	}
 }
 
 #content {
-	@media (@tablet) {
-		display: flex;
+	padding: 1rem;
+	@media (@desktop) {
+		// display: flex;
 	}
 }
