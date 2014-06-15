@@ -1,30 +1,11 @@
 .side-bar {
-	box-sizing: content-box;
+	// box-sizing: content-box;
 	min-width: @side-bar-min-width;
 	width: 100%;
 	@media (@tablet) {
 		margin-right: 0;
 		margin-left: auto;
-		padding-left: 2rem;
-		width: @side-bar-min-width;
-	}
-}
-
-.side-bar__skyscraper,
-.side-bar__skyscraper--mini {
-	margin-bottom: 2rem;
-	text-align: center;
-	font-size: 0;
-	line-height: 0;
-	&:before {
-		.antialias;
-		display: block;
-		background-color: black;
-		color: lighten(black, 100%);
-		content: 'Advert';
-		font-variant: small-caps;
-		font-size: .8rem;
-		line-height: 2;
+		width: ~"calc(@{side-bar-min-width} + 10px)";
 	}
 }
 
@@ -37,4 +18,9 @@
 
 .side-bar .puffs {
 	margin-bottom: 2rem;
+}
+
+.side-bar .advert:not(:last-child) {
+	position: relative;
+	.text-divider-sidebar;
 }

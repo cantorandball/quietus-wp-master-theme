@@ -1,7 +1,7 @@
 .font-large() {
 	font-size: 1.1rem;
 }
-.font-larger(){
+.font-larger() {
 	font-size: 1.3rem;
 }
 .font-small() {
@@ -11,7 +11,7 @@
 	font-size: .7rem;
 }
 
-.icon(@url: '', @width: auto, @height: auto){
+.icon(@url: '', @width: auto, @height: auto) {
 	.text-hide;
 	background-image: url(@url);
 	background-position: center;
@@ -22,14 +22,35 @@
 .text-divider {
 	display: block;
 	clear: both;
+	padding-bottom: 2%;
 	width: 100%;
 	height: 0;
-	padding-bottom: 2%;
 	background-image: url("@{images}/icon-divider.svg");
 	background-position: center 50%;
 	background-size: 50%;
 	background-repeat: no-repeat;
 	content: '';
+}
+
+.text-divider-sidebar {
+	@margin-bottom: 4rem;
+	margin-bottom: ~"calc(@{margin-bottom} + @{advert-border-width})";
+	&:after {
+		position: absolute;
+		right: 0;
+		bottom: ~"calc(0rem - (@{margin-bottom} + @{advert-border-width}))";
+		left: 0;
+		display: block;
+		clear: both;
+		width: 100%;
+		height: @margin-bottom;
+		background-color: @white;
+		background-image: url("@{images}/icon-divider-sidebar.svg");
+		background-position: center;
+		background-size: auto .5rem;
+		background-repeat: no-repeat;
+		content: '';
+	}
 }
 
 .antialias() {

@@ -6,8 +6,8 @@
 	clear: both;
 	margin-right: auto;
 	margin-left: auto;
-	width: 100%;
 	max-width: @post-max-width;
+	width: 100%;
 	background-color: #fff;
 	@media (@tablet) {
 		padding-top: 1rem;
@@ -23,6 +23,10 @@
 .post__category-title {
 	.font-small;
 	font-style: italic;
+	font-variant: small-caps;
+	a {
+		color: @black;
+	}
 }
 
 .post__title {
@@ -56,16 +60,19 @@
 }
 
 .post__body {
-	margin: auto;
 	position: relative;
+	margin: auto;
 	max-width: @post-max-width;
+	@media (@tablet) {
+		padding-right: 2rem;
+	}
 }
 
 .post__byline {
 	.font-very-small;
 	.clearfix;
-	padding-bottom: 1ex;
 	margin-bottom: 1rem;
+	padding-bottom: 1ex;
 	border-bottom: 1px solid @grey;
 	&--author {
 		display: inline;
@@ -102,9 +109,9 @@
 		margin: .6rem 0;
 	}
 	p {
-		margin-bottom: 1em;
+		// margin-bottom: 1em;
 		text-align: justify;
-		text-indent: 1em;
+		text-indent: 1.5em;
 		font-size: 1.125rem;
 		line-height: 1.5;
 		&:first-of-type {
@@ -130,25 +137,16 @@
 }
 
 .post__related {
-	padding-top: 2rem;
-	padding-bottom: 1.5rem;
 	margin-bottom: 2rem;
+	padding-top: 2rem;
+	width: 100%;
 	@media (@tablet) {
 		margin-bottom: 0;
 		padding-bottom: 0
 	}
-
-	width: 100%;
 	&:before {
 		.text-divider;
 		margin-bottom: 2rem;
-	}
-	&:after {
-		.text-divider;
-		margin-top: 2rem;
-		@media (@tablet) {
-			display: none;
-		}
 	}
 }
 
@@ -159,6 +157,11 @@
 	}
 }
 
+.post__sharing {
+	margin-top: 1rem;
+	font-size: 0;
+	line-height: 0;
+}
 .post .fb-like {
 	width: 100%;
 	line-height: 0;

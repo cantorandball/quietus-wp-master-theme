@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div id="leaderboard">
+	<div id="leaderboard" class="advert">
 	  <img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-billboard.png'; ?>" width="970" height="250">
 	</div>
 	<header id="header">
