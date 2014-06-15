@@ -64,6 +64,9 @@
 	margin: auto;
 	max-width: @post-max-width;
 	@media (@tablet) {
+		padding-right: 1rem;
+	}
+	@media (@desktop) {
 		padding-right: 2rem;
 	}
 }
@@ -152,7 +155,7 @@
 
 .post__related .puff {
 	.puff-row-length(@length: 2);
-	@media (@tablet) {
+	@media (@desktop) {
 		.puff-row-length(@length: 3);
 	}
 }
