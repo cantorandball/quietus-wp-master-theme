@@ -2,32 +2,31 @@
 @advert-border-width: 5px;
 
 .advert {
-	background-color: @advert-bg;
 	padding: 0 @advert-border-width @advert-border-width;
+	background-color: @advert-bg;
+	text-align: center;
 	font-size: 0;
 	line-height: 0;
-	text-align: center;
 	&:before {
-		display: block;
+		display: flex;
+		height: ~"calc(2rem - @{advert-border-width})";
+		align-items: center;
+		justify-content: center;
 		color: darken(@advert-bg, 15%);
 		content: 'Advertisement';
 		text-transform: uppercase;
 		font-size: .6rem;
-		height: ~"calc(2rem - @{advert-border-width})";
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 }
 
 #leaderboard {
 	position: relative;
 	overflow-x: hidden;
+	padding-bottom: 1rem;
 	width: 100%;
-	text-align: center;
 	// background-color: #000;
 	border-bottom: 1px solid darken(@advert-bg, 10%);
-	padding-bottom: 1rem;
+	text-align: center;
 }
 
 #skyscraper,
