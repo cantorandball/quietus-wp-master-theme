@@ -13,10 +13,10 @@ var runSequence = require('run-sequence');
 var build = false;
 
 // file locations
-var SRC_DIR   = '_src';
-var STYLE_DIR = 'css';
-var SCRIPT_DIR = 'js';
-var IMAGE_DIR = 'images';
+var SRC_DIR   = './';
+var STYLE_DIR = '../css';
+var SCRIPT_DIR = '../js';
+var IMAGE_DIR = '../images';
 
 // Less
 gulp.task('styles', function () {
@@ -53,7 +53,9 @@ gulp.task('images', function(){
 // Clean
 gulp.task('clean', function (cb) {
   return gulp.src([STYLE_DIR, SCRIPT_DIR, IMAGE_DIR], { read: false })
-    .pipe($.rimraf());
+    .pipe($.rimraf({
+    	force: true
+    }));
 });
 
 // Run all the compile tasks

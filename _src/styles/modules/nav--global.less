@@ -1,11 +1,11 @@
 // ********** MODULE **********
 
 #nav--global {
-	width: 100%;
 	position: relative;
-	background-color: @white;
+	width: 100%;
 	border-top: 1px @black solid;
 	border-bottom: 1px @black solid;
+	background-color: @white;
 }
 
 // ********** ELEMENTS **********
@@ -19,25 +19,17 @@
 		display: inline-block;
 		a {
 			display: inline-block;
-			font-size: 1rem;
 			padding: .2em .65em;
 			color: @black;
 			font-variant: small-caps;
+			font-size: 1rem;
 			// font-style: italic;
-			&:hover {
-				background-color: @black;
-				color: @white;
-				text-decoration: none;
-				-webkit-font-smoothing: antialiased;
-			}
 		}
 	}
-
-	> li.active a {
+	> li.active a, > li a:hover {
 		background-color: @black;
 		color: @white;
 		text-decoration: none;
-		-webkit-font-smoothing: antialiased;
 	}
 }
 
@@ -46,11 +38,11 @@
 }
 
 #nav--global__toggle {
-	display: none;
 	.text-hide;
 	position: absolute;
 	top: 0;
 	right: 0;
+	display: none;
 	// z-index: 1;
 	// width: @nav-height;
 	// height: @nav-height;
@@ -62,13 +54,13 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		display: flex;
 		width: 100%;
 		height: 100%;
-		display: flex;
 		align-items: center;
 		justify-content: center;
-		content: '…';
 		color: @black;
+		content: '…';
 		font-size: 1rem;
 		line-height: 1;
 	}
