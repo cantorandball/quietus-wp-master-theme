@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div id="leaderboard" class="advert">
+	<div id="leaderboard" class="advert advert--leaderboard">
 	  <img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-billboard.png'; ?>" width="970" height="250">
 	</div>
 	<header id="header">
@@ -33,4 +33,4 @@
 	   	</ul>
 		<button id="nav--global__toggle">Toggle navigation</button>
 	</nav>
-	<div id="content">
+	<div class="layout__page">
