@@ -36,6 +36,7 @@
     "gulp-svgmin": "^0.4.4",
     "gulp-uglify": "^0.2.1",
     "gulp-util": "^2.2.14",
+    "jquery": "^2.1.1",
     "jshint-stylish": "^0.1.5",
     "run-sequence": "^0.3.6"
   }
