@@ -1,17 +1,15 @@
-.side-bar {
-	// box-sizing: content-box;
-	min-width: @side-bar-min-width;
-	width: 100%;
-	@media (@tablet) {
-		margin-right: 0;
-		margin-left: auto;
-		width: ~"calc(@{side-bar-min-width} + 10px)";
-	}
-}
+// ********** MODULE **********
+
+.side-bar {}
+
+// ********** ELEMENTS **********
 
 .side-bar .puff {
 	.puff-row-length(2);
 	@media (@tablet) {
+		.puff-row-length(@length: 3);
+	}
+	@media (@desktop) {
 		.puff-row-length(@length: 2);
 	}
 }

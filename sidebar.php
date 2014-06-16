@@ -5,7 +5,7 @@
  */
 ?>
 
-<aside role="complementary" class="side-bar">
+<aside role="complementary" class="layout__sidebar side-bar">
 	<!-- PLACEHOLDER ADVERT -->
 	<div id="skyscraper--mini" class="advert">
 		<img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-medium.gif'; ?>" alt="" width="300" height="250">
