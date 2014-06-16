@@ -39,12 +39,9 @@ get_header(); ?>
 				<?php get_template_part( 'related-posts' ); ?>
 			</section>
 		</div>
-		<?php
-		get_sidebar();
-		get_sidebar( 'article' ); ?>
+		<?php get_sidebar(); ?>
 	</div>
 </article>
 <?php endwhile; ?>
 
-<?php
-get_footer(); ?>
+<?php get_footer(); ?>

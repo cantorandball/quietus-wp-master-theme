@@ -6,8 +6,9 @@
 ?>
 
 <aside role="complementary" class="side-bar">
+	<!-- PLACEHOLDER ADVERT -->
 	<div id="skyscraper--mini" class="advert">
-		<img src="http://pagead2.googlesyndication.com/simgad/16917787911464460011" alt="" width="300" height="250">
+		<img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-medium.gif'; ?>" alt="" width="300" height="250">
 	</div>
 	<?php get_template_part( 'latest-news-and-reviews' ); ?>
 	<!-- PLACEHOLDER ADVERT -->
