@@ -9,7 +9,7 @@ $(function(){
 	// distribute article ads evenly between article paras
 	var $articleAds = $('[data-advert-article]');
 	var $articleParas = $('.post__content p');
-	var parasBeforeAd = Math.floor($articleParas.length / ($articleAds.length + 1));
+	var parasBeforeAd = Math.floor(($articleParas.length - 1) / $articleAds.length);
 	$articleAds.each(function(i, ad){
 		$($articleParas[(i * parasBeforeAd) + parasBeforeAd]).before(ad.innerHTML);
 	});
