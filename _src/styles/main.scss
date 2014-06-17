@@ -3,8 +3,9 @@
 @import '../bower_components/sass-meyer-reset/_sass-meyer-reset.sass';
 
 // tQ settings
-@import 'mixins';
 @import 'settings';
+@import 'mixins';
+@import 'placeholders';
 
 // tQ styles
 @import 'base';
