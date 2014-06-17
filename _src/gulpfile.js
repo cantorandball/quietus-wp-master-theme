@@ -140,9 +140,7 @@ gulp.task('watch', function(){
   var server = $.livereload();
   gulp.watch([
     '../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*',
-    '!node_modules/**/*',
-    '!bower_components/**/*',
-    '!_src/**/*'
+    '!' + SRC_DIR + '/**/*'
   ]).on('change', function (file) {
     server.changed(file.path);
     console.log(file.path + ' changed.');
