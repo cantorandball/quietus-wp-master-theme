@@ -12,7 +12,7 @@ $(function(){
 	var parasBeforeAd = Math.floor($articleParas.length / ($articleAds.length + 1));
 	$articleAds.each(function(i, ad){
 		$($articleParas[(i * parasBeforeAd) + parasBeforeAd]).before(ad.innerHTML);
-	})
+	});
 });
 
 // FTLabs fastclick library - removes any native delay on touch interfaces
