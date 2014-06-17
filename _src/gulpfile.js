@@ -104,7 +104,10 @@ gulp.task('minify', function(){
     .pipe(gulp.dest(IMAGE_DIR))
     .pipe(filter.raster.restore())
 
-    .pipe($.size({showFiles: true}));
+    .pipe($.size({
+    	showFiles: true,
+    	gzip: true
+    }));
 });
 
 // // Run a server
