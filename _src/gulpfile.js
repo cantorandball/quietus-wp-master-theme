@@ -22,7 +22,10 @@ var IMAGE_DIR = '../images';
 gulp.task('styles', function () {
   return gulp.src(SRC_DIR + '/styles/main.less')
     .pipe($.plumber())
-    .pipe($.less())
+    .pipe($.rubySass({
+    	sourcemap: true,
+    	style: 'expanded'
+    }))
     .on("error", $.notify.onError('Less failed…'))
     .on('error', $.util.log)
     .pipe($.autoprefixer())
