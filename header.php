@@ -10,9 +10,7 @@
 </head>
 
 <body>
-	<div id="leaderboard" class="advert advert--leaderboard">
-	  <img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-billboard.png'; ?>" width="970" height="250">
-	</div>
+	<div id="leaderboard" class="advert advert--leaderboard"></div>
 	<header id="header">
 		<h1 id="header__logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
