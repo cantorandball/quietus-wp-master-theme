@@ -24,7 +24,7 @@
 }
 
 .post__byline {
-	@include font-very-small;
+	@extend %font-very-small;
 	padding-bottom: 1ex;
 	border-bottom: 1px solid $grey;
 	&--author {
@@ -49,7 +49,7 @@
 .post__featured-image {
 	width: 100%;
 	&:after {
-		@include text-divider;
+		@extend %text-divider;
 		margin-top: 2rem;
 		margin-bottom: 1rem;
 	}
@@ -75,14 +75,14 @@
 		}
 		&:last-of-type {
 			&:after {
-				@include font-small;
+				@extend %font-small;
 				padding-left: 1ex;
 				content: '✧';
 			}
 		}
 	}
 	hr {
-		@include text-divider;
+		@extend %text-divider;
 		margin: 0;
 		margin-bottom: 1.125rem;
 		border: none;
@@ -109,7 +109,7 @@
 		padding-bottom: 0
 	}
 	&:before {
-		@include text-divider;
+		@extend %text-divider;
 		margin-bottom: 2rem;
 	}
 }
