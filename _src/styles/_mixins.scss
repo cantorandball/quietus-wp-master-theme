@@ -1,0 +1,18 @@
+@mixin icon($url: '', $width: auto, $height: auto) {
+	@include text-hide;
+	background-image: url($url);
+	background-position: center;
+	background-size: $width $height;
+	background-repeat: no-repeat;
+}
+
+@mixin antialias {
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin puff-row-length($length: 2) {
+	width: 100% / $length;
+	a {
+		padding-bottom: percentage(3/4);
+	}
+}

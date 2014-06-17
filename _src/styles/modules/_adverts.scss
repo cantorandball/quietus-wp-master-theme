@@ -1,17 +1,17 @@
 // ********** MODULE **********
 
 .advert {
-	padding: 0 @advert-border-width @advert-border-width;
-	background-color: @advert-bg;
+	padding: 0 $advert-border-width $advert-border-width;
+	background-color: $advert-bg;
 	text-align: center;
 	font-size: 0;
 	line-height: 0;
 	&:before {
 		display: flex;
-		height: ~"calc(2rem - @{advert-border-width})";
+		height: calc(2rem - #{$advert-border-width});
 		align-items: center;
 		justify-content: center;
-		color: darken(@advert-bg, 15%);
+		color: darken($advert-bg, 15%);
 		content: 'Advertisement';
 		text-transform: uppercase;
 		font-size: .6rem;
@@ -26,7 +26,7 @@
 	padding-bottom: 1rem;
 	width: 100%;
 	// background-color: #000;
-	border-bottom: 1px solid darken(@advert-bg, 10%);
+	border-bottom: 1px solid darken($advert-bg, 10%);
 	text-align: center;
 }
 

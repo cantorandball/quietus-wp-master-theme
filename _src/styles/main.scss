@@ -1,11 +1,11 @@
 // library stuff
-@bower_components: '../bower_components';
-@import '@{bower_components}/bootstrap/less/mixins.less';
-@import (less) '@{bower_components}/reset-css/reset.css';
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_mixins.scss';
+@import '../bower_components/sass-meyer-reset/_sass-meyer-reset.sass';
 
 // tQ settings
-@import 'mixins';
 @import 'settings';
+@import 'mixins';
+@import 'placeholders';
 
 // tQ styles
 @import 'base';
