@@ -6,7 +6,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: @black;
+	color: $black;
 	font-family: "Times New Roman", serif;
 	line-height: 1.4;
 }
@@ -16,10 +16,10 @@ p {
 }
 
 a {
-	color: @link-colour;
+	color: $link-colour;
 	text-decoration: none;
 	&:visited {
-		color: @light-grey;
+		color: $light-grey;
 	}
 	&:hover {
 		text-decoration: underline;

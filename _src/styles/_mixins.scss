@@ -1,0 +1,65 @@
+@mixin font-large {
+	font-size: 1.1rem;
+}
+@mixin font-larger {
+	font-size: 1.3rem;
+}
+@mixin font-small {
+	font-size: .8rem;
+}
+@mixin font-very-small {
+	font-size: .7rem;
+}
+
+@mixin icon($url: '', $width: auto, $height: auto) {
+	@include text-hide;
+	background-image: url($url);
+	background-position: center;
+	background-size: $width $height;
+	background-repeat: no-repeat;
+}
+
+@mixin text-divider {
+	display: block;
+	clear: both;
+	padding-bottom: 2%;
+	width: 100%;
+	height: 0;
+	background-image: url("#{$images}/icon-divider.svg");
+	background-position: center 50%;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	content: '';
+}
+
+@mixin text-divider-sidebar {
+	$margin-bottom: 4rem;
+	margin-bottom: calc(#{$margin-bottom} + #{$advert-border-width});
+	&:after {
+		position: absolute;
+		right: 0;
+		bottom: calc(0rem - (#{$margin-bottom} + #{$advert-border-width}));
+		left: 0;
+		display: block;
+		clear: both;
+		width: 100%;
+		height: $margin-bottom;
+		background-color: $white;
+		background-image: url("#{$images}/icon-divider-sidebar.svg");
+		background-position: center;
+		background-size: auto .5rem;
+		background-repeat: no-repeat;
+		content: '';
+	}
+}
+
+@mixin antialias {
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin puff-row-length($length: 2) {
+	width: 100% / $length;
+	a {
+		padding-bottom: percentage(3/4);
+	}
+}

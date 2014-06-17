@@ -1,17 +1,17 @@
 #header {
 	position: relative;
 	&__logo {
-		.text-hide;
+		@include text-hide;
 		position: relative;
 		z-index: 1;
 		width: 100%;
 		height: 6rem;
-		background-color: @white;
-		background-image: url("@{images}/logo-no_url.svg");
+		background-color: $white;
+		background-image: url("#{$images}/logo-no_url.svg");
 		background-position: center;
 		background-size: auto 61%;
 		background-repeat: no-repeat;
-		@media (@mobile) {
+		@media #{$mobile} {
 			// background-position: 1rem center;
 		}
 	}

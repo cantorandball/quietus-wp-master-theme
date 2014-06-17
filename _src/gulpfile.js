@@ -20,13 +20,13 @@ var IMAGE_DIR = '../images';
 
 // Less
 gulp.task('styles', function () {
-  return gulp.src(SRC_DIR + '/styles/main.less')
+  return gulp.src(SRC_DIR + '/styles/main.scss')
     .pipe($.plumber())
     .pipe($.rubySass({
     	sourcemap: true,
     	style: 'expanded'
     }))
-    .on("error", $.notify.onError('Less failed…'))
+    .on("error", $.notify.onError('Sass failed…'))
     .on('error', $.util.log)
     .pipe($.autoprefixer())
     .pipe(gulp.dest(STYLE_DIR));
@@ -135,14 +135,14 @@ gulp.task('dev', ['clean'], function(){
 
 // watch dev files for recompilation and livereload when OUTPUT_DIR updates
 gulp.task('watch', function(){
-  gulp.watch(SRC_DIR + '/styles/**/*.less', ['styles']);
+  gulp.watch(SRC_DIR + '/styles/**/*.scss', ['styles']);
   gulp.watch(SRC_DIR + '/scripts/**/*.js', ['scripts']);
   gulp.watch(SRC_DIR + '/**/*.html', ['html']);
   gulp.watch(SRC_DIR + '/images/**/*', ['images']);
 
   var server = $.livereload();
   gulp.watch([
-    '../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*',
+    '../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*.css',
     '!' + SRC_DIR + '/**/*'
   ]).on('change', function (file) {
     server.changed(file.path);
