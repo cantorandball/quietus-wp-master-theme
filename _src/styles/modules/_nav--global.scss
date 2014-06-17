@@ -3,15 +3,15 @@
 #nav--global {
 	position: relative;
 	width: 100%;
-	border-top: 1px @black solid;
-	border-bottom: 1px @black solid;
-	background-color: @white;
+	border-top: 1px $black solid;
+	border-bottom: 1px $black solid;
+	background-color: $white;
 }
 
 // ********** ELEMENTS **********
 
 .nav--global__primary {
-	.clearfix;
+	@include clearfix;
 	// padding: 0 1rem .25rem;
 	text-align: center;
 	font-size: 0;
@@ -20,15 +20,15 @@
 		a {
 			display: inline-block;
 			padding: .2em .65em;
-			color: @black;
+			color: $black;
 			font-variant: small-caps;
 			font-size: 1rem;
 			// font-style: italic;
 		}
 	}
 	> li.active a, > li a:hover {
-		background-color: @black;
-		color: @white;
+		background-color: $black;
+		color: $white;
 		text-decoration: none;
 	}
 }
@@ -38,14 +38,14 @@
 }
 
 #nav--global__toggle {
-	.text-hide;
+	@include text-hide;
 	position: absolute;
 	top: 0;
 	right: 0;
 	display: none;
 	// z-index: 1;
-	// width: @nav-height;
-	// height: @nav-height;
+	// width: $nav-height;
+	// height: $nav-height;
 	border: 0;
 	&:focus {
 		outline: none;
@@ -59,7 +59,7 @@
 		height: 100%;
 		align-items: center;
 		justify-content: center;
-		color: @black;
+		color: $black;
 		content: '…';
 		font-size: 1rem;
 		line-height: 1;

@@ -5,12 +5,12 @@
 // ********** ELEMENTS **********
 
 .side-bar .puff {
-	.puff-row-length(2);
-	@media (@tablet) {
-		.puff-row-length(@length: 3);
+	@include puff-row-length(2);
+	@media #{$tablet} {
+		@include puff-row-length($length: 3);
 	}
-	@media (@desktop) {
-		.puff-row-length(@length: 2);
+	@media #{$desktop} {
+		@include puff-row-length($length: 2);
 	}
 }
 
@@ -20,6 +20,5 @@
 
 .side-bar .advert:not(:last-child) {
 	margin-bottom: 2rem;
-	// .text-divider-sidebar;
 	position: relative;
 }

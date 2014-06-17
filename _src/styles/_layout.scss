@@ -1,18 +1,18 @@
 // Contains everything below the global nav
 .layout__page {
-	.clearfix;
+	@include clearfix;
 	box-sizing: content-box;
 	margin-right: auto;
 	margin-left: auto;
 	padding: .5rem;
-	max-width: @layout__post--max-width;
-	@media (@tablet) {
+	max-width: $layout__post--max-width;
+	@media #{$tablet} {
 		padding: 2rem 1rem;
 	}
-	@media (@desktop) {
+	@media #{$desktop} {
 		padding-right: 2rem;
 		padding-left: 2rem;
-		max-width: ~"calc(2rem + @{layout__post--max-width} + @{layout__side-bar--width})";
+		max-width: calc(2rem + #{$layout__post--max-width} + #{$layout__side-bar--width});
 	}
 }
 
@@ -26,17 +26,17 @@
 // the meat of the page. floats left of the side bar if there's room, else it appears above it.
 .layout__content {
 	width: 100%;
-	@media (@desktop) {
+	@media #{$desktop} {
 		float: left;
-		width: ~"calc(100% - @{layout__side-bar--width} - 2rem)";
+		width: calc(100% - #{$layout__side-bar--width} - 2rem);
 	}
 }
 
 // the side bar
 .layout__sidebar {
 	width: 100%;
-	@media (@desktop) {
+	@media #{$desktop} {
 		float: right;
-		width: @layout__side-bar--width;
+		width: $layout__side-bar--width;
 	}
 }

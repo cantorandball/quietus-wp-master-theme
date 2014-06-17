@@ -1,9 +1,9 @@
 .category {}
 
 .category__parent-title {
-	.lead-in-title;
+	@extend %lead-in-title;
 }
 
 .category__title {
-	.main-title
+	@extend %main-title;
 }

@@ -5,11 +5,11 @@
 // ********** ELEMENTS **********
 
 .post__category-title {
-	.lead-in-title;
+	@extend %lead-in-title;
 }
 
 .post__title {
-	.main-title;
+	@extend %main-title;
 }
 
 .post__standfirst {
@@ -24,9 +24,9 @@
 }
 
 .post__byline {
-	.font-very-small;
+	@include font-very-small;
 	padding-bottom: 1ex;
-	border-bottom: 1px solid @grey;
+	border-bottom: 1px solid $grey;
 	&--author {
 		display: inline;
 		&:before {
@@ -36,7 +36,7 @@
 			content: ', ';
 		}
 		a {
-			color: @black;
+			color: $black;
 		}
 	}
 	&--date {
@@ -49,7 +49,7 @@
 .post__featured-image {
 	width: 100%;
 	&:after {
-		.text-divider;
+		@include text-divider;
 		margin-top: 2rem;
 		margin-bottom: 1rem;
 	}
@@ -75,17 +75,28 @@
 		}
 		&:last-of-type {
 			&:after {
-				.font-small;
+				@include font-small;
 				padding-left: 1ex;
 				content: '✧';
 			}
 		}
 	}
 	hr {
-		.text-divider;
+		@include text-divider;
 		margin: 0;
 		margin-bottom: 1.125rem;
 		border: none;
+	}
+}
+
+.post__content .img_ad {
+	float: left;
+	margin-right: 1em;
+	margin-top: .75em;
+	&:nth-of-type(odd){
+		float: right;
+		margin-right: 0;
+		margin-left: 1em;
 	}
 }
 
@@ -93,20 +104,20 @@
 	margin-bottom: 2rem;
 	padding-top: 2rem;
 	width: 100%;
-	@media (@tablet) {
+	@media #{$tablet} {
 		margin-bottom: 0;
 		padding-bottom: 0
 	}
 	&:before {
-		.text-divider;
+		@include text-divider;
 		margin-bottom: 2rem;
 	}
 }
 
 .post__related .puff {
-	.puff-row-length(2);
-	@media (@tablet) {
-		.puff-row-length(3);
+	@include puff-row-length(2);
+	@media #{$tablet} {
+		@include puff-row-length(3);
 	}
 }
 

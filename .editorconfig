@@ -11,5 +11,5 @@ insert_final_newline = true
 [*.js]
 indent_size = 2
 
-[*.less]
+[*.scss]
 indent_size = 2
