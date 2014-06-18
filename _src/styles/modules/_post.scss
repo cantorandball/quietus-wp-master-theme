@@ -17,7 +17,7 @@
 }
 
 .post__byline {
-	@extend %font-very-small;
+	@extend %font-xs;
 	padding-bottom: 1ex;
 	border-bottom: 1px solid $grey;
 	&--author {
@@ -68,7 +68,7 @@
 		}
 		&:last-of-type {
 			&:after {
-				@extend %font-small;
+				@extend %font-s;
 				padding-left: 1ex;
 				content: '✧';
 			}
