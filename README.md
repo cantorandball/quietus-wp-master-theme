@@ -2,7 +2,7 @@ quietus-wp-master-theme
 =======================
 
 ## Set up
-CSS, JS and images are managed by [gulp](http://gulpjs.com) from `/_src`. See the README in `_src` for more info.
+CSS, JS and images are managed by [gulp](http://gulpjs.com) from `/_src`. See that [README](_src/README.md) for more info.
 
 _tl;dr_
 
