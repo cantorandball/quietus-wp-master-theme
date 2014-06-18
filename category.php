@@ -46,6 +46,7 @@ get_header(); ?>
 					?>
 				</ul>
 			</div>
+			<?php get_template_part( 'pagination' ); ?>
 		<?php else: ?>
 			<div class="category__no-posts">
 				<p>There are no articles in this category.</p>

@@ -43,8 +43,21 @@ function get_related_posts( $post_id ) {
 		'post__not_in'	 => array( $post_id ),
 		'posts_per_page' => 20,
 		'orderby'        => 'date'
-	);
+		);
 
 	return new WP_Query( $query_args );
+}
+
+function get_paginate_links() {
+	global $wp_query;
+	$big = 999999999;
+	$paginate_links = paginate_links( array(
+		'base'     => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+		'current'  => max( 1, get_query_var( 'paged' ) ),
+		'total'    => $wp_query->max_num_pages,
+		'mid_size' => 5
+		) );
+
+	return $paginate_links;
 }
 ?>
