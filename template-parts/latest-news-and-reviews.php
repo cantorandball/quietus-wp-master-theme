@@ -11,7 +11,7 @@ if ( $latest_news_and_reviews->have_posts() ): ?>
 		<ul>
 			<?php
 			while ( $latest_news_and_reviews->have_posts() ): $latest_news_and_reviews->the_post();
-			get_template_part( 'listing' );
+			get_template_part( 'template-parts/listing' );
 			endwhile;
 			?>
 		</ul>
