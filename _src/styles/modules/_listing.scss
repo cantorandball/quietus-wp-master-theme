@@ -1,0 +1,35 @@
+.listing {
+	margin-bottom: 1.25rem;
+}
+
+.listing__thumbnail,
+.listing__content {
+	float: left;
+}
+
+.listing__thumbnail {
+	max-width: 9.375rem;
+	max-height: 7.0625rem;
+	margin-right: 0.625rem;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+	}
+}
+
+.listing__content {
+	max-width: 27.3125rem;
+}
+
+.listing__category-title {
+	@extend %lead-in-title;
+}
+
+.listing__post-title {
+	margin-bottom: .5em;
+}
+
+.listing__excerpt {
+	font-size: 0.875rem;
+}
