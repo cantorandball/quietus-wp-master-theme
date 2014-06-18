@@ -1,0 +1,9 @@
+.search {}
+
+.search__leadin {
+	@extend %lead-in-title;
+}
+
+.search__title {
+	@extend %main-title;
+}
