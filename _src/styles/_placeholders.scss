@@ -38,3 +38,14 @@
   font-size: 2rem;
   line-height: 1.1;
 }
+
+%standfirst {
+	padding-bottom: 1rem;
+	text-indent: 0;
+	font-style: italic;
+	img {
+		display: block;
+		margin-bottom: 1ex;
+		width: 100%;
+	}
+}

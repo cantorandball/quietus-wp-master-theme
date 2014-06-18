@@ -13,14 +13,7 @@
 }
 
 .post__standfirst {
-	padding-bottom: 1rem;
-	text-indent: 0;
-	font-style: italic;
-	img {
-		display: block;
-		margin-bottom: 1ex;
-		width: 100%;
-	}
+	@extend %standfirst;
 }
 
 .post__byline {
