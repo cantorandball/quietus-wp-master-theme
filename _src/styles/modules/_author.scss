@@ -1,0 +1,9 @@
+.author {}
+
+.author__leadin {
+	@extend %lead-in-title;
+}
+
+.author__title {
+	@extend %main-title;
+}
