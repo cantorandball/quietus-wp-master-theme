@@ -28,7 +28,7 @@
   @extend %font-s;
   font-style: italic;
   font-variant: small-caps;
-  a {
+  a, a:visited {
     color: $black;
   }
 }
