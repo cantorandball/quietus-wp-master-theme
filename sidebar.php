@@ -8,7 +8,7 @@
 <aside role="complementary" class="layout__sidebar side-bar">
 	<!-- PLACEHOLDER ADVERT -->
 	<div id="skyscraper--mini" class="advert"></div>
-	<?php get_template_part( 'latest-news-and-reviews' ); ?>
+	<?php get_template_part( 'template-parts/latest-news-and-reviews' ); ?>
 	<!-- PLACEHOLDER ADVERT -->
 	<div id="skyscraper" class="advert"></div>
 </aside>

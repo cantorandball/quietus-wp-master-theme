@@ -27,7 +27,7 @@ get_header(); ?>
 			<ul class="author__post-listing">
 				<?php
 				while( have_posts() ): the_post();
-				get_template_part( 'listing', 'excerpt' );
+				get_template_part( 'template-parts/listing', 'excerpt' );
 				endwhile;
 				?>
 			</ul>

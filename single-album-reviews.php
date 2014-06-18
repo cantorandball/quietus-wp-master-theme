@@ -17,31 +17,16 @@ get_header(); ?>
 				<span class="post--review__artist" itemprop="creator"><?php the_field('album_artist'); ?></span>
 			</h2>
 		</header>
-		<?php if ( has_excerpt() ): ?>
-		<section class="post__standfirst">
-			<?php the_excerpt(); ?>
-		</section>
-		<?php endif; ?>
-		<div class="post__byline">
-			<address class="post__byline--author" itemprop="author" rel="author"><?php the_author_posts_link(); ?></address>
-			<time class="post__byline--date" pubdate datetime="<?php the_time( 'Y-m-d H:i' ); ?>" itemprop="datePublished"><?php the_time('F jS, Y'); ?></time>
-		</div>
+		<?php get_template_part( 'template-parts/single-standfirst' ) ?>
+		<?php get_template_part( 'template-parts/single-byline' ) ?>
 	</div>
 	<div class="layout__content">
-		<?php if ( has_post_thumbnail() ): ?>
-		<figure class="post__featured-image" itemprop="image">
-			<?php the_post_thumbnail(); ?>
-		</figure>
-		<?php endif; ?>
+		<?php get_template_part( 'template-parts/single-featured-image' ) ?>
 		<section class="post__content" itemprop="reviewBody">
 			<?php the_content(); ?>
 		</section>
-		<section class="post__sharing">
-			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-		</section>
-		<section class="post__related">
-			<?php get_template_part( 'related-posts' ); ?>
-		</section>
+		<?php get_template_part( 'template-parts/single-sharing' ) ?>
+		<?php get_template_part( 'template-parts/single-related' ) ?>
 	</div>
 </article>
 
