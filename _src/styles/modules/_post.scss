@@ -40,6 +40,7 @@
 }
 
 .post__featured-image {
+	@include clearfix;
 	width: 100%;
 	&:after {
 		@extend %text-divider;

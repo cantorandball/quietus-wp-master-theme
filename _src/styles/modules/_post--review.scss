@@ -7,14 +7,23 @@
 }
 
 .post--review .post__featured-image {
-	width: 19.9em;
+	width: 100%;
 	float: left;
 	margin-right: 1rem;
 	&:after {
 		display: none;
 	}
+	@media #{$mobile} {
+		width: 15.8em;
+	}
+	@media #{$tablet} {
+		width: 19.25em;
+	}
 }
 
 .post--review .post__content {
 	margin-top: -.5em;
+	p:first-of-type:first-letter {
+		font-size: 1em;
+	}
 }

@@ -25,6 +25,7 @@
 
 // the meat of the page. floats left of the side bar if there's room, else it appears above it.
 .layout__content {
+	@include clearfix;
 	width: 100%;
 	@media #{$desktop} {
 		float: left;
