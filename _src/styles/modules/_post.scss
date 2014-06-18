@@ -5,29 +5,15 @@
 // ********** ELEMENTS **********
 
 .post__category-title {
-	@extend %font-small;
-	font-style: italic;
-	font-variant: small-caps;
-	a {
-		color: $black;
-	}
+	@extend %lead-in-title;
 }
 
 .post__title {
-	padding-bottom: 1ex;
-	font-size: 2rem;
-	line-height: 1.1;
+	@extend %main-title;
 }
 
 .post__standfirst {
-	padding-bottom: 1rem;
-	text-indent: 0;
-	font-style: italic;
-	img {
-		display: block;
-		margin-bottom: 1ex;
-		width: 100%;
-	}
+	@extend %standfirst;
 }
 
 .post__byline {

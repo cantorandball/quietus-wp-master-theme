@@ -23,3 +23,29 @@
 	background-repeat: no-repeat;
 	content: '';
 }
+
+%lead-in-title {
+  @extend %font-small;
+  font-style: italic;
+  font-variant: small-caps;
+  a {
+    color: $black;
+  }
+}
+
+%main-title {
+  padding-bottom: 1ex;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+%standfirst {
+	padding-bottom: 1rem;
+	text-indent: 0;
+	font-style: italic;
+	img {
+		display: block;
+		margin-bottom: 1ex;
+		width: 100%;
+	}
+}

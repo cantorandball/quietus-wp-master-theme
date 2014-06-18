@@ -1,0 +1,13 @@
+.category {}
+
+.category__parent-title {
+	@extend %lead-in-title;
+}
+
+.category__title {
+	@extend %main-title;
+}
+
+.category__standfirst {
+	@extend %standfirst;
+}
