@@ -5,7 +5,7 @@ if ( is_category() && get_queried_object_id() == get_the_category()[0]->cat_ID )
 	$show_category = true;
 }
 ?>
-<li class="listing clearfix">
+<li class="listing">
 	<?php if ( has_post_thumbnail() ): ?>
 		<div class="listing__thumbnail">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
