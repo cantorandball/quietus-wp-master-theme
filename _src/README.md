@@ -1,3 +1,5 @@
+#Assets
+
 These are the source files for `quietus-wp-master-theme` front-end assets, and they are managed by [gulp](http://gulpjs.com).
 
 They are built into:
@@ -8,14 +10,14 @@ They are built into:
 
 Any assets that should be available to the site **must** be saved to the relevant directory under `/_src`.
 
-# Setup up
+## Setup up
 
 Make sure you have [node installed](http://nodejs.org/), then run:
 
     npm install
     bower install
 
-# Use
+## Use
 
 There are 2 gulp tasks available:
 
