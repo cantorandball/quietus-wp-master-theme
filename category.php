@@ -5,10 +5,13 @@
  * @since The Quietus Master 1.0
  */
 
-$parent   = null;
-$category = get_queried_object();
-if ( $category->category_parent != '0' )
-	$parent = get_category( $category->category_parent );
+global $current_category;
+
+$parent           = null;
+$current_category = get_queried_object();
+
+if ( $current_category->category_parent != '0' )
+	$parent = get_category( $current_category->category_parent );
 
 get_header(); ?>
 
