@@ -1,4 +1,3 @@
-var navGlobal = require('./nav--global');
 var $ = require('jquery');
 
 $(function(){
