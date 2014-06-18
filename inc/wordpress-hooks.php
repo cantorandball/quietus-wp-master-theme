@@ -53,4 +53,19 @@ function quietus_category_template( $single_template ) {
     return $single_template;
 }
 add_filter( "single_template", "quietus_category_template" ) ;
+
+/**
+ * Forces the excerpt to conclude with a full stop, regardless of what's in the post.
+ * @return string HTML-formatted post excerpt
+ */
+function quietus_format_excerpt() {
+	$excerpt = get_the_excerpt();
+	$chars = array( ".", "!", "?", "…" );
+	if (!in_array ( substr( $excerpt, -1 ), $chars ) ) {
+    	$excerpt .= '.';
+	};
+	return '<p>' . $excerpt . '</p>';
+}
+add_filter( "the_excerpt", "quietus_format_excerpt" ) ;
+
 ?>
