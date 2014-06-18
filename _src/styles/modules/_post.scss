@@ -84,18 +84,18 @@
 	}
 }
 
-.post__content .img_ad {
-	margin-top: .75em;
+.post__content .advert {
+	margin-top: .5rem;
 	&:nth-of-type(even) {
 		float: left;
-		margin-right: 1em;
+		margin-right: 1rem;
 		& + p {
 			text-indent: .75em;
 		}
 	}
 	&:nth-of-type(odd) {
 		float: right;
-		margin-left: 1em;
+		margin-left: 1rem;
 	}
 }
 
