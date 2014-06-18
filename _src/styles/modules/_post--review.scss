@@ -1,0 +1,20 @@
+.post--review__artist {
+	@extend %font-xs;
+	display: block;
+	margin-top: 1ex;
+	text-transform: uppercase;
+	font-family: Helvetica;
+}
+
+.post--review .post__featured-image {
+	width: 19.9em;
+	float: left;
+	margin-right: 1rem;
+	&:after {
+		display: none;
+	}
+}
+
+.post--review .post__content {
+	margin-top: -.5em;
+}

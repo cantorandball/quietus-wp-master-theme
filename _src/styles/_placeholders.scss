@@ -1,14 +1,14 @@
-%font-large {
-	font-size: 1.1rem;
-}
-%font-larger {
-	font-size: 1.3rem;
-}
-%font-small {
+%font-s {
 	font-size: .8rem;
 }
-%font-very-small {
+%font-xs {
 	font-size: .7rem;
+}
+%font-l {
+	font-size: 1.1rem;
+}
+%font-xl {
+	font-size: 1.3rem;
 }
 
 %text-divider {
@@ -25,7 +25,7 @@
 }
 
 %lead-in-title {
-  @extend %font-small;
+  @extend %font-s;
   font-style: italic;
   font-variant: small-caps;
   a {
