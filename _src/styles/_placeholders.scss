@@ -25,7 +25,7 @@
 }
 
 %lead-in-title {
-  @include font-small;
+  @extend %font-small;
   font-style: italic;
   font-variant: small-caps;
   a {
