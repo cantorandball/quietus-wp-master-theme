@@ -13,6 +13,9 @@
 @mixin puff-row-length($length: 2) {
 	width: 100% / $length;
 	a {
-		padding-bottom: percentage(3/4);
+		padding-bottom: percentage(2/3);
+	}
+	&.album-reviews a {
+		padding-bottom: 100%;
 	}
 }

@@ -41,7 +41,7 @@ get_header(); ?>
 				<ul>
 					<?php
 					while( have_posts() ): the_post();
-					get_template_part( 'template-parts/listing', 'excerpt' );
+					get_template_part( 'template-parts/listing' );
 					endwhile;
 					?>
 				</ul>

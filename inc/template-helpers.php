@@ -11,11 +11,24 @@
  * Get latest posts from News and Album Reviews categories
  * @return wp_query wp_query object containing matching posts.
  */
-function get_latest_news_and_reviews() {
+function get_latest_news() {
 	$query_args = array(
-		'category_name'  => 'news,album-reviews',
+		'category_name'  => 'news',
 		'posts_per_page' => 20,
-		'orderby'        => 'date'
+		'orderby'        => 'date',
+		);
+	return new WP_Query( $query_args );
+}
+
+/**
+ * Get latest posts from News and Album Reviews categories
+ * @return wp_query wp_query object containing matching posts.
+ */
+function get_latest_reviews() {
+	$query_args = array(
+		'category_name'  => 'album-reviews',
+		'posts_per_page' => 20,
+		'orderby'        => 'date',
 		);
 	return new WP_Query( $query_args );
 }
