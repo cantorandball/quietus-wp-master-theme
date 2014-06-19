@@ -6,11 +6,12 @@
 		z-index: 1;
 		height: 6rem;
 		background-color: $white;
-		background-image: url("#{$images}/logo-no_url.svg");
+		background-image: url("#{$images}/logo.svg");
 		background-position: 1rem center;
 		background-size: auto 61%;
 		background-repeat: no-repeat;
 		.centered & {
+			background-image: url("#{$images}/logo-no_url.svg");
 			background-position: center;
 		}
 	}
