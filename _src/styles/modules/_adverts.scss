@@ -8,7 +8,7 @@
 	line-height: 0;
 	&:before {
 		display: flex;
-		height: calc(2rem - #{$advert-border-width});
+		height: 2rem - $advert-border-width;
 		align-items: center;
 		justify-content: center;
 		color: darken($advert-bg, 15%);

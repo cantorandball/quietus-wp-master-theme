@@ -5,10 +5,10 @@ $light-grey: #999;
 $link-colour: #0074D9;
 
 $advert-bg: darken(white, 7%);
-$advert-border-width: 5px;
+$advert-border-width: px-to-rem(5);
 
 $layout__post--max-width: 37.625rem;
-$layout__adverts--skyscraper-width: 300px;
+$layout__adverts--skyscraper-width: px-to-rem(300);
 $layout__side-bar--width: $layout__adverts--skyscraper-width + ($advert-border-width * 2);
 
 // ********** BREAKPOINTS **********
