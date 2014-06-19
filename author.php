@@ -24,13 +24,16 @@ get_header(); ?>
 
 	<div class="layout__content">
 		<?php if ( have_posts() ): ?>
-			<ul class="author__post-listing">
-				<?php
-				while( have_posts() ): the_post();
-				get_template_part( 'template-parts/listing', 'excerpt' );
-				endwhile;
-				?>
-			</ul>
+			<div class="author__post-listing">
+				<ul>
+					<?php
+					while( have_posts() ): the_post();
+					get_template_part( 'template-parts/listing', 'excerpt' );
+					endwhile;
+					?>
+				</ul>
+			</div>
+			<?php get_template_part( 'pagination' ); ?>
 		<?php else: ?>
 			<div class="author__no-posts">
 				<p>No articles form this author yet.</p>
