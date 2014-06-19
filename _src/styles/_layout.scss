@@ -1,7 +1,7 @@
 // Contains everything below the global nav
 .layout__page {
 	@include clearfix;
-	padding: 1rem;
+	padding: 2rem 2rem;
 	box-sizing: content-box;
 	max-width: $layout__post--max-width;
 	@include media($desktop) {
