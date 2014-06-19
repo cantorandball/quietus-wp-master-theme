@@ -60,7 +60,7 @@ add_filter( "single_template", "quietus_category_template" ) ;
  * @return string HTML-formatted post excerpt
  */
 function quietus_format_excerpt($excerpt) {
-	return ereg_replace( "([^.!?…;])(<\/p>)($|\s)", "\\1.\\2", trim( $excerpt ) );
+	return ereg_replace( "([^.!?…;])(<\/p>)", "\\1.\\2", $excerpt );
 }
 add_filter( "the_excerpt", "quietus_format_excerpt" ) ;
 
