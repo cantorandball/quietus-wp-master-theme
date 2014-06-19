@@ -4,26 +4,6 @@
 
 // ********** ELEMENTS **********
 
-.side-bar .puff {
-	$puff-ratio: 2/3;
-	@include puff-row-length(2, $puff-ratio);
-	@media #{$tablet} {
-		@include puff-row-length(3, $puff-ratio);
-	}
-	@media #{$desktop} {
-		@include puff-row-length(2, $puff-ratio);
-	}
-	&.album-reviews {
-		@include puff-row-length(2, 1);
-		@media #{$tablet} {
-			@include puff-row-length(3, 1);
-		}
-		@media #{$desktop} {
-			@include puff-row-length(2, 1);
-		}
-	}
-}
-
 .side-bar .puffs {
 	margin-bottom: 2rem;
 }

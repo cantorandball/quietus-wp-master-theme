@@ -10,7 +10,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-@mixin puff-row-length($length: 2, $ratio: 1) {
+@mixin puff-row-length($length: 2, $ratio: 2/3) {
 	width: 100% / $length;
 	a {
 		padding-bottom: percentage($ratio);
