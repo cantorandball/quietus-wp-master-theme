@@ -4,16 +4,6 @@
 
 // ********** ELEMENTS **********
 
-.side-bar .puff {
-	@include puff-row-length(2);
-	@media #{$tablet} {
-		@include puff-row-length($length: 3);
-	}
-	@media #{$desktop} {
-		@include puff-row-length($length: 2);
-	}
-}
-
 .side-bar .puffs {
 	margin-bottom: 2rem;
 }

@@ -8,7 +8,7 @@
 	line-height: 0;
 	&:before {
 		display: flex;
-		height: calc(2rem - #{$advert-border-width});
+		height: 2rem - $advert-border-width;
 		align-items: center;
 		justify-content: center;
 		color: darken($advert-bg, 15%);
@@ -27,7 +27,20 @@
 	width: 100%;
 	// background-color: #000;
 	border-bottom: 1px solid darken($advert-bg, 10%);
-	text-align: center;
+
+	// these overide defaults, just delete to make .centered the default
+	text-align: left;
+	padding-left: 1rem;
+	&:before {
+		width: 970px;
+	}
+	.centered & {
+		text-align: center;
+		padding-left: $advert-border-width;
+		&:before {
+			width: auto;
+		}
+	}
 }
 
 .advert--skyscraper,

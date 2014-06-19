@@ -41,11 +41,12 @@ get_header(); ?>
 				<ul>
 					<?php
 					while( have_posts() ): the_post();
-					get_template_part( 'template-parts/listing', 'excerpt' );
+					get_template_part( 'template-parts/listing' );
 					endwhile;
 					?>
 				</ul>
 			</div>
+			<?php get_template_part( 'template-parts/pagination' ); ?>
 		<?php else: ?>
 			<div class="category__no-posts">
 				<p>There are no articles in this category.</p>

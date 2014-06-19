@@ -1,6 +1,10 @@
 // ********** MODULE **********
 
-.post {}
+.post {
+	.layout__content {
+		margin-top: -.4rem; // pull content up, to handle lineheight of paras.
+	}
+}
 
 // ********** ELEMENTS **********
 
@@ -40,12 +44,14 @@
 }
 
 .post__featured-image {
-	@include clearfix;
+	@include media($mobile) {
+		margin-top: .4rem; // push image down to meet top of text
+	}
 	width: 100%;
 	&:after {
 		@extend %text-divider;
 		margin-top: 2rem;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 	}
 	img {
 		width: 100%;
@@ -54,25 +60,15 @@
 }
 
 .post__content {
-	margin-top: .5rem;
 	p {
-		// margin-bottom: 1em;
+		$font-size: 1.125rem;
+		$line-height: 1.5;
 		text-align: justify;
 		text-indent: 1.5em;
-		font-size: 1.125rem;
-		line-height: 1.5;
+		font-size: $font-size;
+		line-height: $line-height;
 		&:first-of-type {
-			text-indent: 0;
-			&:first-letter {
-				font-size: 1.4em;
-			}
-		}
-		&:last-of-type {
-			&:after {
-				@extend %font-s;
-				padding-left: 1ex;
-				content: '✧';
-			}
+			@extend %drop-cap;
 		}
 	}
 	hr {
@@ -81,6 +77,9 @@
 		margin-bottom: 1.125rem;
 		margin-top: 1.125rem;
 		border: none;
+		+ p {
+			@extend %drop-cap;
+		}
 	}
 }
 
@@ -103,7 +102,7 @@
 	margin-bottom: 2rem;
 	padding-top: 2rem;
 	width: 100%;
-	@media #{$tablet} {
+	@include media($tablet) {
 		margin-bottom: 0;
 		padding-bottom: 0
 	}
@@ -115,7 +114,7 @@
 
 .post__related .puff {
 	@include puff-row-length(2);
-	@media #{$tablet} {
+	@include media($tablet) {
 		@include puff-row-length(3);
 	}
 }

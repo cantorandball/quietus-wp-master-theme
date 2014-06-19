@@ -10,9 +10,13 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-@mixin puff-row-length($length: 2) {
+@mixin puff-row-length($length: 2, $ratio: 2/3) {
 	width: 100% / $length;
 	a {
-		padding-bottom: percentage(3/4);
+		padding-bottom: percentage($ratio);
 	}
+}
+
+@mixin media($media) {
+  @media only screen and #{$media} { @content; }
 }

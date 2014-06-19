@@ -52,6 +52,7 @@ function quietus_category_template( $single_template ) {
     };
     return $single_template;
 }
+
 add_filter( "single_template", "quietus_category_template" ) ;
 
 /**
@@ -68,5 +69,14 @@ function quietus_format_excerpt($excerpt) {
 	return $excerpt . '</p>';
 }
 add_filter( "the_excerpt", "quietus_format_excerpt" ) ;
+
+/**
+ * Prevents orphans in titles by replacing the last space with a &nbsp;
+ * @return  string the formatted title
+ */
+function quietus_the_title( $title, $id ) {
+    return preg_replace( '/\s([^\s]+)$/', '&nbsp;${1}', $title );
+}
+add_filter( 'the_title', 'quietus_the_title', 10, 2 );
 
 ?>

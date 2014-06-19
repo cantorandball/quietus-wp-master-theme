@@ -21,13 +21,16 @@ get_header(); ?>
 
 	<div class="layout__content">
 		<?php if ( have_posts() ): ?>
-			<ul class="search__post-listing">
-				<?php
-				while( have_posts() ): the_post();
-				get_template_part( 'template-parts/listing', 'excerpt' );
-				endwhile;
-				?>
-			</ul>
+			<div class="search__post-listing">
+				<ul>
+					<?php
+					while( have_posts() ): the_post();
+					get_template_part( 'template-parts/listing' );
+					endwhile;
+					?>
+				</ul>
+			</div>
+			<?php get_template_part( 'template-parts/pagination' ); ?>
 		<?php else: ?>
 			<div class="search__no-posts">
 				<p><?php echo( __( 'No results found', 'quietus' ) ); ?>.</p>

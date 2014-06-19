@@ -13,7 +13,7 @@ if ( $related_posts->have_posts() ): ?>
 		<ul>
 			<?php
 			while ( $related_posts->have_posts() ): $related_posts->the_post();
-			get_template_part( 'template-parts/listing' );
+			get_template_part( 'template-parts/puff' );
 			endwhile;
 			?>
 		</ul>

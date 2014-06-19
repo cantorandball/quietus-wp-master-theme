@@ -12,9 +12,12 @@
 
 .nav--global__primary {
 	@include clearfix;
-	// padding: 0 1rem .25rem;
-	text-align: center;
+	padding-left: .5rem;
 	font-size: 0;
+	.centered & {
+		text-align: center;
+		padding-left: 0;
+	}
 	> li {
 		display: inline-block;
 		a {

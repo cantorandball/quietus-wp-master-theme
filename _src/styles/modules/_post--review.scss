@@ -1,3 +1,7 @@
+.post--review__release {
+	font-style: italic;
+}
+
 .post--review__artist {
 	@extend %font-xs;
 	display: block;
@@ -10,20 +14,15 @@
 	width: 100%;
 	float: left;
 	margin-right: 1rem;
+	// margin-top: .45em;
+	// display: inline;
 	&:after {
 		display: none;
 	}
-	@media #{$mobile} {
-		width: 15.8em;
+	@include media($mobile) {
+		width: 14.3em;
 	}
-	@media #{$tablet} {
-		width: 19.25em;
-	}
-}
-
-.post--review .post__content {
-	margin-top: -.5em;
-	p:first-of-type:first-letter {
-		font-size: 1em;
+	@include media($tablet) {
+		// width: 19.35em;
 	}
 }

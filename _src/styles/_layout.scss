@@ -1,18 +1,24 @@
 // Contains everything below the global nav
 .layout__page {
 	@include clearfix;
+	padding: 1rem;
 	box-sizing: content-box;
-	margin-right: auto;
-	margin-left: auto;
-	padding: .5rem;
 	max-width: $layout__post--max-width;
-	@media #{$tablet} {
-		padding: 2rem 1rem;
+	@include media($desktop) {
+		max-width: $layout__content--max-width;
 	}
-	@media #{$desktop} {
-		padding-right: 2rem;
-		padding-left: 2rem;
-		max-width: calc(2rem + #{$layout__post--max-width} + #{$layout__side-bar--width});
+	.centered & {
+		padding: .5rem;
+		margin-right: auto;
+		margin-left: auto;
+		@include media($tablet) {
+			padding: 2rem 1rem;
+		}
+		@include media($desktop) {
+			padding-right: 2rem;
+			padding-left: 2rem;
+			max-width: $layout__content--max-width;
+		}
 	}
 }
 
@@ -27,16 +33,16 @@
 .layout__content {
 	@include clearfix;
 	width: 100%;
-	@media #{$desktop} {
+	@include media($desktop) {
 		float: left;
-		width: calc(100% - #{$layout__side-bar--width} - 2rem);
+		width: calc(100% - #{$layout__side-bar--width + 2rem});
 	}
 }
 
 // the side bar
 .layout__sidebar {
 	width: 100%;
-	@media #{$desktop} {
+	@include media($desktop) {
 		float: right;
 		width: $layout__side-bar--width;
 	}
