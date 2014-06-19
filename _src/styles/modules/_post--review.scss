@@ -14,20 +14,15 @@
 	width: 100%;
 	float: left;
 	margin-right: 1rem;
+	// margin-top: .45em;
+	// display: inline;
 	&:after {
 		display: none;
 	}
 	@media #{$mobile} {
-		width: 15.8em;
+		width: 14.3em;
 	}
 	@media #{$tablet} {
-		width: 19.25em;
-	}
-}
-
-.post--review .post__content {
-	margin-top: -.5em;
-	p:first-of-type:first-letter {
-		font-size: 1em;
+		// width: 19.35em;
 	}
 }

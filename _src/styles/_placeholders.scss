@@ -49,3 +49,16 @@
 		width: 100%;
 	}
 }
+
+%drop-cap {
+	text-indent: 0;
+	&:first-letter {
+		overflow: hidden;
+		font-size: 3.2em;
+		line-height: .92;
+		float: left;
+		display: block;
+		padding-right: .1ex;
+		margin-bottom: -.1em;
+	}
+}
