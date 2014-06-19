@@ -1,18 +1,24 @@
 // Contains everything below the global nav
 .layout__page {
 	@include clearfix;
+	padding: 1rem;
 	box-sizing: content-box;
-	margin-right: auto;
-	margin-left: auto;
-	padding: .5rem;
 	max-width: $layout__post--max-width;
-	@include media($tablet) {
-		padding: 2rem 1rem;
-	}
 	@include media($desktop) {
-		padding-right: 2rem;
-		padding-left: 2rem;
-		max-width: 2rem + $layout__post--max-width + $layout__side-bar--width;
+		max-width: $layout__content--max-width;
+	}
+	.centered & {
+		padding: .5rem;
+		margin-right: auto;
+		margin-left: auto;
+		@include media($tablet) {
+			padding: 2rem 1rem;
+		}
+		@include media($desktop) {
+			padding-right: 2rem;
+			padding-left: 2rem;
+			max-width: $layout__content--max-width;
+		}
 	}
 }
 
