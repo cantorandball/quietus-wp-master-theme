@@ -30,7 +30,7 @@ get_header(); ?>
 					?>
 				</ul>
 			</div>
-			<?php get_template_part( 'pagination' ); ?>
+			<?php get_template_part( 'template-parts/pagination' ); ?>
 		<?php else: ?>
 			<div class="search__no-posts">
 				<p><?php echo( __( 'No results found', 'quietus' ) ); ?>.</p>

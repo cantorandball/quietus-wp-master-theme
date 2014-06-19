@@ -33,7 +33,7 @@ get_header(); ?>
 					?>
 				</ul>
 			</div>
-			<?php get_template_part( 'pagination' ); ?>
+			<?php get_template_part( 'template-parts/pagination' ); ?>
 		<?php else: ?>
 			<div class="author__no-posts">
 				<p>No articles form this author yet.</p>
