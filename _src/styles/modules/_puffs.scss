@@ -26,18 +26,18 @@
 		background-repeat: no-repeat;
 	}
 	@include puff-row-length(2);
-	@media #{$tablet} {
+	@include media($tablet) {
 		@include puff-row-length(3);
 	}
-	@media #{$desktop} {
+	@include media($desktop) {
 		@include puff-row-length(2);
 	}
 	&.album-reviews {
 		@include puff-row-length(2, 1);
-		@media #{$tablet} {
+		@include media($tablet) {
 			@include puff-row-length(3, 1);
 		}
-		@media #{$desktop} {
+		@include media($desktop) {
 			@include puff-row-length(2, 1);
 		}
 	}

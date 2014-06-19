@@ -19,10 +19,10 @@
 	&:after {
 		display: none;
 	}
-	@media #{$mobile} {
+	@include media($mobile) {
 		width: 14.3em;
 	}
-	@media #{$tablet} {
+	@include media($tablet) {
 		// width: 19.35em;
 	}
 }

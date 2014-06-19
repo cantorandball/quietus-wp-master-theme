@@ -16,3 +16,7 @@
 		padding-bottom: percentage($ratio);
 	}
 }
+
+@mixin media($media) {
+  @media only screen and #{$media} { @content; }
+}
