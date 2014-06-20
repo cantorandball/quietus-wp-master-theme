@@ -1,6 +1,12 @@
 .listing {
 	@include clearfix;
-	margin-bottom: 1.25rem;
+	margin-bottom: .5rem;
+	padding-top: .5rem;
+	border-top: 1px solid $black;
+	&:last-child {
+		padding-bottom: .5rem;
+		border-bottom: 1px solid $black;
+	}
 	a {
 		color: $black;
 	}
@@ -38,5 +44,7 @@
 }
 
 .listing__excerpt {
+	@extend %standfirst;
 	font-size: 0.875rem;
+	padding: 0;
 }
