@@ -11,4 +11,22 @@
 .side-bar .advert:not(:last-child) {
 	margin-bottom: 2rem;
 	position: relative;
+.side-bar .puffs--album-reviews {
+	.puff {
+		@include puff-row-length(2, 1);
+		@include media($mobile) {
+			@include puff-row-length(3, 1);
+		}
+		@include media($cols-2) {
+			@include puff-row-length(2, 1);
+		}
+	}
+	@include media($cols-3) {
+		width: $layout--adverts__skyscraper-width;
+		float: right;
+	}
+	@include media($cols-4) {
+		float: left;
+	}
+}
 }

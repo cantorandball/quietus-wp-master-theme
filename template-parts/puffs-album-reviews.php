@@ -4,7 +4,7 @@
  */
 $latest_reviews = get_latest_reviews();
 ?>
-<dl class="puffs">
+<dl class="puffs puffs--album-reviews">
 	<?php if ( $latest_reviews->have_posts() ): ?>
 	<dt class="puff__header"><?php echo( __( 'Latest Reviews', 'quietus' ) ); ?></dt>
 	<dd>
