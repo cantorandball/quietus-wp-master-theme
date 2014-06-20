@@ -5,10 +5,70 @@
 // ********** ELEMENTS **********
 
 .side-bar .puffs {
-	margin-bottom: 2rem;
+	margin-bottom: 1.4rem;
+	.puff {
+		@include puff-row-length(2);
+		@include media($mobile) {
+			@include puff-row-length(3);
+		}
+		@include media($cols-2) {
+			@include puff-row-length(2);
+		}
+		@include media($cols-3) {
+			@include puff-row-length(1);
+		}
+		@include media($cols-4) {
+			@include puff-row-length(2);
+		}
+	}
+	@include media($cols-2) {
+		width: $layout--adverts__skyscraper-width;
+		float: left;
+	}
+	@include media($cols-3) {
+		width: $layout--adverts__skyscraper-width / 2;
+		float: left;
+	}
+	@include media($cols-4) {
+		width: $layout--adverts__skyscraper-width;
+		margin-right: $layout__gutter-width;
+	}
 }
 
-.side-bar .advert:not(:last-child) {
-	margin-bottom: 2rem;
-	position: relative;
+.side-bar .puffs--album-reviews {
+	.puff {
+		@include puff-row-length(2, 1);
+		@include media($mobile) {
+			@include puff-row-length(3, 1);
+		}
+		@include media($cols-2) {
+			@include puff-row-length(2, 1);
+		}
+	}
+	@include media($cols-3) {
+		width: $layout--adverts__skyscraper-width;
+		float: right;
+	}
+	@include media($cols-4) {
+		float: left;
+	}
+}
+
+
+.side-bar .advert {
+	width: 100%;
+	float: left;
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+		position: relative;
+	}
+	@include media($cols-2) {
+		width: $layout--adverts__skyscraper-width;
+	}
+	@include media($cols-3) {
+		float: right;
+	}
+	@include media($cols-4) {
+		// float: left;
+	}
 }
