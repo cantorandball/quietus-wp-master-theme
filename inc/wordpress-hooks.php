@@ -52,8 +52,17 @@ function quietus_category_template( $single_template ) {
     };
     return $single_template;
 }
-add_filter( "single_template", "quietus_category_template" );
 
+add_filter( "single_template", "quietus_category_template" ) ;
+
+/**
+ * Forces the excerpt to conclude with a full stop, regardless of what's in the post.
+ * @return string HTML-formatted post excerpt
+ */
+function quietus_format_excerpt($excerpt) {
+	return preg_replace( '/([^.!?…;])(<\/p>)/', '$1.$2', $excerpt );
+}
+add_filter( "the_excerpt", "quietus_format_excerpt" ) ;
 
 /**
  * Prevents orphans in titles by replacing the last space with a &nbsp;
@@ -63,4 +72,5 @@ function quietus_the_title( $title, $id ) {
     return preg_replace( '/\s([^\s]+)$/', '&nbsp;${1}', $title );
 }
 add_filter( 'the_title', 'quietus_the_title', 10, 2 );
+
 ?>
