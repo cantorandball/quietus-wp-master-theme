@@ -3,21 +3,20 @@
 	@include clearfix;
 	padding: 2rem 2rem;
 	box-sizing: content-box;
-	max-width: $layout__post--max-width;
-	@include media($desktop) {
-		max-width: $layout__content--max-width;
-	}
+	width: auto;
 	.centered & {
-		padding: .5rem;
-		margin-right: auto;
 		margin-left: auto;
-		@include media($tablet) {
-			padding: 2rem 1rem;
+		margin-right: auto;
+		max-width: $layout--post__max-width;
+		@include media($cols-2) {
+			width: $layout--post__max-width + $layout__gutter-width + $width-cols-2-sidebar;
+			max-width: none;
 		}
-		@include media($desktop) {
-			padding-right: 2rem;
-			padding-left: 2rem;
-			max-width: $layout__content--max-width;
+		@include media($cols-3) {
+			width: $layout--post__max-width + $layout__gutter-width + $width-cols-3-sidebar;
+		}
+		@include media($cols-4) {
+			width: $layout--post__max-width + $layout__gutter-width + $width-cols-4-sidebar;
 		}
 	}
 }
@@ -33,17 +32,26 @@
 .layout__content {
 	@include clearfix;
 	width: 100%;
-	@include media($desktop) {
+	max-width: $layout--post__max-width;
+	@include media($cols-2) {
 		float: left;
-		width: calc(100% - #{$layout__side-bar--width + 2rem});
 	}
 }
 
 // the side bar
 .layout__sidebar {
 	width: 100%;
-	@include media($desktop) {
-		float: right;
-		width: $layout__side-bar--width;
+	max-width: $layout--post__max-width;
+	float: left;
+	@include media($cols-2) {
+		width: $width-cols-2-sidebar;
+		max-width: none;
+		margin-left: $layout__gutter-width;
+	}
+	@include media($cols-3) {
+		width: $width-cols-3-sidebar;
+	}
+	@include media($cols-4) {
+		width: $width-cols-4-sidebar;
 	}
 }

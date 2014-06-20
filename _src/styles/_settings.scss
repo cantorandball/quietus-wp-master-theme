@@ -7,14 +7,38 @@ $link-colour: #0074D9;
 $advert-bg: darken(white, 7%);
 $advert-border-width: px-to-rem(5);
 
-$layout__post--max-width: 37.625rem;
-$layout__adverts--skyscraper-width: px-to-rem(300);
-$layout__side-bar--width: $layout__adverts--skyscraper-width + ($advert-border-width * 2);
-$layout__content--max-width: 2rem + $layout__post--max-width + $layout__side-bar--width;
+$layout__gutter-width: 2rem;
+$layout__padding-width: 2rem;
+$layout--puffs__gutter-width: .5rem;
+$layout--post__max-width: 37.625rem;
+$layout--adverts__skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
 
-// ********** BREAKPOINTS **********
+// ********** DEVICE BREAKPOINTS **********
+$desktop-l: "(min-width: 80rem)"; // 1280px
 $desktop: "(min-width: 61rem)"; // 976px
 $tablet: "(min-width: 46rem)"; // 736px
 $mobile: "(min-width: 30rem)"; // 480px
+
+// ********** GRID BREAKPOINTS **********
+// article | ads & double puffs
+$width-cols-2-sidebar: $layout--adverts__skyscraper-width;
+
+// article | single puffs | ads & double puffs
+$width-cols-3-sidebar:
+	$layout--adverts__skyscraper-width * .5 +
+	$layout__gutter-width +
+	$layout--adverts__skyscraper-width;
+
+// article | double puffs | ads
+$width-cols-4-sidebar:
+	$layout--adverts__skyscraper-width * 2 +
+	$layout__gutter-width;
+
+$width-article: $layout__padding-width * 2 + $layout--post__max-width + $layout__gutter-width;
+
+// ********** GRID MEDIA QUERIES **********
+$cols-2: "(min-width: #{$width-article + $width-cols-2-sidebar})";
+$cols-3: "(min-width: #{$width-article + $width-cols-3-sidebar})";
+$cols-4: "(min-width: #{$width-article + $width-cols-4-sidebar})";
 
 $images: "/wp-content/themes/quietus-wp-master-theme/images";

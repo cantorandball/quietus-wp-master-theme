@@ -22,7 +22,4 @@
 	@include media($mobile) {
 		width: 14.3em;
 	}
-	@include media($tablet) {
-		// width: 19.35em;
-	}
 }
