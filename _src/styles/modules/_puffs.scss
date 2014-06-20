@@ -2,19 +2,21 @@
 
 .puffs {
 	@include clearfix;
+	// max-width: $layout--adverts__skyscraper-width;
+	// width: 100%;
 }
 
 // ********** ELEMENTS **********
 
 .puffs ul {
-	margin-left: -.5rem;
+	margin-left: 0 - $layout--puffs__gutter-width;
 }
 
 .puff {
 	position: relative;
 	float: left;
-	margin-bottom: .5rem;
-	padding-left: .5rem;
+	margin-bottom: $layout--puffs__gutter-width;
+	padding-left: $layout--puffs__gutter-width;
 	a {
 		position: relative;
 		display: block;
@@ -25,32 +27,22 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	@include puff-row-length(2);
-	@include media($tablet) {
-		@include puff-row-length(3);
-	}
-	@include media($desktop) {
-		@include puff-row-length(2);
-	}
-	&.album-reviews {
-		@include puff-row-length(2, 1);
-		@include media($tablet) {
-			@include puff-row-length(3, 1);
-		}
-		@include media($desktop) {
-			@include puff-row-length(2, 1);
-		}
-	}
+	@include puff-row-length(1);
 }
 
 .puff__header {
 	margin-bottom: 1ex;
 	text-align: center;
 	font-variant: small-caps;
+	&:first-of-type {
+		@include media($cols-3) {
+			margin-top: -.4em;
+		}
+	}
 }
 
 .puff__list {
-	@include clearfix;
+	// @include clearfix;
 }
 
 .puff__content {

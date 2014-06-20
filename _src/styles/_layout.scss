@@ -1,24 +1,26 @@
 // Contains everything below the global nav
 .layout__page {
 	@include clearfix;
-	padding: 1rem;
 	box-sizing: content-box;
-	max-width: $layout__post--max-width;
-	@include media($desktop) {
-		max-width: $layout__content--max-width;
+	padding: .75rem;
+	max-width: $layout--post__max-width;
+	width: auto;
+	@include media($mobile) {
+		padding: 2rem;
+	}
+	@include media($cols-2) {
+		max-width: none;
+		width: $layout--post__max-width + $layout__gutter-width + $width-cols-2-sidebar;
+	}
+	@include media($cols-3) {
+		width: $layout--post__max-width + $layout__gutter-width + $width-cols-3-sidebar;
+	}
+	@include media($cols-4) {
+		width: $layout--post__max-width + $layout__gutter-width + $width-cols-4-sidebar;
 	}
 	.centered & {
-		padding: .5rem;
 		margin-right: auto;
 		margin-left: auto;
-		@include media($tablet) {
-			padding: 2rem 1rem;
-		}
-		@include media($desktop) {
-			padding-right: 2rem;
-			padding-left: 2rem;
-			max-width: $layout__content--max-width;
-		}
 	}
 }
 
@@ -31,19 +33,28 @@
 
 // the meat of the page. floats left of the side bar if there's room, else it appears above it.
 .layout__content {
-	@include clearfix;
+	max-width: $layout--post__max-width;
 	width: 100%;
-	@include media($desktop) {
+	@include clearfix;
+	@include media($cols-2) {
 		float: left;
-		width: calc(100% - #{$layout__side-bar--width + 2rem});
 	}
 }
 
 // the side bar
 .layout__sidebar {
+	float: left;
+	max-width: $layout--post__max-width;
 	width: 100%;
-	@include media($desktop) {
-		float: right;
-		width: $layout__side-bar--width;
+	@include media($cols-2) {
+		margin-left: $layout__gutter-width;
+		max-width: none;
+		width: $width-cols-2-sidebar;
+	}
+	@include media($cols-3) {
+		width: $width-cols-3-sidebar;
+	}
+	@include media($cols-4) {
+		width: $width-cols-4-sidebar;
 	}
 }

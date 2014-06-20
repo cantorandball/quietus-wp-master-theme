@@ -12,7 +12,7 @@
 
 .nav--global__primary {
 	@include clearfix;
-	padding-left: .5rem;
+	padding-left: 2rem - .65rem;
 	font-size: 0;
 	.centered & {
 		text-align: center;
