@@ -48,13 +48,13 @@ function quietus_categories_meta_box_callback( $post ) {
 		                           'hierarchical' => 0
 		                           ) );
 
-		$category_dt = $children ? $category->name : quietus_category_input( $category );
+		$category_dt = $children ? $category->name : quietus_category_input( $category, $post );
 		echo '<dt>' . $category_dt . '</dt>';
 
 		if ( $children ) {
 			echo '<dd><ul class="child-categories">';
 			foreach ( $children as $child ) {
-				echo '<li>' . quietus_category_input( $child ) . '</li>';
+				echo '<li>' . quietus_category_input( $child, $post ) . '</li>';
 			}
 			echo '</ul></dd>';
 		}
@@ -67,8 +67,7 @@ function quietus_categories_meta_box_callback( $post ) {
  * @param  object $cat the category to generate a radio button for
  * @return string      category radio input and label
  */
-function quietus_category_input( $cat ) {
-	global $post;
+function quietus_category_input( $cat, $post ) {
 	$cat_ID   = $cat->cat_ID;
 	$cat_name = $cat->name;
 	$checked  = in_category( $cat_ID, $post->ID );
