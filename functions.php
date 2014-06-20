@@ -8,6 +8,7 @@
  */
 
 require( get_template_directory() . '/inc/theme-setup.php' );
+require( get_template_directory() . '/inc/admin-setup.php' );
 require( get_template_directory() . '/inc/wordpress-sanitisation.php' );
 require( get_template_directory() . '/inc/wordpress-hooks.php' );
 require( get_template_directory() . '/inc/template-helpers.php' );
