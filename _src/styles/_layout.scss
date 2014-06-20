@@ -1,9 +1,12 @@
 // Contains everything below the global nav
 .layout__page {
 	@include clearfix;
-	padding: 2rem 2rem;
+	padding: .75rem;
 	box-sizing: content-box;
 	width: auto;
+	@include media($mobile) {
+		padding: 2rem;
+	}
 	.centered & {
 		margin-left: auto;
 		margin-right: auto;
