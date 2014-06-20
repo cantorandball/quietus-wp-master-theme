@@ -1,6 +1,9 @@
 .listing {
 	@include clearfix;
 	margin-bottom: 1.25rem;
+	a {
+		color: $black;
+	}
 }
 
 .listing__thumbnail,
@@ -21,6 +24,7 @@
 
 .listing__content {
 	max-width: 27.3125rem;
+	margin-top: -.25em;
 }
 
 .listing__category-title {
@@ -28,7 +32,9 @@
 }
 
 .listing__post-title {
-	margin-bottom: .5em;
+	@extend %font-l;
+	line-height: 1.2;
+	margin-bottom: .05em;
 }
 
 .listing__excerpt {
