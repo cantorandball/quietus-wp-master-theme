@@ -17,7 +17,7 @@ get_header();
 
 		<ul class="categories">
 			<?php foreach( $child_categories as $cat ): ?>
-				<?php $posts = get_posts_in_category( $cat->cat_ID, 4 ); ?>
+				<?php $posts = get_posts_in_category( $cat->cat_ID, 3 ); ?>
 				<?php if ( $posts->have_posts() ): $posts->the_post(); ?>
 					<li class="category-card">
 						<h2><?php echo $cat->name; ?></h2>
@@ -28,11 +28,10 @@ get_header();
 						</div>
 						<ul>
 							<?php while( $posts->have_posts() ): $posts->the_post(); ?>
-								<li>
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								</li>
+								<?php get_template_part( 'template-parts/listing' ) ?>
 							<?php endwhile; ?>
 						</ul>
+						<a href="<?php echo esc_url( get_category_link( $cat->cat_ID ) ); ?>">More from ‘<?php echo $cat->name; ?>’</a>
 					</li>
 				<?php endif; ?>
 			<?php endforeach; ?>
