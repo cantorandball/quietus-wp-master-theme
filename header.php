@@ -9,7 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="">
+<body class="centered">
 	<div id="leaderboard" class="advert advert--leaderboard"></div>
 	<header id="header">
 		<h1 id="header__logo">
