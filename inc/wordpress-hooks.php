@@ -55,6 +55,24 @@ function quietus_category_template( $single_template ) {
 
 add_filter( "single_template", "quietus_category_template" ) ;
 
+function quietus_category_template( $category_template ) {
+	global $child_categories;
+
+	$category = get_queried_object();
+	$child_categories = get_categories( array(
+		                           'type'         => 'post',
+		                           'parent'       => $category->cat_ID,
+		                           'hide_empty'   => 0,
+		                           'hierarchical' => 0
+		                           ) );
+
+	if ( $child_categories)
+		return get_template_directory() . '/category-root.php';
+
+	return $category_template;
+}
+add_filter( 'category_template', 'quietus_category_template' );
+
 /**
  * Forces the excerpt to conclude with a full stop, regardless of what's in the post.
  * @return string HTML-formatted post excerpt
