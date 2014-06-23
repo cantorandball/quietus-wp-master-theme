@@ -73,4 +73,18 @@ function get_paginate_links() {
 
 	return $paginate_links;
 }
+
+function get_posts_in_category( $category_id, $limit ) {
+	return new WP_Query( array(
+	                    'cat' => $category_id,
+	                    'posts_per_page' => $limit
+	                    ) );
+}
+
+function get_background_image_url( $post_id, $size ) {
+	$size = $size || 'medium';
+	$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size )[0];
+
+	return 'background-image:url(' . $src . ')';
+}
 ?>
