@@ -1,0 +1,28 @@
+// _layout.scss
+.layout__page {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// modules/_adverts.scss
+.advert--leaderboard {
+	padding-left: $advert-border-width;
+	text-align: center;
+	&:before {
+			width: auto;
+	}
+}
+
+// modules/_header.scss
+#header {
+	&__logo {
+		background-image: url("#{$images}/logo-no_url.svg");
+		background-position: center;
+	}
+}
+
+// modules/_nav--global.scss
+.nav--global__primary {
+	padding-left: 0;
+	text-align: center;
+}

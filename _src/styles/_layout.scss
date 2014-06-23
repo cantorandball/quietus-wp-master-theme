@@ -18,10 +18,6 @@
 	@include media($cols-4) {
 		width: $layout--post__max-width + $layout__gutter-width + $width-cols-4-sidebar;
 	}
-	.centered & {
-		margin-right: auto;
-		margin-left: auto;
-	}
 }
 
 // full bleed element, for example the article header

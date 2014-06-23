@@ -10,10 +10,6 @@
 		background-position: 2rem center;
 		background-size: auto 61%;
 		background-repeat: no-repeat;
-		.centered & {
-			background-image: url("#{$images}/logo-no_url.svg");
-			background-position: center;
-		}
 	}
 }
 
