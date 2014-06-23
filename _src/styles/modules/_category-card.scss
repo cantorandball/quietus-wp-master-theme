@@ -1,0 +1,16 @@
+.category-card {
+	width: 50%;
+	float: left;
+}
+
+.category-card:nth-child(2n) {
+	padding-left: 0.625rem;
+}
+
+.category-card:nth-child(2n+1) {
+	padding-right: 0.625rem;
+}
+
+.puff.category-card__puff {
+	padding-left: 0;
+}
