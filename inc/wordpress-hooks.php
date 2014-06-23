@@ -44,7 +44,7 @@ add_filter( 'wp_title', 'quietus_wp_title', 10, 2 );
  * Filter to create single-category.php templates.
  * Derived from http://www.nathanrice.net/blog/wordpress-single-post-templates
  */
-function quietus_category_template( $single_template ) {
+function quietus_single_template( $single_template ) {
     foreach( (array) get_the_category() as $cat ) {
     	if ( file_exists(get_template_directory() . "/single-{$cat->slug}.php") ) {
     		return get_template_directory() . "/single-{$cat->slug}.php";
@@ -53,7 +53,8 @@ function quietus_category_template( $single_template ) {
     return $single_template;
 }
 
-add_filter( "single_template", "quietus_category_template" ) ;
+add_filter( "single_template", "quietus_single_template" ) ;
+
 
 function quietus_category_template( $category_template ) {
 	global $child_categories;
