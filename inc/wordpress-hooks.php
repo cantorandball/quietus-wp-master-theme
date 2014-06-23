@@ -46,8 +46,8 @@ add_filter( 'wp_title', 'quietus_wp_title', 10, 2 );
  */
 function quietus_category_template( $single_template ) {
     foreach( (array) get_the_category() as $cat ) {
-    	if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") ) {
-    		return TEMPLATEPATH . "/single-{$cat->slug}.php";
+    	if ( file_exists(get_template_directory() . "/single-{$cat->slug}.php") ) {
+    		return get_template_directory() . "/single-{$cat->slug}.php";
     	};
     };
     return $single_template;
