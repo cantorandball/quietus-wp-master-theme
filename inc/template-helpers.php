@@ -87,4 +87,28 @@ function get_background_image_url( $post_id, $size ) {
 
 	return 'background-image:url(' . $src . ')';
 }
+
+function quietus_the_category( $link_to ) {
+	$cat = quietus_get_the_category();
+	$link = get_category_link( $cat->cat_ID );
+	if ( !$cat )
+		return;
+
+	if ( $link_to ) {
+		echo '<a href="' . esc_url( $link ) . '">' . $cat->name . '</a>';
+	} else {
+		echo $cat->name;
+	}
+
+}
+
+function quietus_get_the_category() {
+	$cat = get_the_category();
+
+	if ( $cat ) {
+		return $cat[0];
+	} else {
+		return null;
+	}
+}
 ?>
