@@ -61,7 +61,16 @@
 }
 
 .layout__sidebar--wider {
-	@extend .layout__sidebar;
-	max-width: $layout--root-category__sidebar__max-width;
-	margin-left: 1.25rem;
+	float: left;
+	width: 100%;
+
+	@include media($mobile) {
+		margin-left: 0;
+		max-width: none;
+	}
+
+	@include media($desktop) {
+		max-width: $layout--root-category__sidebar__max-width;
+		margin-left: 1.25rem;
+	}
 }
