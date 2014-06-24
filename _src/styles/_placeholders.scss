@@ -11,6 +11,10 @@
 	font-size: 1.3rem;
 }
 
+%antialias {
+	-webkit-font-smoothing: antialiased;
+}
+
 %text-divider {
 	display: block;
 	clear: both;
