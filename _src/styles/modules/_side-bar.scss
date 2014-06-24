@@ -4,6 +4,23 @@
 
 // ********** ELEMENTS **********
 
+.side-bar .child-categories {
+	margin-bottom: 1.4rem;
+
+	li {
+	 	margin-bottom: 0.625rem;
+	}
+}
+
+.side-bar .child-categories__title {
+	@extend %main-title;
+}
+
+.side-bar .child-categories__excerpt {
+	@extend %font-s;
+}
+
+
 .side-bar .puffs {
 	margin-bottom: 1.4rem;
 	.puff {

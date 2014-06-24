@@ -1,0 +1,26 @@
+.featured-articles {
+	@include clearfix;
+	margin-bottom: 1.4rem;
+}
+
+.featured-article {
+	width: 33%;
+	float: left;
+	padding-left: 1.25rem;
+}
+
+.featured-article:first-child {
+	margin-left: -1.25rem;
+}
+
+.featured-article__category-title {
+	@extend %lead-in-title;
+}
+
+.featured-article__title {
+	@extend %font-l;
+}
+
+.puff.featured-article__puff {
+	padding-left: 0;
+}
