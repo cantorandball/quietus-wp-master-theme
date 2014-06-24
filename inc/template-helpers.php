@@ -96,6 +96,9 @@ if ( !function_exists( 'quietus_get_current_category' ) ) {
 	function quietus_get_current_category() {
 		global $quietus_current_category;
 
+		if ( $quietus_current_category )
+			return $quietus_current_category;
+
 		if ( is_category() ) {
 			$quietus_current_category = get_queried_object();
 		} else {
