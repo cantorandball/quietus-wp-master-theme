@@ -87,4 +87,25 @@ function get_background_image_url( $post_id, $size ) {
 
 	return 'background-image:url(' . $src . ')';
 }
+
+/**
+ * Get the current category, regardless of page type.
+ * @return Category 	wp category object
+ */
+if ( !function_exists( 'quietus_get_current_category' ) ) {
+	function quietus_get_current_category() {
+		$quietus_current_category;
+
+		if ( is_category() ) {
+			$quietus_current_category = get_queried_object();
+		} else {
+			$categories = get_the_category( get_queried_object_id() );
+			if ( $categories )
+				$quietus_current_category = $categories[0];
+		}
+
+		return $quietus_current_category;
+	}
+}
+
 ?>
