@@ -16,7 +16,7 @@ if ( is_category() && get_queried_object_id() == get_the_category()[0]->cat_ID )
 	<div class="listing__content">
 		<?php if ( $show_category ): ?>
 			<h3 class="listing__category-title">
-				<?php the_category(); ?>
+				<?php quietus_the_category( true ); ?>
 			</h3>
 		<?php endif; ?>
 		<h2 class="listing__post-title">

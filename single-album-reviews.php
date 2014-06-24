@@ -11,7 +11,7 @@ get_header(); ?>
 <article role="main" class="post post--review" itemscope itemtype="http://schema.org/Review">
 	<div class="layout__jumbotron">
 		<header>
-			<h3 class="post__category-title"><?php the_category(); ?></h3>
+			<h3 class="post__category-title"><?php quietus_the_category( true ); ?></h3>
 			<h2 class="post__title" itemprop="itemReviewed">
 				<span class="post--review__release" itemprop="name"><?php the_field('album_title'); ?></span>
 				<span class="post--review__artist" itemprop="creator"><?php the_field('album_artist'); ?></span>
