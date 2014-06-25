@@ -36,7 +36,12 @@ module.exports = {
 		flowNavItems();
 		$(window).on('resize orientationchange', flowNavItems);
 
-		$(document.body).on('click', '.nav--global__overflow-toggle', function(){
+		$(document).on("click", function(){
+			$overflowNav.removeClass('active');
+		});
+
+		$(document.body).on('click', '.nav--global__overflow-toggle', function(e){
+			e.stopPropagation();
 			$overflowNav.toggleClass('active');
 		});
 	}
