@@ -5,7 +5,6 @@
  * @since The Quietus Master 1.0
  */
 
-global $child_categories;
 get_header();
 ?>
 
@@ -15,30 +14,48 @@ get_header();
 			<h2 class="category__title"><?php single_cat_title( '', true ); ?></h2>
 		</header>
 
-		<ul class="categories">
-			<?php foreach( $child_categories as $cat ): ?>
-				<?php $posts = get_posts_in_category( $cat->cat_ID, 3 ); ?>
-				<?php if ( $posts->have_posts() ): $posts->the_post(); ?>
-					<li class="category-card">
-						<h2><?php echo $cat->name; ?></h2>
-						<div class="puff category-card__puff">
+		<ul class="featured-articles">
+			<?php for ( $i=0; $i < 3; $i++ ): ?>
+				<?php if ( have_posts() ): the_post(); ?>
+					<li class="featured-article">
+						<div class="puff featured-article__puff">
 							<a href="<?php the_permalink(); ?>" style="<?php echo get_background_image_url( get_the_ID(), 'medium' ); ?>">
-								<span class="puff__content"><?php the_title(); ?></span>
+								<div class="puff__content">
+									<h3 class="featured-article__category-title">
+										<?php quietus_the_category( false ); ?>
+									</h3>
+									<h2 class="featured-article__title">
+										<?php the_title(); ?>
+									</h2>
+								</div>
 							</a>
 						</div>
-						<ul>
-							<?php while( $posts->have_posts() ): $posts->the_post(); ?>
-								<?php get_template_part( 'template-parts/listing' ) ?>
-							<?php endwhile; ?>
-						</ul>
-						<a href="<?php echo esc_url( get_category_link( $cat->cat_ID ) ); ?>">More from ‘<?php echo $cat->name; ?>’</a>
 					</li>
 				<?php endif; ?>
-			<?php endforeach; ?>
+			<?php endfor; ?>
 		</ul>
+	</div>
+
+	<div class="layout__content--wider">
+		<header>
+			<h2 class="category__title"><?php echo __( 'Recent articles', 'quietus' ); ?></h2>
+		</header>
+		<?php if ( have_posts() ): ?>
+			<div class="category__post-listing">
+				<ul>
+					<?php
+					while( have_posts() ): the_post();
+					get_template_part( 'template-parts/listing' );
+					endwhile;
+					?>
+				</ul>
+			</div>
+			<?php get_template_part( 'template-parts/pagination' ); ?>
+		<?php endif; ?>
 	</div>
 </section>
 
 <?php
+get_sidebar( 'category-root' );
 get_footer();
 ?>

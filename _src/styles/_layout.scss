@@ -29,12 +29,17 @@
 
 // the meat of the page. floats left of the side bar if there's room, else it appears above it.
 .layout__content {
-	max-width: $layout--post__max-width;
 	width: 100%;
 	@include clearfix;
 	@include media($cols-2) {
 		float: left;
 	}
+	max-width: $layout--post__max-width;
+}
+
+.layout__content--wider {
+	@extend .layout__content;
+	max-width: $layout--root-category__max-width;
 }
 
 // the side bar
@@ -52,5 +57,20 @@
 	}
 	@include media($cols-4) {
 		width: $width-cols-4-sidebar;
+	}
+}
+
+.layout__sidebar--wider {
+	float: left;
+	width: 100%;
+
+	@include media($mobile) {
+		margin-left: 0;
+		max-width: none;
+	}
+
+	@include media($desktop) {
+		max-width: $layout--root-category__sidebar__max-width;
+		margin-left: 1.25rem;
 	}
 }
