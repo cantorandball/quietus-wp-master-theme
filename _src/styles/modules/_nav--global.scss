@@ -4,8 +4,9 @@
 	position: relative;
 	width: 100%;
 	border-top: 1px $black solid;
-	border-bottom: 1px $black solid;
+	border-bottom: 1px solid $black;
 	background-color: $white;
+	font-size: 0;
 }
 
 // ********** ELEMENTS **********
@@ -22,10 +23,9 @@
 			color: $black;
 			font-variant: small-caps;
 			font-size: 1rem;
-			// font-style: italic;
 		}
 	}
-	> li.active a, > li a:hover {
+	.active > a, a:hover {
 		background-color: $black;
 		color: $white;
 		text-decoration: none;
@@ -33,7 +33,32 @@
 }
 
 .nav--global__secondary {
-	display: none
+	margin-top: -1px;
+	width: 100%;
+	border-top: 1px solid $black;
+	background-color: $white;
+	font-size: 0;
+	&:empty {
+		display: none;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		@extend %font-s;
+		display: inline-block;
+		padding: .4em 1em;
+		color: lighten($black, 0%);
+		font-style: italic;
+		font-variant: small-caps;
+	}
+	.active > a, a:hover {
+		margin-top: -1px;
+		border-top: 1px solid $black;
+		background-color: $black;
+		color: $white;
+		text-decoration: none;
+	}
 }
 
 #nav--global__toggle {
@@ -42,9 +67,6 @@
 	top: 0;
 	right: 0;
 	display: none;
-	// z-index: 1;
-	// width: $nav-height;
-	// height: $nav-height;
 	border: 0;
 	&:focus {
 		outline: none;
