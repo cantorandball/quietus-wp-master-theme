@@ -26,7 +26,7 @@
 			<?php wp_nav_menu( array(
 				'container' => false,
 				'items_wrap' => '%3$s',
-				'depth' => 0
+				'depth' => 1
 			) ); ?>
 	   	</ul>
 		<button id="nav--global__toggle">Toggle navigation</button>
