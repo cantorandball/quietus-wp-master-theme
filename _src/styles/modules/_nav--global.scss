@@ -4,7 +4,6 @@
 	position: relative;
 	width: 100%;
 	border-top: 1px $black solid;
-	border-bottom: 1px solid $black;
 	background-color: $white;
 	font-size: 0;
 }
@@ -12,77 +11,63 @@
 // ********** ELEMENTS **********
 
 .nav--global__primary {
-	@include clearfix;
+	overflow: hidden;
+	padding-right: 2rem;
 	padding-left: 2rem - .65rem;
+	height: 2rem;
+	border-bottom: 1px solid $black;
 	font-size: 0;
-	> li {
+	li {
+		@extend %nav-item;
 		display: inline-block;
+		font-size: 1rem;
+		&:before {
+			display: inline-block;
+			content: '∙';
+		}
+		&:first-child:before {
+			content: '';
+		}
 		a {
 			display: inline-block;
-			padding: .2em .65em;
-			color: $black;
-			font-variant: small-caps;
-			font-size: 1rem;
+			margin-right: -.2em;
+			margin-left: -.2em;
+			padding: .3em .9em;
 		}
 	}
 	.active > a, a:hover {
 		background-color: $black;
 		color: $white;
-		text-decoration: none;
 	}
 }
 
 .nav--global__secondary {
-	margin-top: -1px;
+	padding-left: 2rem - .65rem;
 	width: 100%;
-	border-top: 1px solid $black;
 	background-color: $white;
 	font-size: 0;
 	&:empty {
 		display: none;
 	}
 	li {
-		display: inline-block;
-	}
-	a {
+		@extend %nav-item;
 		@extend %font-s;
 		display: inline-block;
-		padding: .4em 1em;
-		color: lighten($black, 0%);
-		font-style: italic;
-		font-variant: small-caps;
+		&:before {
+			display: inline-block;
+			padding: 0 .8em;
+			content: '∙';
+		}
+		&:first-child:before {
+			content: '';
+		}
+	}
+	a {
+		display: inline-block;
+		padding: .7em 0 .1em;
+		border-bottom: 1px solid $white;
 	}
 	.active > a, a:hover {
-		margin-top: -1px;
-		border-top: 1px solid $black;
-		background-color: $black;
-		color: $white;
-		text-decoration: none;
-	}
-}
-
-#nav--global__toggle {
-	@include text-hide;
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: none;
-	border: 0;
-	&:focus {
-		outline: none;
-	}
-	&:after {
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: flex;
-		width: 100%;
-		height: 100%;
-		align-items: center;
-		justify-content: center;
-		color: $black;
-		content: '…';
-		font-size: 1rem;
-		line-height: 1;
+		border-color: $black;
 	}
 }

@@ -35,6 +35,9 @@
 				'depth' => 0,
 				'walker' => new quietus_sub_menu()
 			) ); ?></ul>
-		<button id="nav--global__toggle">Toggle navigation</button>
+	   	<div class="nav--global__overflow">
+	   		<button class="nav--global__overflow-toggle">Toggle navigation</button>
+			<ul class="nav--global__overflow-items"></ul>
+	   	</div>
 	</nav>
 	<div class="layout__page">

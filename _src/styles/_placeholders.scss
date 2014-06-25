@@ -10,6 +10,10 @@
 %font-xl {
 	font-size: 1.3rem;
 }
+%font-reset {
+	font-size: 1rem;
+	line-height: $line-height;
+}
 
 %antialias {
 	-webkit-font-smoothing: antialiased;
@@ -26,6 +30,18 @@
 	background-size: 50%;
 	background-repeat: no-repeat;
 	content: '';
+}
+
+%nav-item {
+	color: $black;
+	font-variant: small-caps;
+
+	a {
+		color: $black;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 %lead-in-title {

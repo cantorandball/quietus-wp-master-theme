@@ -1,0 +1,57 @@
+.nav--global__overflow {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.nav--global__overflow-items {
+	position: absolute;
+	top: 2rem;
+	right: 0;
+	display: none;
+	width: 12rem;
+	border-bottom: 1px solid $black;
+	border-left: 1px solid $black;
+	background-color: $white;
+	li {
+		@extend %nav-item;
+		display: block;
+		white-space:nowrap;
+		font-size: 1rem;
+	}
+	a {
+		display: block;
+		padding: .3em .6em;
+	}
+	.active > a, a:hover {
+		background-color: $black;
+		color: $white;
+	}
+	.nav--global__overflow.active & {
+		display: block;
+	}
+}
+
+.nav--global__overflow-toggle {
+	@include text-hide;
+	position: relative;
+	z-index: 1;
+	padding: 0;
+	width: 2rem;
+	height: 0rem + (32/16);
+	outline: none;
+	border-bottom: 1px solid $black;
+	border-left: 1px solid $black;
+	background-color: $white;
+	color: $black;
+	cursor: pointer;
+	&.highlight, &:hover, .nav--global__overflow.active & {
+		background-color: $black;
+		color: $white;
+	}
+	&:after {
+		@extend %font-reset;
+		display: inline-block;
+		margin: 0;
+		content: '…';
+	}
+}
