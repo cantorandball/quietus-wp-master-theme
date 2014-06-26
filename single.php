@@ -11,7 +11,7 @@ get_header(); ?>
 <article role="main" class="post">
 	<div class="layout__jumbotron">
 		<header>
-			<h3 class="post__category-title"><?php the_category(); ?></h3>
+			<h3 class="post__category-title"><?php quietus_the_category( true ); ?></h3>
 			<h2 class="post__title"><?php the_title(); ?></h2>
 		</header>
 		<?php get_template_part( 'template-parts/single-standfirst' ) ?>

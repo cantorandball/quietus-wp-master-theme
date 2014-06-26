@@ -12,7 +12,6 @@ module.exports = {
 		// distribute article ads evenly between article paras
 		var $articleAds = $('[data-advert-article]');
 		var $articleParas = $('.post__content p');
-		console.log($articleParas.length);
 		var parasBeforeAd = Math.round($articleParas.length / ($articleAds.length + 1));
 		$articleAds.each(function(i, ad){
 			var adSrc = '<div class="advert">' + ad.innerHTML + '</div>';

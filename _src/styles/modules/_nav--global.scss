@@ -4,67 +4,70 @@
 	position: relative;
 	width: 100%;
 	border-top: 1px $black solid;
-	border-bottom: 1px $black solid;
 	background-color: $white;
+	font-size: 0;
 }
 
 // ********** ELEMENTS **********
 
 .nav--global__primary {
-	@include clearfix;
-	padding-left: 2rem - .65rem;
+	overflow: hidden;
+	padding-right: 2rem;
+	height: 2rem;
+	border-bottom: 1px solid $black;
+	text-align: center;
 	font-size: 0;
-	.centered & {
-		text-align: center;
-		padding-left: 0;
-	}
-	> li {
+	li {
+		@extend %nav-item;
 		display: inline-block;
+		font-size: 1rem;
+		&:before {
+			display: inline-block;
+			content: '∙';
+		}
+		&:first-child:before {
+			content: '';
+		}
 		a {
 			display: inline-block;
-			padding: .2em .65em;
-			color: $black;
-			font-variant: small-caps;
-			font-size: 1rem;
-			// font-style: italic;
+			margin-right: -.2em;
+			margin-left: -.2em;
+			padding: .3em .9em;
 		}
 	}
-	> li.active a, > li a:hover {
+	.active > a, a:hover {
 		background-color: $black;
 		color: $white;
-		text-decoration: none;
 	}
 }
 
 .nav--global__secondary {
-	display: none
-}
-
-#nav--global__toggle {
-	@include text-hide;
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: none;
-	// z-index: 1;
-	// width: $nav-height;
-	// height: $nav-height;
-	border: 0;
-	&:focus {
-		outline: none;
+	width: 100%;
+	background-color: $white;
+	text-align: center;
+	font-size: 0;
+	&:empty {
+		display: none;
 	}
-	&:after {
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: flex;
-		width: 100%;
-		height: 100%;
-		align-items: center;
-		justify-content: center;
-		color: $black;
-		content: '…';
-		font-size: 1rem;
-		line-height: 1;
+	li {
+		@extend %nav-item;
+		@extend %font-s;
+		display: inline-block;
+		&:before {
+			display: inline-block;
+			padding: 0 .8em;
+			content: '∙';
+		}
+		&:first-child:before {
+			content: '';
+		}
+	}
+	a {
+		display: inline-block;
+		padding: .7em 0 .1em;
+		border-bottom: 1px solid $white;
+	}
+	.active > a, a:hover {
+		border-color: $black;
 	}
 }

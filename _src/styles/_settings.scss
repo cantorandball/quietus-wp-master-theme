@@ -4,6 +4,8 @@ $white: #fff;
 $light-grey: #999;
 $link-colour: #0074D9;
 
+$line-height: 1.4;
+
 $advert-bg: darken(white, 7%);
 $advert-border-width: px-to-rem(5);
 
@@ -11,6 +13,8 @@ $layout__gutter-width: 2rem;
 $layout__padding-width: 2rem;
 $layout--puffs__gutter-width: .5rem;
 $layout--post__max-width: 37.625rem;
+$layout--root-category__max-width: 51.875rem;
+$layout--root-category__sidebar__max-width: 25.25rem;
 $layout--adverts__skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
 
 // ********** DEVICE BREAKPOINTS **********

@@ -1,9 +1,9 @@
 {
-	"color-case": "lower",
-	"combinator-space": [1, 1],
-	"element-case": "lower",
-	"leading-zero": false,
-	"stick-brace": 1,
+  "color-case": "lower",
+  "combinator-space": [1, 1],
+  "element-case": "lower",
+  "leading-zero": false,
+  "stick-brace": 1,
   "sort-order": [
     "$variable",
     "$include",

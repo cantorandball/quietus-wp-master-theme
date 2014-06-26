@@ -9,7 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="">
+<body>
 	<div id="leaderboard" class="advert advert--leaderboard"></div>
 	<header id="header">
 		<h1 id="header__logo">
@@ -29,6 +29,15 @@
 				'depth' => 1
 			) ); ?>
 	   	</ul>
-		<button id="nav--global__toggle">Toggle navigation</button>
+		<ul class="nav--global__secondary"><?php wp_nav_menu( array(
+				'container' => false,
+				'items_wrap' => '%3$s',
+				'depth' => 0,
+				'walker' => new quietus_sub_menu()
+			) ); ?></ul>
+	   	<div class="nav--global__overflow">
+	   		<button class="nav--global__overflow-toggle">Toggle navigation</button>
+			<ul class="nav--global__overflow-items"></ul>
+	   	</div>
 	</nav>
 	<div class="layout__page">

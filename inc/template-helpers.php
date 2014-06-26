@@ -73,4 +73,65 @@ function get_paginate_links() {
 
 	return $paginate_links;
 }
+
+function get_posts_in_category( $category_id, $limit ) {
+	return new WP_Query( array(
+	                    'cat' => $category_id,
+	                    'posts_per_page' => $limit
+	                    ) );
+}
+
+function get_background_image_url( $post_id, $size ) {
+	$size = $size || 'medium';
+	$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size )[0];
+
+	return 'background-image:url(' . $src . ')';
+}
+
+function quietus_the_category( $link_to ) {
+	$cat = quietus_get_the_category();
+	$link = get_category_link( $cat->cat_ID );
+	if ( !$cat )
+		return;
+
+	if ( $link_to ) {
+		echo '<a href="' . esc_url( $link ) . '">' . $cat->name . '</a>';
+	} else {
+		echo $cat->name;
+	}
+
+}
+
+function quietus_get_the_category() {
+	$cat = get_the_category();
+
+	if ( $cat ) {
+		return $cat[0];
+	} else {
+		return null;
+	}
+}
+
+/**
+ * Get the current category, regardless of page type.
+ * @return Category 	wp category object
+ */
+if ( !function_exists( 'quietus_get_current_category' ) ) {
+	function quietus_get_current_category() {
+		global $quietus_current_category;
+
+		if ( $quietus_current_category )
+			return $quietus_current_category;
+
+		if ( is_category() ) {
+			$quietus_current_category = get_queried_object();
+		} else {
+			$categories = get_the_category( get_queried_object_id() );
+			if ( $categories )
+				$quietus_current_category = $categories[0];
+		}
+
+		return $quietus_current_category;
+	}
+}
 ?>
