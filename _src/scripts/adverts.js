@@ -1,6 +1,6 @@
 'use strict';
 
-var $ = require('jquery');
+var $ = require('zepto-browserify').$;
 
 module.exports = {
 	insert: function(){

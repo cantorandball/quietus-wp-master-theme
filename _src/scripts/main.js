@@ -1,4 +1,4 @@
-var $ = require('jquery');
+var $ = require('zepto-browserify').$;
 var adverts = require('./adverts');
 var overflowNav = require('./overflow-nav');
 

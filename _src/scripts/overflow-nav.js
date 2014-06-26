@@ -1,4 +1,4 @@
-var $ = require('jquery');
+var $ = require('zepto-browserify').$;
 var optimisedResize = require('./optimized-resize');
 
 var items = $('.nav--global__primary li');
