@@ -43,7 +43,8 @@ module.exports = (function() {
 		// initalize resize event listener
 		init: function(callback) {
 			if (raf) {
-				window.addEventListener('resize orientationchange', resize);
+				window.addEventListener('resize', resize);
+				window.addEventListener('orientationchange', resize);
 				addCallback(callback);
 			}
 		},
