@@ -1,7 +1,5 @@
 var $ = require('jquery');
-var _ = {
-	debounce: require('lodash.debounce')
-};
+var optimisedResize = require('./optimized-resize');
 
 var items = $('.nav--global__primary li');
 var $overflowNav = $('.nav--global__overflow');
@@ -10,7 +8,7 @@ var $overFlowNavItems = items.clone();
 var $toggle = $('.nav--global__overflow-toggle');
 
 // TODO: manage as one HTML update
-var flowNavItems = _.debounce(function(){
+var flowNavItems = function(){
 	var visible = false;
 	var highlight = false;
 	for(var i = items.length-1; i >= 0; i--) {
@@ -28,13 +26,13 @@ var flowNavItems = _.debounce(function(){
 	};
 	$overflowNav.toggle(visible);
 	$toggle.toggleClass('highlight', highlight)
-}, 50);
+};
 
 module.exports = {
 	init: function(){
 		$overflowNavList.prepend($overFlowNavItems);
 		flowNavItems();
-		$(window).on('resize orientationchange', flowNavItems);
+		optimisedResize.init(flowNavItems);
 
 		$(document).on("click", function(){
 			$overflowNav.removeClass('active');
