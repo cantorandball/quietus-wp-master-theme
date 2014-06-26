@@ -12,7 +12,6 @@ var flowNavItems = function(){
 	var visible = false;
 	var highlight = false;
 	for(var i = items.length-1; i >= 0; i--) {
-		var href = items[i].getAttribute;
 		if(items[i].offsetTop > 0){
 			var item = $overFlowNavItems[i];
 			item.style.display = 'block';
