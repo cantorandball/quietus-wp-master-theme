@@ -1,5 +1,6 @@
-// https://developer.mozilla.org/en-US/docs/Web/Events/resize
+// modifed version of https://developer.mozilla.org/en-US/docs/Web/Events/resize
 var raf = require('raf');
+
 module.exports = (function() {
 
 	var callbacks = [],
