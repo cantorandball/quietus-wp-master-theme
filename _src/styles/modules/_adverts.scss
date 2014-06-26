@@ -25,13 +25,9 @@
 	overflow-x: hidden;
 	padding-bottom: 1rem;
 	width: 100%;
-	// background-color: #000;
 	border-bottom: 1px solid darken($advert-bg, 10%);
-	text-align: left;
-	padding-left: 1rem;
-	&:before {
-		width: 970px;
-	}
+	text-align: center;
+	// padding-left: 1rem;
 }
 
 #skyscraper,

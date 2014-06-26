@@ -2,6 +2,8 @@
 .layout__page {
 	@include clearfix;
 	box-sizing: content-box;
+	margin-right: auto;
+	margin-left: auto;
 	padding: .75rem;
 	max-width: $layout--post__max-width;
 	width: auto;
@@ -29,12 +31,12 @@
 
 // the meat of the page. floats left of the side bar if there's room, else it appears above it.
 .layout__content {
-	width: 100%;
 	@include clearfix;
 	@include media($cols-2) {
 		float: left;
 	}
 	max-width: $layout--post__max-width;
+	width: 100%;
 }
 
 .layout__content--wider {
@@ -63,14 +65,12 @@
 .layout__sidebar--wider {
 	float: left;
 	width: 100%;
-
 	@include media($mobile) {
 		margin-left: 0;
 		max-width: none;
 	}
-
 	@include media($desktop) {
-		max-width: $layout--root-category__sidebar__max-width;
 		margin-left: 1.25rem;
+		max-width: $layout--root-category__sidebar__max-width;
 	}
 }

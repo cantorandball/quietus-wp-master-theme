@@ -13,9 +13,9 @@
 .nav--global__primary {
 	overflow: hidden;
 	padding-right: 2rem;
-	padding-left: 2rem - .65rem;
 	height: 2rem;
 	border-bottom: 1px solid $black;
+	text-align: center;
 	font-size: 0;
 	li {
 		@extend %nav-item;
@@ -42,9 +42,9 @@
 }
 
 .nav--global__secondary {
-	padding-left: 2rem - .65rem;
 	width: 100%;
 	background-color: $white;
+	text-align: center;
 	font-size: 0;
 	&:empty {
 		display: none;
