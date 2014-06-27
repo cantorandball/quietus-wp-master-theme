@@ -1,56 +1,56 @@
 // Contains everything below the global nav
-.layout__page {
+.layout-page {
 	@include clearfix;
 	box-sizing: content-box;
 	margin-right: auto;
 	margin-left: auto;
 	padding: .75rem;
-	max-width: $layout--post__max-width;
+	max-width: $layout-post-max-width;
 	width: auto;
 	@include media($mobile) {
 		padding: 2rem;
 	}
 	@include media($cols-2) {
 		max-width: none;
-		width: $layout--post__max-width + $layout__gutter-width + $width-cols-2-sidebar;
+		width: $layout-post-max-width + $layout-gutter-width + $width-cols-2-sidebar;
 	}
 	@include media($cols-3) {
-		width: $layout--post__max-width + $layout__gutter-width + $width-cols-3-sidebar;
+		width: $layout-post-max-width + $layout-gutter-width + $width-cols-3-sidebar;
 	}
 	@include media($cols-4) {
-		width: $layout--post__max-width + $layout__gutter-width + $width-cols-4-sidebar;
+		width: $layout-post-max-width + $layout-gutter-width + $width-cols-4-sidebar;
 	}
 }
 
 // full bleed element, for example the article header
-.layout__jumbotron {
+.layout-jumbotron {
 	clear: both;
 	margin-bottom: 1rem;
 	width: 100%;
 }
 
 // the meat of the page. floats left of the side bar if there's room, else it appears above it.
-.layout__content {
+.layout-content {
 	@include clearfix;
 	@include media($cols-2) {
 		float: left;
 	}
-	max-width: $layout--post__max-width;
+	max-width: $layout-post-max-width;
 	width: 100%;
 }
 
-.layout__content--wider {
-	@extend .layout__content;
-	max-width: $layout--root-category__max-width;
+.layout-content-wider {
+	@extend .layout-content;
+	max-width: $layout-root-category-max-width;
 }
 
 // the side bar
-.layout__sidebar {
+.layout-sidebar {
 	float: left;
-	max-width: $layout--post__max-width;
+	max-width: $layout-post-max-width;
 	width: 100%;
 	@include media($cols-2) {
-		margin-left: $layout__gutter-width;
+		margin-left: $layout-gutter-width;
 		max-width: none;
 		width: $width-cols-2-sidebar;
 	}
@@ -62,7 +62,7 @@
 	}
 }
 
-.layout__sidebar--wider {
+.layout-sidebar-wider {
 	float: left;
 	width: 100%;
 	@include media($mobile) {
@@ -71,6 +71,6 @@
 	}
 	@include media($desktop) {
 		margin-left: 1.25rem;
-		max-width: $layout--root-category__sidebar__max-width;
+		max-width: $layout-root-category-sidebar-max-width;
 	}
 }

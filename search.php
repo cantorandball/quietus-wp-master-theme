@@ -8,20 +8,20 @@
 get_header(); ?>
 
 <section role="main" class="search">
-	<div class="layout__jumbotron">
+	<div class="layout-jumbotron">
 		<header>
-			<h3 class="search__leadin">
+			<h3 class="search-leadin">
 				<?php echo( __( 'Search Results for:', 'quietus' ) ); ?>
 			</h3>
-			<h2 class="search__title">
+			<h2 class="search-title">
 				<?php the_search_query(); ?>
 			</h2>
 		</header>
 	</div>
 
-	<div class="layout__content">
+	<div class="layout-content">
 		<?php if ( have_posts() ): ?>
-			<div class="search__post-listing">
+			<div class="search-post-listing">
 				<ul>
 					<?php
 					while( have_posts() ): the_post();
@@ -32,7 +32,7 @@ get_header(); ?>
 			</div>
 			<?php get_template_part( 'template-parts/pagination' ); ?>
 		<?php else: ?>
-			<div class="search__no-posts">
+			<div class="search-no-posts">
 				<p><?php echo( __( 'No results found', 'quietus' ) ); ?>.</p>
 			</div>
 		<?php endif; ?>

@@ -1,30 +1,30 @@
 // ********** MODULE **********
 
 .post {
-	.layout__content {
+	.layout-content {
 		margin-top: -.4rem; // pull content up, to handle lineheight of paras.
 	}
 }
 
 // ********** ELEMENTS **********
 
-.post__category-title {
+.post-category-title {
 	@extend %lead-in-title;
 }
 
-.post__title {
+.post-title {
 	@extend %main-title;
 }
 
-.post__standfirst {
+.post-standfirst {
 	@extend %standfirst;
 }
 
-.post__byline {
+.post-byline {
 	@extend %font-xs;
 	padding-bottom: 1ex;
 	border-bottom: 1px solid $grey;
-	&--author {
+	&-author {
 		display: inline;
 		&:before {
 			content: '— ';
@@ -36,14 +36,14 @@
 			color: $black;
 		}
 	}
-	&--date {
+	&-date {
 		&:after {
 			content: '.';
 		}
 	}
 }
 
-.post__featured-image {
+.post-featured-image {
 	@include media($mobile) {
 		margin-top: .4rem; // push image down to meet top of text
 	}
@@ -59,7 +59,7 @@
 	}
 }
 
-.post__content {
+.post-content {
 	p {
 		$font-size: 1.125rem;
 		$line-height: 1.5;
@@ -83,7 +83,7 @@
 	}
 }
 
-.post__content .advert {
+.post-content .advert {
 	margin-top: .5rem;
 	padding-left: 0;
 	padding-right: 0;
@@ -104,7 +104,7 @@
 	}
 }
 
-.post__related {
+.post-related {
 	margin-bottom: 2rem;
 	padding-top: 2rem;
 	width: 100%;
@@ -118,14 +118,14 @@
 	}
 }
 
-.post__related .puff {
+.post-related .puff {
 	@include puff-row-length(2);
 	@include media($tablet) {
 		@include puff-row-length(3);
 	}
 }
 
-.post__sharing {
+.post-sharing {
 	margin-top: 1rem;
 	margin-right: auto;
 	margin-left: auto;

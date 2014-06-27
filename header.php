@@ -10,34 +10,34 @@
 </head>
 
 <body>
-	<div id="leaderboard" class="advert advert--leaderboard"></div>
-	<header id="header">
-		<h1 id="header__logo">
+	<div class="advert advert-leaderboard" id="leaderboard"></div>
+	<header class="header">
+		<h1 class="logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				<?php bloginfo('name'); ?>
 			</a>
 		</h1>
-		<div id="header__search">
+		<div class="search-box">
 			<?php get_search_form(); ?>
 		</div>
 	</header>
-	<nav id="nav--global">
-		<ul class="nav--global__primary">
+	<nav class="site-nav">
+		<ul class="site-nav-primary">
 			<?php wp_nav_menu( array(
 				'container' => false,
 				'items_wrap' => '%3$s',
 				'depth' => 1
 			) ); ?>
 	   	</ul>
-		<ul class="nav--global__secondary"><?php wp_nav_menu( array(
+		<ul class="site-nav-secondary"><?php wp_nav_menu( array(
 				'container' => false,
 				'items_wrap' => '%3$s',
 				'depth' => 0,
 				'walker' => new quietus_sub_menu()
 			) ); ?></ul>
-	   	<div class="nav--global__overflow">
-	   		<button class="nav--global__overflow-toggle">Toggle navigation</button>
-			<ul class="nav--global__overflow-items"></ul>
+	   	<div class="site-nav-overflow">
+	   		<button class="site-nav-overflow-toggle">Toggle navigation</button>
+			<ul class="site-nav-overflow-items"></ul>
 	   	</div>
 	</nav>
-	<div class="layout__page">
+	<div class="layout-page">

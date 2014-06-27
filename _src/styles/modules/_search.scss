@@ -1,9 +1,13 @@
 .search {}
 
-.search__leadin {
+.search-box {
+	display: none;
+}
+
+.search-leadin {
 	@extend %lead-in-title;
 }
 
-.search__title {
+.search-title {
 	@extend %main-title;
 }

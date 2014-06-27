@@ -1,18 +1,12 @@
-#header {
-	position: relative;
-	&__logo {
-		@include text-hide;
-		position: relative;
-		z-index: 1;
-		height: 6rem;
-		background-color: $white;
-		background-image: url("#{$images}/logo-no_url.svg");
-		background-position: center;
-		background-size: auto 61%;
-		background-repeat: no-repeat;
-	}
+.header {
 }
 
-#header__search {
-	display: none;
+.logo {
+	@include text-hide;
+	height: 7rem;
+	background-color: $white;
+	background-image: url("#{$images}/logo-no_url.svg");
+	background-position: center;
+	background-size: auto 4rem;
+	background-repeat: no-repeat;
 }

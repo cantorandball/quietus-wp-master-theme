@@ -6,6 +6,6 @@ if ( $categories )
 ?>
 <li class="puff <?= $current_category ?>">
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="<?php echo get_background_image_url( get_the_ID(), 'medium' ); ?>">
-		<span class="puff__content"><?php the_title(); ?></span>
+		<span class="puff-content"><?php the_title(); ?></span>
 	</a>
 </li>

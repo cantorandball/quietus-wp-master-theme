@@ -6,9 +6,9 @@ $latest_news = get_latest_news();
 ?>
 <dl class="puffs">
 	<?php if ( $latest_news->have_posts() ): ?>
-	<dt class="puff__header"><?php echo( __( 'Latest News', 'quietus' ) ); ?></dt>
+	<dt class="puff-header"><?php echo( __( 'Latest News', 'quietus' ) ); ?></dt>
 	<dd>
-		<ul class="puff__list">
+		<ul class="puff-list">
 			<?php
 			while ( $latest_news->have_posts() ): $latest_news->the_post();
 				get_template_part( 'template-parts/puff' );

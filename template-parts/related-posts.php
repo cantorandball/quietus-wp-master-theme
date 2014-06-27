@@ -8,7 +8,7 @@ $related_posts = get_related_posts( $post_id );
 
 if ( $related_posts->have_posts() ): ?>
 <dl class="puffs">
-	<dt class="puff__header"><?php echo( __( 'Related Articles', 'quietus' ) ); ?></dt>
+	<dt class="puff-header"><?php echo( __( 'Related Articles', 'quietus' ) ); ?></dt>
 	<dd>
 		<ul>
 			<?php

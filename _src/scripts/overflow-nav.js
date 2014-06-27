@@ -1,11 +1,11 @@
 var $ = require('zepto-browserify').$;
 var optimisedResize = require('./optimized-resize');
 
-var items = $('.nav--global__primary li');
-var $overflowNav = $('.nav--global__overflow');
-var $overflowNavList = $('.nav--global__overflow-items');
+var items = $('.site-nav-primary li');
+var $overflowNav = $('.site-nav-overflow');
+var $overflowNavList = $('.site-nav-overflow-items');
 var $overFlowNavItems = items.clone();
-var $toggle = $('.nav--global__overflow-toggle');
+var $toggle = $('.site-nav-overflow-toggle');
 
 // TODO: manage as one HTML update
 var flowNavItems = function(){
@@ -37,7 +37,7 @@ module.exports = {
 			$overflowNav.removeClass('active');
 		});
 
-		$(document.body).on('click', '.nav--global__overflow-toggle', function(e){
+		$(document.body).on('click', '.site-nav-overflow-toggle', function(e){
 			e.stopPropagation();
 			$overflowNav.toggleClass('active');
 		});

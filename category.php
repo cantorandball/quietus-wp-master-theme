@@ -16,28 +16,28 @@ if ( $current_category->category_parent != '0' )
 get_header(); ?>
 
 <section role="main" class="category">
-	<div class="layout__jumbotron">
+	<div class="layout-jumbotron">
 		<header>
 			<?php if ( $parent ): ?>
-				<h3 class="category__parent-title">
+				<h3 class="category-parent-title">
 					<a href="<?php echo get_category_link( $parent->cat_ID ); ?>"><?php echo $parent->name; ?></a>
 				</h3>
 			<?php endif; ?>
-			<h2 class="category__title">
+			<h2 class="category-title">
 				<?php single_cat_title( '', true ); ?>
 			</h2>
 		</header>
 
 		<?php if ( category_description() ): ?>
-			<section class="category__standfirst">
+			<section class="category-description">
 				<?php echo category_description(); ?>
 			</section>
 		<?php endif ?>
 	</div>
 
-	<div class="layout__content">
+	<div class="layout-content">
 		<?php if ( have_posts() ): ?>
-			<div class="category__post-listing">
+			<div class="category-post-listing">
 				<ul>
 					<?php
 					while( have_posts() ): the_post();
@@ -48,7 +48,7 @@ get_header(); ?>
 			</div>
 			<?php get_template_part( 'template-parts/pagination' ); ?>
 		<?php else: ?>
-			<div class="category__no-posts">
+			<div class="category-no-posts">
 				<p>There are no articles in this category.</p>
 			</div>
 		<?php endif; ?>

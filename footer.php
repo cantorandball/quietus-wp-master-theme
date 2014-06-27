@@ -15,7 +15,7 @@
 		<script type="text/template" data-advert data-id="leaderboard">
 			<img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-billboard.png'; ?>" width="970" height="250">
 		</script>
-		<script type="text/template" data-advert data-id="skyscraper--mini">
+		<script type="text/template" data-advert data-id="skyscraper-mini">
 			<img src="<?php echo get_template_directory_uri() . '/images/placeholders/ad-medium.gif'; ?>" alt="" width="300" height="250">
 		</script>
 		<script type="text/template" data-advert data-id="skyscraper">

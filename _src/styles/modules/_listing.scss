@@ -12,12 +12,12 @@
 	}
 }
 
-.listing__thumbnail,
-.listing__content {
+.listing-thumbnail,
+.listing-content {
 	float: left;
 }
 
-.listing__thumbnail {
+.listing-thumbnail {
 	max-width: 9.375rem;
 	max-height: 7.0625rem;
 	margin-right: 0.625rem;
@@ -28,22 +28,22 @@
 	}
 }
 
-.listing__content {
+.listing-content {
 	max-width: 27.3125rem;
 	margin-top: -.25em;
 }
 
-.listing__category-title {
+.listing-category-title {
 	@extend %lead-in-title;
 }
 
-.listing__post-title {
+.listing-post-title {
 	@extend %font-l;
 	line-height: 1.2;
 	margin-bottom: .05em;
 }
 
-.listing__excerpt {
+.listing-excerpt {
 	@extend %standfirst;
 	font-size: 0.875rem;
 	padding: 0;

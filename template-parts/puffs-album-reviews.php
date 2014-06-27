@@ -4,11 +4,11 @@
  */
 $latest_reviews = get_latest_reviews();
 ?>
-<dl class="puffs puffs--album-reviews">
+<dl class="puffs puffs-album-reviews">
 	<?php if ( $latest_reviews->have_posts() ): ?>
-	<dt class="puff__header"><?php echo( __( 'Latest Reviews', 'quietus' ) ); ?></dt>
+	<dt class="puff-header"><?php echo( __( 'Latest Reviews', 'quietus' ) ); ?></dt>
 	<dd>
-		<ul class="puff__list">
+		<ul class="puff-list">
 			<?php
 			while ( $latest_reviews->have_posts() ): $latest_reviews->the_post();
 				get_template_part( 'template-parts/puff', 'album-reviews' );

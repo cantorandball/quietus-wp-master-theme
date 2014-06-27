@@ -32,10 +32,12 @@
 	content: '';
 }
 
-%nav-item {
+%category-name {
 	color: $black;
 	font-variant: small-caps;
+}
 
+%nav-item {
 	a {
 		color: $black;
 		&:hover {

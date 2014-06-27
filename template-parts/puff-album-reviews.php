@@ -6,9 +6,9 @@ if ( $categories )
 ?>
 <li class="puff <?= $current_category ?>">
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="<?php echo get_background_image_url( get_the_ID(), 'medium' ); ?>">
-		<span class="puff__content">
-			<span class="puff__release"><?php the_field('album_title'); ?></span>
-			<span class="puff__artist"><?php the_field('album_artist'); ?></span>
+		<span class="puff-content">
+			<span class="puff-release"><?php the_field('album_title'); ?></span>
+			<span class="puff-artist"><?php the_field('album_artist'); ?></span>
 		</span>
 	</a>
 </li>

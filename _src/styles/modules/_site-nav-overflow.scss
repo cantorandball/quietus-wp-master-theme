@@ -1,11 +1,11 @@
-.nav--global__overflow {
+.site-nav-overflow {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-.nav--global__overflow-items {
+
+.site-nav-overflow-items {
 	position: absolute;
-	top: 2rem;
 	right: 0;
 	display: none;
 	width: 12rem;
@@ -13,45 +13,43 @@
 	border-left: 1px solid $black;
 	background-color: $white;
 	li {
-		@extend %nav-item;
+		@extend %font-reset;
 		display: block;
-		white-space:nowrap;
-		font-size: 1rem;
+		text-align: left;
+		white-space: nowrap;
 	}
 	a {
-		display: block;
-		padding: .3em .6em;
+		width: 100%;
+		&:before {
+			content: '';
+		}
 	}
 	.active > a, a:hover {
 		background-color: $black;
 		color: $white;
 	}
-	.nav--global__overflow.active & {
+	.site-nav-overflow.active & {
 		display: block;
 	}
 }
 
-.nav--global__overflow-toggle {
+.site-nav-overflow-toggle {
 	@include text-hide;
-	position: relative;
-	z-index: 1;
 	padding: 0;
 	width: 2rem;
-	height: 0rem + (32/16);
+	height: 2rem;
 	outline: none;
 	border-bottom: 1px solid $black;
-	border-left: 1px solid $black;
 	background-color: $white;
 	color: $black;
 	cursor: pointer;
-	&.highlight, &:hover, .nav--global__overflow.active & {
+	&.highlight, &:hover, .site-nav-overflow.active & {
 		background-color: $black;
 		color: $white;
 	}
 	&:after {
 		@extend %font-reset;
-		display: inline-block;
-		margin: 0;
+		display: block;
 		content: '…';
 	}
 }

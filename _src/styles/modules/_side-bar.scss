@@ -12,11 +12,11 @@
 	}
 }
 
-.side-bar .child-categories__title {
+.side-bar .child-categories-title {
 	@extend %main-title;
 }
 
-.side-bar .child-categories__excerpt {
+.side-bar .child-categories-excerpt {
 	@extend %font-s;
 }
 
@@ -39,20 +39,20 @@
 		}
 	}
 	@include media($cols-2) {
-		width: $layout--adverts__skyscraper-width;
+		width: $layout-adverts-skyscraper-width;
 		float: left;
 	}
 	@include media($cols-3) {
-		width: $layout--adverts__skyscraper-width / 2;
+		width: $layout-adverts-skyscraper-width / 2;
 		float: left;
 	}
 	@include media($cols-4) {
-		width: $layout--adverts__skyscraper-width;
-		margin-right: $layout__gutter-width;
+		width: $layout-adverts-skyscraper-width;
+		margin-right: $layout-gutter-width;
 	}
 }
 
-.side-bar .puffs--album-reviews {
+.side-bar .puffs-album-reviews {
 	.puff {
 		@include puff-row-length(2, 1);
 		@include media($mobile) {
@@ -63,7 +63,7 @@
 		}
 	}
 	@include media($cols-3) {
-		width: $layout--adverts__skyscraper-width;
+		width: $layout-adverts-skyscraper-width;
 		float: right;
 	}
 	@include media($cols-4) {
@@ -80,7 +80,7 @@
 		position: relative;
 	}
 	@include media($cols-2) {
-		width: $layout--adverts__skyscraper-width;
+		width: $layout-adverts-skyscraper-width;
 	}
 	@include media($cols-3) {
 		float: right;

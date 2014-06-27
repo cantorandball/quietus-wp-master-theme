@@ -1,8 +1,8 @@
-.post--review__release {
+.post-review-release {
 	font-style: italic;
 }
 
-.post--review__artist {
+.post-review-artist {
 	@extend %font-xs;
 	display: block;
 	margin-top: 1ex;
@@ -10,7 +10,7 @@
 	font-family: Helvetica;
 }
 
-.post--review .post__featured-image {
+.post-review .post-featured-image {
 	width: 100%;
 	float: left;
 	margin-right: 1rem;

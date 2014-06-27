@@ -1,0 +1,73 @@
+// ********** MODULE **********
+$nav-row-height: 2rem;
+
+.site-nav {
+	position: relative;
+	width: 100%;
+	border-top: 1px $black solid;
+	background-color: $white;
+	text-align: center;
+	font-size: 0;
+	li {
+		@extend %category-name;
+		@extend %nav-item;
+		display: inline-block;
+		&:first-child a:before {
+			overflow: hidden;
+			text-indent: -1em;
+		}
+	}
+	a {
+		display: flex;
+		margin-right: -.2em;
+		padding-right: .8em;
+		height: $nav-row-height;
+		align-items: center;
+		&:before {
+			display: inline-block;
+			width: .8em;
+			content: '∙';
+			text-align: left;
+		}
+	}
+}
+
+// ********** ELEMENTS **********
+
+.site-nav-primary {
+	overflow: hidden;
+	padding-right: $nav-row-height;
+	padding-left: $nav-row-height;
+	height: $nav-row-height;
+	border-bottom: 1px solid $black;
+	li {
+		@extend %font-reset;
+	}
+	.active a, a:hover {
+		background-color: $black;
+		color: $white;
+		&:before {
+			color: $black;
+		}
+	}
+}
+
+.site-nav-secondary {
+	li {
+		@extend %font-s;
+	}
+	a {
+		position: relative;
+	}
+	.active a, a:hover {
+		&:after {
+			position: absolute;
+			right: 1em;
+			bottom: 0;
+			left: 1em;
+			height: 1px;
+			background-color: $black;
+			content: '';
+		}
+	}
+}

@@ -38,15 +38,15 @@
 	}
 }
 
-.featured-article__category-title {
+.featured-article-category-title {
 	@extend %lead-in-title;
 }
 
-.featured-article__title {
+.featured-article-title {
 	@extend %font-l;
 }
 
-.puff.featured-article__puff {
+.puff.featured-article-puff {
 	padding-left: 0;
 	margin-bottom: 0;
 }
