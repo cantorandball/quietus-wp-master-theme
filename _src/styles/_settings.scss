@@ -9,36 +9,38 @@ $line-height: 1.4;
 $advert-bg: darken(white, 7%);
 $advert-border-width: px-to-rem(5);
 
-$layout-gutter-width: 2rem;
-$layout-padding-width: 2rem;
-$layout-puffs-gutter-width: .5rem;
-$layout-post-max-width: 37.625rem;
-$layout-root-category-max-width: 51.875rem;
-$layout-root-category-sidebar-max-width: 25.25rem;
-$layout-adverts-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
+$gutter-width: 2rem;
+$padding-width: 2rem;
+$puffs-gutter-width: .5rem;
+$post-max-width: px-to-rem(602);
+
+$root-category-max-width: px-to-rem(830);
+$root-category-sidebar-max-width: px-to-rem(404);
+
+$adverts-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
 
 // ********** DEVICE BREAKPOINTS **********
-$desktop-l: "(min-width: 80rem)"; // 1280px
-$desktop: "(min-width: 61rem)"; // 976px
-$tablet: "(min-width: 46rem)"; // 736px
-$mobile: "(min-width: 30rem)"; // 480px
+$desktop-l: "(min-width: #{px-to-rem(1280)})";
+$desktop: "(min-width: #{px-to-rem(976)})";
+$tablet: "(min-width: #{px-to-rem(736)})";
+$mobile: "(min-width: #{px-to-rem(480)})";
 
 // ********** GRID BREAKPOINTS **********
 // article | ads & double puffs
-$width-cols-2-sidebar: $layout-adverts-skyscraper-width;
+$width-cols-2-sidebar: $adverts-skyscraper-width;
 
 // article | single puffs | ads & double puffs
 $width-cols-3-sidebar:
-	$layout-adverts-skyscraper-width * .5 +
-	$layout-gutter-width +
-	$layout-adverts-skyscraper-width;
+	$adverts-skyscraper-width * .5 +
+	$gutter-width +
+	$adverts-skyscraper-width;
 
 // article | double puffs | ads
 $width-cols-4-sidebar:
-	$layout-adverts-skyscraper-width * 2 +
-	$layout-gutter-width;
+	$adverts-skyscraper-width * 2 +
+	$gutter-width;
 
-$width-article: $layout-padding-width * 2 + $layout-post-max-width + $layout-gutter-width;
+$width-article: $padding-width * 2 + $post-max-width + $gutter-width;
 
 // ********** GRID MEDIA QUERIES **********
 $cols-2: "(min-width: #{$width-article + $width-cols-2-sidebar})";

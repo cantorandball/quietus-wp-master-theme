@@ -5,20 +5,20 @@
 	margin-right: auto;
 	margin-left: auto;
 	padding: .75rem;
-	max-width: $layout-post-max-width;
+	max-width: $post-max-width;
 	width: auto;
 	@include media($mobile) {
 		padding: 2rem;
 	}
 	@include media($cols-2) {
 		max-width: none;
-		width: $layout-post-max-width + $layout-gutter-width + $width-cols-2-sidebar;
+		width: $post-max-width + $gutter-width + $width-cols-2-sidebar;
 	}
 	@include media($cols-3) {
-		width: $layout-post-max-width + $layout-gutter-width + $width-cols-3-sidebar;
+		width: $post-max-width + $gutter-width + $width-cols-3-sidebar;
 	}
 	@include media($cols-4) {
-		width: $layout-post-max-width + $layout-gutter-width + $width-cols-4-sidebar;
+		width: $post-max-width + $gutter-width + $width-cols-4-sidebar;
 	}
 }
 
@@ -35,22 +35,22 @@
 	@include media($cols-2) {
 		float: left;
 	}
-	max-width: $layout-post-max-width;
+	max-width: $post-max-width;
 	width: 100%;
 }
 
 .layout-content-wider {
 	@extend .layout-content;
-	max-width: $layout-root-category-max-width;
+	max-width: $root-category-max-width;
 }
 
 // the side bar
 .layout-sidebar {
 	float: left;
-	max-width: $layout-post-max-width;
+	max-width: $post-max-width;
 	width: 100%;
 	@include media($cols-2) {
-		margin-left: $layout-gutter-width;
+		margin-left: $gutter-width;
 		max-width: none;
 		width: $width-cols-2-sidebar;
 	}
@@ -71,6 +71,6 @@
 	}
 	@include media($desktop) {
 		margin-left: 1.25rem;
-		max-width: $layout-root-category-sidebar-max-width;
+		max-width: $root-category-sidebar-max-width;
 	}
 }
