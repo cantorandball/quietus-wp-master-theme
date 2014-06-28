@@ -9,6 +9,8 @@ var port = 8008;
 // temporary solution till https://github.com/gulpjs/gulp/issues/355
 var runSequence = require('run-sequence');
 
+var browserSync = require('browser-sync');
+
 // Used for build-only options
 var build = false;
 
@@ -113,45 +115,25 @@ gulp.task('minify', function(){
     }));
 });
 
-// // Run a server
-// gulp.task('connect', function() {
-//   var connect = require('connect'),
-//   server = connect()
-//     .use(require('connect-livereload')({port: 35729}))
-//     .use(connect.static(OUTPUT_DIR));
-//   require('http').createServer(server)
-//     .listen(port)
-//     .on('listening', function () {
-//       console.log('Started connect web server on http://localhost:' + port);
-//     })
-//     .on('close', function(){
-//       console.log('stopped server');
-//       gulp.start('clean');
-//     });
-// })
-
 // Dev mode
 gulp.task('dev', ['clean'], function(){
   // livereload needs the rebuild files before starting, so use runSequence till gulp 4.
-  runSequence('compile', ['watch']);
+  runSequence('compile', ['watch', 'browser-sync']);
 });
 
 // watch dev files for recompilation and livereload when OUTPUT_DIR updates
 gulp.task('watch', function(){
   gulp.watch(SRC_DIR + '/styles/**/*.scss', ['styles']);
   gulp.watch(SRC_DIR + '/scripts/**/*.js', ['scripts']);
-  gulp.watch(SRC_DIR + '/**/*.html', ['html']);
   gulp.watch(SRC_DIR + '/images/**/*', ['images']);
-
-  var server = $.livereload();
-  gulp.watch([
-    '../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*.css',
-    '!' + SRC_DIR + '/**/*'
-  ]).on('change', function (file) {
-    server.changed(file.path);
-    console.log(file.path + ' changed.');
-  });
 })
+
+gulp.task('browser-sync', function() {
+    browserSync.init(null, {
+        proxy: "thequietus.dev",
+        files: ['../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*.css'],
+    });
+});
 
 // Perform a build
 gulp.task('build', function () {
