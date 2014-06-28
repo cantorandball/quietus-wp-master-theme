@@ -66,20 +66,3 @@
 		background-color: fade-out(black, .4);
 	}
 }
-
-.puff-release {
-	@extend %font-l;
-	display: block;
-	margin-bottom: .5ex;
-	font-style: italic;
-	line-height: 1;
-}
-
-.puff-artist {
-	@extend %font-xs;
-	display: block;
-	display: block;
-	margin-bottom: .3ex;
-	text-transform: uppercase;
-	font-family: Helvetica;
-}
