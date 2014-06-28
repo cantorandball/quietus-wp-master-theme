@@ -31,4 +31,16 @@ add_filter( 'nav_menu_css_class', 'quietus_nav_menu_css_class', 10, 2 );
  * Hide admin bar
  */
 add_filter( 'show_admin_bar', '__return_false' );
+
+/**
+ * Format the content e.g. dont wrap single images/iframes surroudned by carriage returns inside <p> elements
+ * @param  String $content The content
+ * @return String          Cleaned content
+ */
+function quietus_the_content($content) {
+	$content = preg_replace( '/(<p>)(<img[^>]+>)(<\/p>)/', '<figure>$2</figure>', $content );
+	$content = preg_replace( '/(<p>)(<iframe.+?<\/iframe>)(<\/p>)/', '<div class="post-embed">$2</div>', $content );
+	return $content;
+}
+add_filter( 'the_content', 'quietus_the_content' );
 ?>
