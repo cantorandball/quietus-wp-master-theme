@@ -105,3 +105,9 @@
 %antialias {
 	-webkit-font-smoothing: antialiased;
 }
+
+%antialias-hidpi {
+	@include hidpi {
+		-webkit-font-smoothing: antialiased;
+	}
+}

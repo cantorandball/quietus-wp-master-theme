@@ -1,5 +1,6 @@
 .featured-articles {
 	@include grid-row;
+	@extend %antialias-hidpi;
 }
 
 .featured-article {
@@ -27,6 +28,7 @@
 
 .featured-article-category-title {
 	@extend %category-title;
+	color: $white;
 }
 
 .featured-article-title {
