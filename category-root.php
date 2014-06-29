@@ -15,7 +15,7 @@ get_header();
 		</header>
 
 		<ul class="featured-articles">
-			<?php for ( $i=0; $i < 3; $i++ ): ?>
+			<?php for ( $i=0; $i < 5; $i++ ): ?>
 				<?php if ( have_posts() ): the_post(); ?>
 					<li class="featured-article">
 						<div class="puff featured-article-puff">
