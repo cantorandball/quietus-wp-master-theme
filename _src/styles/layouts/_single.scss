@@ -9,6 +9,7 @@ $sidebar-width-2-col: $adverts-skyscraper-width;
 $sidebar-width-3-col: ($adverts-skyscraper-width * .5) + $page-gutter-width + $adverts-skyscraper-width;
 // article | double puffs | ads
 $sidebar-width-4-col: $adverts-skyscraper-width + $page-gutter-width + $adverts-skyscraper-width;
+$post-max-width: $bp-desktop-l - $advert-skyscraper-width - $page-gutter-width - ($page-gutter-width * 2);
 
 
 // ********** GRID MEDIA QUERIES **********

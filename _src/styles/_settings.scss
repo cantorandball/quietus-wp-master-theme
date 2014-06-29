@@ -1,30 +1,34 @@
+// ********** COLOURS **********
+
 $black: #222;
 $grey: #666;
 $white: #fff;
 $light-grey: #999;
 $link-colour: $black;
+$advert-bg: darken(white, 7%);
+
+// ********** FONT SIZES **********
 
 $line-height: 1.4;
 $grid-gutter-width: 1rem;
 
-$advert-bg: darken(white, 7%);
-$advert-border-width: px-to-rem(5);
+// ********** MODULE SIZES **********
 
 $page-gutter-width: 2rem;
 $page-padding-width: 2rem;
 
 $puffs-gutter-width: .5rem;
 
+$advert-border-width: px-to-rem(5);
+$advert-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
+
 $root-category-max-width: px-to-rem(830);
 $root-category-sidebar-max-width: px-to-rem(404);
 
-$adverts-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
-
-$post-max-width: px-to-rem(768) - ($adverts-skyscraper-width / 2) - $page-gutter-width - ($page-padding-width * 2);
 
 // ********** DEVICE BREAKPOINTS **********
 $bp-desktop-l: px-to-rem(1140);
-$bp-desktop: px-to-rem(980);
+$bp-desktop: px-to-rem(960);
 $bp-tablet: px-to-rem(740);
 $bp-mobile: px-to-rem(480);
 
