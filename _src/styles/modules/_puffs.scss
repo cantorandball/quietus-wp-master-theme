@@ -27,11 +27,6 @@
 	margin-bottom: 1ex;
 	text-align: center;
 	font-variant: small-caps;
-	&:first-of-type {
-		@include media($single-3-col) {
-			margin-top: -.4em;
-		}
-	}
 }
 
 .puff-content {

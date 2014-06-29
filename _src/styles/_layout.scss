@@ -4,10 +4,20 @@
 	margin-right: auto;
 	margin-left: auto;
 	padding: 1rem;
-	// max-width: px-to-rem(1280);
-	width: auto;
+	width: 100%;
+	max-width: 38rem;
 	@include media($mobile) {
 		padding: $page-padding-width;
+	}
+	@include media($tablet) {
+		width: $bp-tablet;
+	}
+	@include media($desktop) {
+		width: $bp-desktop;
+		max-width: none;
+	}
+	@include media($desktop-l) {
+		width: $bp-desktop-l;
 	}
 }
 

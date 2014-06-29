@@ -143,7 +143,7 @@
 	margin-bottom: 2rem;
 	padding-top: 2rem;
 	width: 100%;
-	@include media($single-2-col) {
+	@include media($tablet) {
 		margin-bottom: 0;
 		padding-bottom: 0
 	}
