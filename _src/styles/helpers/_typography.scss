@@ -1,10 +1,14 @@
 // ********** FONT SIZES **********
 
 %font-s {
-	font-size: .8rem;
+	font-size: .9rem;
 }
 
 %font-xs {
+	font-size: .8rem;
+}
+
+%font-xxs {
 	font-size: .7rem;
 }
 
@@ -38,7 +42,7 @@
 }
 
 %category-title {
-  @extend %font-s;
+  @extend %font-xs;
   @extend %category-name;
   font-style: italic;
 }

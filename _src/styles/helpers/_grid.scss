@@ -1,5 +1,5 @@
 @mixin grid-row($gutter: $grid-gutter-width) {
-	@extend %clearfix;
+	@include clearfix;
 	margin-left: 0 - $gutter;
 }
 

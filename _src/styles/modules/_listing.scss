@@ -1,36 +1,28 @@
-.listing {
+.listings {
 	@extend %clearfix;
-	margin-bottom: .5rem;
-	padding-top: .5rem;
-	border-top: 1px solid $black;
-	&:last-child {
-		padding-bottom: .5rem;
 		border-bottom: 1px solid $black;
-	}
-	a {
-		color: $black;
-	}
 }
 
-.listing-thumbnail,
-.listing-content {
-	float: left;
+.listing {
+	@extend %clearfix;
+	padding: 1rem 0;
+	border-top: 1px solid $black;
 }
 
 .listing-thumbnail {
-	max-width: 9.375rem;
-	max-height: 7.0625rem;
-	margin-right: 0.625rem;
-	overflow: hidden;
-
-	img {
-		width: 100%;
-	}
+	display: block;
+	display: none;
 }
 
-.listing-content {
-	max-width: 27.3125rem;
-	margin-top: -.25em;
+.listing-thumbnail {
+	@include text-hide;
+	$width: 10rem;
+	width: $width;
+	height: $width * (2/3);
+	background-size: cover;
+	background-position: center;
+	float: left;
+	margin-right: 1rem;
 }
 
 .listing-category-title {
@@ -39,4 +31,32 @@
 
 .listing-post-title {
 	@extend %post-title;
+	@extend %font-xl;
+}
+
+.listing-excerpt {
+	@extend %font-s;
+	font-style: italic;
+}
+
+
+.listing:nth-of-type(n+3) {
+	float: left;
+	width: 50%;
+	padding-left: .5em;
+	&:nth-of-type(odd){
+		clear: left;
+		padding-left: 0;
+		padding-right: .5em;
+		&:last-child {
+			width: 100%;
+		}
+	}
+	.listing-thumbnail, .listing-excerpt {
+	 	display: none;
+	}
+	.listing-post-title {
+		@extend %font-reset;
+		line-height: 1.3;
+	}
 }

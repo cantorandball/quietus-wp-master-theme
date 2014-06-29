@@ -59,7 +59,7 @@ $nav-row-height: 2rem;
 	@include media($desktop) {
 		display: block;
 	}
-	@extend %font-s;
+	@extend %font-xs;
 	a {
 		position: relative;
 	}

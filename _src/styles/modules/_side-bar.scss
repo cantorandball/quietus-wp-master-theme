@@ -4,23 +4,3 @@
 
 // ********** ELEMENTS **********
 
-.side-bar .child-categories {
-	margin-bottom: 1.4rem;
-
-	li {
-	 	margin-bottom: 0.625rem;
-	}
-}
-
-.side-bar .child-categories-title {
-	@extend %page-title;
-}
-
-.side-bar .child-categories-excerpt {
-	@extend %font-s;
-}
-
-
-
-
-

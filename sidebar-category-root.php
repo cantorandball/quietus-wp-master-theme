@@ -1,9 +1,9 @@
 <?php global $child_categories; ?>
 
-<aside role="complementary" class="layout-sidebar-wider side-bar">
+<aside role="complementary" class="category-side-bar">
 	<?php if ( $child_categories ): ?>
 		<div class="child-categories">
-			<h2 class="child-categories-title"><?php echo __( sprintf( 'In %s', single_cat_title( '', false ) ), 'quietus' ); ?></h2>
+			<h2 class="child-categories-title"><?php echo __( sprintf( 'Sections', single_cat_title( '', false ) ), 'quietus' ); ?></h2>
 			<ul>
 				<?php foreach ( $child_categories as $cat ): ?>
 					<li>
