@@ -1,13 +1,22 @@
 .category {}
 
 .category-parent-title {
-	@extend %lead-in-title;
+	@extend %category-title;
 }
 
 .category-title {
-	@extend %main-title;
+	@extend %page-title;
 }
 
 .category-description {
-	@extend %standfirst;
+	@extend %post-excerpt;
+}
+
+.category-post-listing {
+	.listing-thumbnail {
+		display: none;
+		@include media($tablet) {
+			display: block;
+		};
+	}
 }

@@ -1,33 +1,26 @@
 // ********** MODULE **********
 
 .puffs {
-	@include clearfix;
-	// max-width: $adverts-skyscraper-width;
-	// width: 100%;
+	@extend %clearfix;
+	ul {
+		@include grid-row($puffs-gutter-width);
+	}
 }
 
 // ********** ELEMENTS **********
 
-.puffs ul {
-	margin-left: 0 - $puffs-gutter-width;
-}
-
 .puff {
-	position: relative;
-	float: left;
-	margin-bottom: $puffs-gutter-width;
-	padding-left: $puffs-gutter-width;
+	@include puff-cols(1);
 	a {
+		@include aspect-ratio(2/3);
 		position: relative;
 		display: block;
 		width: 100%;
-		height: 0;
 		background-color: $black;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	@include puff-row-length(1);
 }
 
 .puff-header {
@@ -35,14 +28,10 @@
 	text-align: center;
 	font-variant: small-caps;
 	&:first-of-type {
-		@include media($cols-3) {
+		@include media($single-3-col) {
 			margin-top: -.4em;
 		}
 	}
-}
-
-.puff-list {
-	// @include clearfix;
 }
 
 .puff-content {

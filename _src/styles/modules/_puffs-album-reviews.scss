@@ -1,5 +1,7 @@
 .puffs-album-reviews .puff {
-	@include puff-row-length(1, 1);
+	a {
+		@include aspect-ratio(1);
+	}
 }
 
 .puff-release {

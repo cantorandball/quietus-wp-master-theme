@@ -1,5 +1,5 @@
 .listing {
-	@include clearfix;
+	@extend %clearfix;
 	margin-bottom: .5rem;
 	padding-top: .5rem;
 	border-top: 1px solid $black;
@@ -34,17 +34,9 @@
 }
 
 .listing-category-title {
-	@extend %lead-in-title;
+	@extend %category-title;
 }
 
 .listing-post-title {
-	@extend %font-l;
-	line-height: 1.2;
-	margin-bottom: .05em;
-}
-
-.listing-excerpt {
-	@extend %standfirst;
-	font-size: 0.875rem;
-	padding: 0;
+	@extend %post-title;
 }

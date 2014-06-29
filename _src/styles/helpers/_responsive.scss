@@ -1,0 +1,15 @@
+// ********** DEVICE BREAKPOINTS **********
+$desktop-l: "(min-width: #{$bp-desktop-l})";
+$desktop: "(min-width: #{$bp-desktop})";
+$tablet: "(min-width: #{$bp-tablet})";
+$mobile: "(min-width: #{$bp-mobile})";
+
+
+@mixin media($media) {
+  @media only screen and #{$media} { @content; }
+}
+
+@mixin aspect-ratio($ratio: 1) {
+	padding-bottom: percentage($ratio);
+	height: 0;
+}

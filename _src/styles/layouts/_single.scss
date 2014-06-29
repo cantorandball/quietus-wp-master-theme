@@ -1,0 +1,150 @@
+// ********** GRID BREAKPOINTS **********
+$article-width: ($page-padding-width * 2) + $post-max-width + $page-gutter-width;
+
+// article | single puffs
+$sidebar-width-half-col: ($adverts-skyscraper-width * .5);
+// article | ads & double puffs
+$sidebar-width-2-col: $adverts-skyscraper-width;
+// article | single puffs | ads & double puffs
+$sidebar-width-3-col: ($adverts-skyscraper-width * .5) + $page-gutter-width + $adverts-skyscraper-width;
+// article | double puffs | ads
+$sidebar-width-4-col: $adverts-skyscraper-width + $page-gutter-width + $adverts-skyscraper-width;
+
+
+// ********** GRID MEDIA QUERIES **********
+$bp-single-half-col: $article-width + $sidebar-width-half-col;
+$bp-single-2-col: $article-width + $sidebar-width-2-col;
+$bp-single-3-col: $article-width + $sidebar-width-3-col;
+$bp-single-4-col: $article-width + $sidebar-width-4-col;
+$single-half-col: "(min-width: #{$bp-single-half-col})";
+$single-2-col: "(min-width: #{$bp-single-2-col})";
+$single-3-col: "(min-width: #{$bp-single-3-col})";
+$single-4-col: "(min-width: #{$bp-single-4-col})";
+
+.page {
+	@include media($mobile) {
+		width: $post-max-width;
+	}
+	@include media($single-half-col) {
+		width: $bp-single-half-col;
+	}
+	@include media($single-2-col) {
+		width: $bp-single-2-col;
+	}
+	@include media($single-3-col) {
+		width: $bp-single-3-col;
+	}
+	@include media($single-4-col) {
+		width: $bp-single-4-col;
+	}
+}
+
+.post-header {
+	clear: both;
+	margin-bottom: 1rem;
+}
+
+.post-body {
+	@extend %clearfix;
+	float: left;
+	max-width: $post-max-width;
+	width: 100%;
+	margin-right: $page-gutter-width;
+	margin-top: -.4rem; // pull content up, to handle lineheight of paras.
+}
+
+.side-bar {
+	float: left;
+	width: 100%;
+	max-width: $post-max-width;
+	@include media($single-half-col) {
+		width: $sidebar-width-half-col;
+		max-width: none;
+	}
+	@include media($single-2-col) {
+		width: $sidebar-width-2-col;
+	}
+	@include media($single-3-col) {
+		width: $sidebar-width-3-col;
+	}
+	@include media($single-4-col) {
+		width: $sidebar-width-4-col;
+	}
+}
+
+.side-bar .puff {
+	@include puff-cols(2);
+	@include media($mobile) {
+		@include puff-cols(3);
+	}
+	@include media($single-half-col) {
+		@include puff-cols(1);
+	}
+	@include media($single-2-col) {
+		@include puff-cols(2);
+	}
+	@include media($single-3-col) {
+		@include puff-cols(1);
+	}
+	@include media($single-4-col) {
+		@include puff-cols(2);
+	}
+}
+
+.side-bar .puffs {
+	margin-bottom: 1.4rem;
+	@include media($single-half-col) {
+		width: $adverts-skyscraper-width / 2;
+		float: left;
+	}
+	@include media($single-2-col) {
+		width: $adverts-skyscraper-width;
+	}
+	@include media($single-3-col) {
+		width: $adverts-skyscraper-width / 2;
+	}
+	@include media($single-4-col) {
+		width: $adverts-skyscraper-width;
+		margin-right: $page-gutter-width;
+	}
+}
+
+.side-bar .puffs-album-reviews {
+	@include media($single-3-col) {
+		width: $adverts-skyscraper-width;
+		float: right;
+	}
+	@include media($single-4-col) {
+		float: left;
+	}
+	.puff {
+		@include puff-cols(2);
+		@include media($mobile) {
+			@include puff-cols(3);
+		}
+		@include media($single-half-col) {
+			@include puff-cols(1);
+		}
+		@include media($single-2-col) {
+			@include puff-cols(2);
+		}
+	}
+}
+
+
+.side-bar .advert {
+	width: 100%;
+	float: left;
+	display: none;
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+		position: relative;
+	}
+	@include media($single-2-col) {
+		display: block;
+		width: $adverts-skyscraper-width;
+	}
+	@include media($single-3-col) {
+		float: right;
+	}
+}

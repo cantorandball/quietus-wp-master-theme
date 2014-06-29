@@ -1,66 +1,55 @@
 // Contains everything below the global nav
-.layout-page {
-	@include clearfix;
-	box-sizing: content-box;
+.page {
+	@extend %clearfix;
 	margin-right: auto;
 	margin-left: auto;
-	padding: .75rem;
-	max-width: $post-max-width;
+	padding: 1rem;
+	// max-width: px-to-rem(1280);
 	width: auto;
 	@include media($mobile) {
-		padding: 2rem;
-	}
-	@include media($cols-2) {
-		max-width: none;
-		width: $post-max-width + $gutter-width + $width-cols-2-sidebar;
-	}
-	@include media($cols-3) {
-		width: $post-max-width + $gutter-width + $width-cols-3-sidebar;
-	}
-	@include media($cols-4) {
-		width: $post-max-width + $gutter-width + $width-cols-4-sidebar;
+		padding: $page-padding-width;
 	}
 }
 
 // full bleed element, for example the article header
-.layout-jumbotron {
-	clear: both;
-	margin-bottom: 1rem;
-	width: 100%;
-}
+// .layout-jumbotron {
+// 	clear: both;
+// 	margin-bottom: 1rem;
+// 	width: 100%;
+// }
 
 // the meat of the page. floats left of the side bar if there's room, else it appears above it.
-.layout-content {
-	@include clearfix;
-	@include media($cols-2) {
-		float: left;
-	}
-	max-width: $post-max-width;
-	width: 100%;
-}
+// .layout-content {
+// 	@extend %clearfix;
+// 	@include media($single-2-col) {
+// 		float: left;
+// 	}
+// 	max-width: $post-max-width;
+// 	width: 100%;
+// }
 
 .layout-content-wider {
-	@extend .layout-content;
+	// @extend .layout-content;
 	max-width: $root-category-max-width;
 }
 
 // the side bar
-.layout-sidebar {
-	float: left;
-	max-width: $post-max-width;
-	width: 100%;
-	@include media($cols-2) {
-		margin-left: $gutter-width;
-		max-width: none;
-		width: $width-cols-2-sidebar;
-	}
-	@include media($cols-3) {
-		width: $width-cols-3-sidebar;
-	}
-	@include media($cols-4) {
-		width: $width-cols-4-sidebar;
-	}
-}
+// .layout-sidebar {
+// 	float: left;
+// 	max-width: $post-max-width;
+// 	width: 100%;
+// 	@include media($single-2-col) {
+// 		margin-left: $page-gutter-width;
+// 		max-width: none;
+// 		width: $width-cols-2-sidebar;
+// 	}
+// 	@include media($single-3-col) {
+// 		width: $width-cols-3-sidebar;
+// 	}
+// 	@include media($single-4-col) {
+// 		width: $width-cols-4-sidebar;
+// 	}
+// }
 
 .layout-sidebar-wider {
 	float: left;

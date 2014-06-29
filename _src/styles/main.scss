@@ -3,14 +3,18 @@
 @import '../bower_components/sass-meyer-reset/_sass-meyer-reset.sass';
 
 // tQ settings
-@import 'functions';
+@import 'helpers/functions';
 @import 'settings';
-@import 'mixins';
-@import 'placeholders';
+
+@import 'helpers/typography';
+@import 'helpers/responsive';
+@import 'helpers/grid';
+
+@import 'layout';
+@import 'layouts/single';
 
 // tQ styles
 @import 'base';
-@import 'layout';
 @import 'modules/author';
 @import 'modules/category';
 @import 'modules/featured-articles';
