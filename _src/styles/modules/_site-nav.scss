@@ -2,8 +2,8 @@
 $nav-row-height: 2rem;
 
 .site-nav {
-	@extend %font-collapsed;
-	@extend %category-name;
+	@include font-collapsed;
+	@extend .category-name;
 	position: relative;
 	width: 100%;
 	border-top: 1px $black solid;

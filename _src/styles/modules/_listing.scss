@@ -1,6 +1,7 @@
 .listings {
 	@extend %clearfix;
-		border-bottom: 1px solid $black;
+	border-bottom: 1px solid $black;
+	margin-bottom: $page-gutter-width;
 }
 
 .listing {
@@ -9,32 +10,40 @@
 	border-top: 1px solid $black;
 }
 
-.listing-thumbnail {
-	display: block;
-	display: none;
-}
-
-.listing-thumbnail {
-	@include text-hide;
-	$width: 10rem;
-	width: $width;
-	height: $width * (2/3);
-	background-size: cover;
-	background-position: center;
-	float: left;
-	margin-right: 1rem;
-}
-
 .listing-category-title {
-	@extend %category-title;
+	@extend .category-title;
 }
 
-.listing-post-title {
-	@extend %post-title;
+.listing .post-title {
 	@extend %font-xl;
+	padding-bottom: 0;
 }
 
-.listing-excerpt {
+.listing .post-excerpt {
 	@extend %font-s;
 	font-style: italic;
+	padding-bottom: 0;
+}
+
+.listing:nth-of-type(n+4) {
+	float: left;
+	width: 100%;
+	@include media($tablet) {
+		width: 50%;
+		padding-left: .5em;
+		&:nth-of-type(even){
+			clear: right;
+			padding-left: 0;
+			padding-right: .5em;
+			&:last-child {
+				width: 100%;
+			}
+		}
+	}
+	.post-excerpt {
+	 	display: none;
+	}
+	.post-title {
+		font-size: 1rem;
+	}
 }

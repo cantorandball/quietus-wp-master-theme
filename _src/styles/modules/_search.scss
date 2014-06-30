@@ -5,9 +5,9 @@
 }
 
 .search-leadin {
-	@extend %category-title;
+	@extend .category-title;
 }
 
 .search-title {
-	@extend %page-title;
+	@extend .page-title;
 }

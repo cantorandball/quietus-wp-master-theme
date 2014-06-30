@@ -6,15 +6,15 @@
 // ********** ELEMENTS **********
 
 .post-category-title {
-	@extend %category-title;
+	@extend .category-title;
 }
 
 .post-title {
-	@extend %page-title;
+	@extend .page-title;
 }
 
 .post-standfirst {
-	@extend %post-excerpt;
+	@extend .post-excerpt;
 }
 
 .post-byline {

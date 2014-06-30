@@ -1,0 +1,35 @@
+.category-secondary {
+	@include grid-row($page-gutter-width);
+}
+
+.category-listings {
+	@include grid-cols(1, $page-gutter-width);
+	@include media($desktop) {
+		@include grid-cols(1.5, $page-gutter-width);
+	}
+}
+
+.category-side-bar {
+	@include grid-cols(1, $page-gutter-width);
+	@include media($desktop) {
+		@include grid-cols(3, $page-gutter-width);
+	}
+}
+
+.sub-categories {
+	@extend %clearfix;
+	border-bottom: 1px solid $black;
+	margin-bottom: $page-gutter-width;
+
+	.category-excerpt {
+		@extend %font-xxs;
+		font-style: italic;
+		display: block;
+	}
+
+	li {
+		display: block;
+		border-top: 1px solid $black;
+		padding: .25em 0;
+	}
+}
