@@ -42,6 +42,6 @@
 	 	display: none;
 	}
 	.post-title {
-		font-size: 1rem;
+		@extend %font-s;
 	}
 }
