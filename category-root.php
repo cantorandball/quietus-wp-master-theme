@@ -8,9 +8,9 @@
 get_header();
 ?>
 
-<section role="main" class="category">
+<section role="main" class="category-page">
 	<header>
-		<h2 class="category-title"><?php single_cat_title( '', true ); ?></h2>
+		<h2 class="page-title"><?php single_cat_title( '', true ); ?></h2>
 	</header>
 
 	<ul class="featured-articles">
@@ -33,25 +33,25 @@ get_header();
 			<?php endif; ?>
 		<?php endfor; ?>
 	</ul>
+	<div class="category-sub-content">
+		<section class="category category-recent">
+			<header>
+				<h2 class="category-title"><?php echo __( 'Recent articles', 'quietus' ); ?></h2>
+			</header>
+			<?php if ( have_posts() ): ?>
+				<ul class="listings category-listings">
+					<?php
+					while( have_posts() ): the_post();
+					get_template_part( 'template-parts/listing' );
+					endwhile;
+					?>
+				</ul>
+				<?php get_template_part( 'template-parts/pagination' ); ?>
+			<?php endif; ?>
+		</section>
+		<?php get_sidebar( 'category-root' ); ?>
+	</div>
 </section>
-<div class="category-sub-content">
-	<section class="category category-recent">
-		<header>
-			<h2 class="category-title"><?php echo __( 'Recent articles', 'quietus' ); ?></h2>
-		</header>
-		<?php if ( have_posts() ): ?>
-			<ul class="listings category-listings">
-				<?php
-				while( have_posts() ): the_post();
-				get_template_part( 'template-parts/listing' );
-				endwhile;
-				?>
-			</ul>
-			<?php get_template_part( 'template-parts/pagination' ); ?>
-		<?php endif; ?>
-	</section>
-	<?php get_sidebar( 'category-root' ); ?>
-</div>
 
 <?php
 get_footer();

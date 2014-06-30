@@ -38,25 +38,3 @@
 	@extend %font-s;
 	font-style: italic;
 }
-
-
-.listing:nth-of-type(n+3) {
-	float: left;
-	width: 50%;
-	padding-left: .5em;
-	&:nth-of-type(odd){
-		clear: left;
-		padding-left: 0;
-		padding-right: .5em;
-		&:last-child {
-			width: 100%;
-		}
-	}
-	.listing-thumbnail, .listing-excerpt {
-	 	display: none;
-	}
-	.listing-post-title {
-		@extend %font-reset;
-		line-height: 1.3;
-	}
-}
