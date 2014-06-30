@@ -1,0 +1,121 @@
+// ********** FONT SIZES **********
+
+%font-s {
+	font-size: .9rem;
+}
+
+%font-xs {
+	font-size: .8rem;
+}
+
+%font-xxs {
+	font-size: .7rem;
+}
+
+%font-l {
+	font-size: 1.1rem;
+}
+
+%font-xl {
+	font-size: 1.3rem;
+}
+
+%font-xxl {
+	font-size: 2rem;
+}
+
+%font-reset {
+	font-size: 1rem;
+	line-height: $line-height;
+}
+
+@mixin font-collapsed {
+	font-size: 0;
+	line-height: 0;
+}
+
+// ********** GENERIC STYLES **********
+
+.post-title {
+	@extend %font-l;
+	line-height: 1.1;
+}
+
+.page-title {
+	@extend .post-title;
+  @extend %font-xxl;
+	margin-bottom: .4em;
+}
+
+.section-title {
+  @extend %font-xxl;
+  padding-bottom: 1ex;
+  line-height: 1.1;
+}
+
+.category-name {
+	font-variant: small-caps;
+}
+
+.category-title {
+  @extend .category-name;
+  @extend %font-xs;
+  font-style: italic;
+}
+
+.post-standfirst {
+	margin-top: .15rem;
+	text-indent: 0;
+	font-style: italic;
+	img {
+		display: block;
+		margin-bottom: 1ex;
+		width: 100%;
+	}
+}
+
+// ********** STYLES **********
+
+%drop-cap {
+	text-indent: 0;
+	&:first-letter {
+		overflow: hidden;
+		font-size: 3.2em;
+		line-height: .92;
+		float: left;
+		display: block;
+		padding-right: .1ex;
+		margin-bottom: -.1em;
+	}
+}
+
+%ornament-divider {
+	display: block;
+	clear: both;
+	padding-bottom: 2%;
+	width: 100%;
+	height: 0;
+	background-image: url("#{$images}/icon-divider.svg");
+	background-position: center 50%;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	content: '';
+}
+
+%no-hightlight {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// ********** UTILITIES **********
+
+%antialias {
+	-webkit-font-smoothing: antialiased;
+}
+
+%antialias-hidpi {
+	@include hidpi {
+		-webkit-font-smoothing: antialiased;
+	}
+}

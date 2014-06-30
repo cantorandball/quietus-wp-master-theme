@@ -5,7 +5,7 @@
  */
 ?>
 
-<aside role="complementary" class="layout-sidebar side-bar">
+<aside role="complementary" class="side-bar">
 	<!-- PLACEHOLDER ADVERT -->
 	<div id="skyscraper-mini" class="advert"></div>
 	<?php get_template_part( 'template-parts/puffs', 'news' ); ?>

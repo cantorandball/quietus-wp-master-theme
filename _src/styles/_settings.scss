@@ -1,50 +1,35 @@
+// ********** COLOURS **********
+
 $black: #222;
 $grey: #666;
 $white: #fff;
 $light-grey: #999;
-$link-colour: #0074D9;
+$link-colour: $black;
+$advert-bg: darken(white, 7%);
+
+// ********** FONT SIZES **********
 
 $line-height: 1.4;
+$grid-gutter-width: 1rem;
 
-$advert-bg: darken(white, 7%);
-$advert-border-width: px-to-rem(5);
+// ********** MODULE SIZES **********
 
-$gutter-width: 2rem;
-$padding-width: 2rem;
+$page-gutter-width: 2rem;
+$page-padding-width: 2rem;
+
 $puffs-gutter-width: .5rem;
-$post-max-width: px-to-rem(602);
+
+$advert-border-width: px-to-rem(5);
+$advert-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
 
 $root-category-max-width: px-to-rem(830);
 $root-category-sidebar-max-width: px-to-rem(404);
 
-$adverts-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
 
 // ********** DEVICE BREAKPOINTS **********
-$desktop-l: "(min-width: #{px-to-rem(1280)})";
-$desktop: "(min-width: #{px-to-rem(976)})";
-$tablet: "(min-width: #{px-to-rem(736)})";
-$mobile: "(min-width: #{px-to-rem(480)})";
-
-// ********** GRID BREAKPOINTS **********
-// article | ads & double puffs
-$width-cols-2-sidebar: $adverts-skyscraper-width;
-
-// article | single puffs | ads & double puffs
-$width-cols-3-sidebar:
-	$adverts-skyscraper-width * .5 +
-	$gutter-width +
-	$adverts-skyscraper-width;
-
-// article | double puffs | ads
-$width-cols-4-sidebar:
-	$adverts-skyscraper-width * 2 +
-	$gutter-width;
-
-$width-article: $padding-width * 2 + $post-max-width + $gutter-width;
-
-// ********** GRID MEDIA QUERIES **********
-$cols-2: "(min-width: #{$width-article + $width-cols-2-sidebar})";
-$cols-3: "(min-width: #{$width-article + $width-cols-3-sidebar})";
-$cols-4: "(min-width: #{$width-article + $width-cols-4-sidebar})";
+$bp-desktop-l: px-to-rem(1140);
+$bp-desktop: px-to-rem(960);
+$bp-tablet: px-to-rem(740);
+$bp-mobile: px-to-rem(480);
 
 $images: "/wp-content/themes/quietus-wp-master-theme/images";

@@ -8,54 +8,36 @@
 get_header();
 ?>
 
-<section role="main" class="category">
-	<div class="layout-jumbotron">
-		<header>
-			<h2 class="category-title"><?php single_cat_title( '', true ); ?></h2>
-		</header>
-
-		<ul class="featured-articles">
-			<?php for ( $i=0; $i < 3; $i++ ): ?>
-				<?php if ( have_posts() ): the_post(); ?>
-					<li class="featured-article">
-						<div class="puff featured-article-puff">
-							<a href="<?php the_permalink(); ?>" style="<?php echo get_background_image_url( get_the_ID(), 'medium' ); ?>">
-								<div class="puff-content">
-									<h3 class="featured-article-category-title">
-										<?php quietus_the_category( false ); ?>
-									</h3>
-									<h2 class="featured-article-title">
-										<?php the_title(); ?>
-									</h2>
-								</div>
-							</a>
-						</div>
-					</li>
-				<?php endif; ?>
-			<?php endfor; ?>
-		</ul>
-	</div>
-
-	<div class="layout-content-wider">
-		<header>
-			<h2 class="category-title"><?php echo __( 'Recent articles', 'quietus' ); ?></h2>
-		</header>
-		<?php if ( have_posts() ): ?>
-			<div class="category-post-listing">
-				<ul>
-					<?php
-					while( have_posts() ): the_post();
-					get_template_part( 'template-parts/listing' );
-					endwhile;
-					?>
-				</ul>
-			</div>
-			<?php get_template_part( 'template-parts/pagination' ); ?>
-		<?php endif; ?>
-	</div>
+<section class="category-listings-featured">
+	<header>
+		<h2 class="page-title category-name"><?php single_cat_title( '', true ); ?></h2>
+	</header>
+	<ul class="listings-featured">
+		<?php for ( $i=0; $i < 3; $i++ ):
+			if ( have_posts() ): the_post();
+				get_template_part( 'template-parts/listing', 'featured' );
+			endif;
+		endfor; ?>
+	</ul>
 </section>
 
-<?php
-get_sidebar( 'category-root' );
-get_footer();
-?>
+<div class="category-secondary">
+	<section class="category-listings">
+		<header>
+			<h2 class="section-title"><?php echo __( 'Recent Articles', 'quietus' ); ?></h2>
+		</header>
+		<?php if ( have_posts() ): ?>
+			<ul class="listings">
+				<?php
+				while( have_posts() ): the_post();
+				get_template_part( 'template-parts/listing' );
+				endwhile;
+				?>
+			</ul>
+			<?php get_template_part( 'template-parts/pagination' ); ?>
+		<?php endif; ?>
+	</section>
+	<?php get_sidebar( 'category-root' ); ?>
+</div>
+
+<?php get_footer(); ?>

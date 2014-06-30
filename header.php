@@ -40,4 +40,4 @@
 			<ul class="site-nav-overflow-items"></ul>
 	   	</div>
 	</nav>
-	<div class="layout-page">
+	<div class="page">

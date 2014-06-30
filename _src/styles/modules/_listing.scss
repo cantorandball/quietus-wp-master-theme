@@ -1,50 +1,47 @@
+.listings {
+	@extend %clearfix;
+	border-bottom: 1px solid $black;
+	margin-bottom: $page-gutter-width;
+}
+
 .listing {
-	@include clearfix;
-	margin-bottom: .5rem;
-	padding-top: .5rem;
+	@extend %clearfix;
+	padding: 1rem 0;
 	border-top: 1px solid $black;
-	&:last-child {
-		padding-bottom: .5rem;
-		border-bottom: 1px solid $black;
-	}
-	a {
-		color: $black;
-	}
-}
-
-.listing-thumbnail,
-.listing-content {
-	float: left;
-}
-
-.listing-thumbnail {
-	max-width: 9.375rem;
-	max-height: 7.0625rem;
-	margin-right: 0.625rem;
-	overflow: hidden;
-
-	img {
-		width: 100%;
-	}
-}
-
-.listing-content {
-	max-width: 27.3125rem;
-	margin-top: -.25em;
 }
 
 .listing-category-title {
-	@extend %lead-in-title;
+	@extend .category-title;
 }
 
-.listing-post-title {
-	@extend %font-l;
-	line-height: 1.2;
-	margin-bottom: .05em;
+.listing .post-title {
+	@extend %font-xl;
+	padding-bottom: 0;
 }
 
-.listing-excerpt {
-	@extend %standfirst;
-	font-size: 0.875rem;
-	padding: 0;
+.listing .post-standfirst {
+	@extend %font-s;
+}
+
+.listing:nth-of-type(n+4) {
+	float: left;
+	width: 100%;
+	@include media($tablet) {
+		width: 50%;
+		padding-left: .5em;
+		&:nth-of-type(even){
+			clear: right;
+			padding-left: 0;
+			padding-right: .5em;
+			&:last-child {
+				width: 100%;
+			}
+		}
+	}
+	.post-standfirst {
+	 	display: none;
+	}
+	.post-title {
+		font-size: 1rem;
+	}
 }

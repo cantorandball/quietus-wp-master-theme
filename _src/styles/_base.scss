@@ -19,7 +19,7 @@ a {
 	color: $link-colour;
 	text-decoration: none;
 	&:visited {
-		color: $light-grey;
+		color: $link-colour;
 	}
 	&:hover {
 		text-decoration: underline;

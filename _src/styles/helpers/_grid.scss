@@ -1,0 +1,20 @@
+@mixin grid-row($gutter: $grid-gutter-width) {
+	@include clearfix;
+	margin-left: 0 - $gutter;
+}
+
+@mixin grid-cols($cols, $gutter: $grid-gutter-width) {
+	position: relative;
+	padding-left: $gutter;
+	padding-bottom: $gutter;
+	width: (100% / $cols);
+	float: left;
+}
+
+@mixin puff-cols($cols) {
+	@include grid-cols($cols, $puffs-gutter-width)
+}
+
+%clearfix {
+	@include clearfix;
+}

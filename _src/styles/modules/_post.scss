@@ -1,29 +1,14 @@
 // ********** MODULE **********
 
-.post {
-	.layout-content {
-		margin-top: -.4rem; // pull content up, to handle lineheight of paras.
-	}
-}
+.post {}
 
 // ********** ELEMENTS **********
 
-.post-category-title {
-	@extend %lead-in-title;
-}
-
-.post-title {
-	@extend %main-title;
-}
-
-.post-standfirst {
-	@extend %standfirst;
-}
-
 .post-byline {
-	@extend %font-xs;
+	@extend %font-xxs;
 	padding-bottom: 1ex;
 	border-bottom: 1px solid $grey;
+	padding-top: 1em;
 	&-author {
 		display: inline;
 		&:before {
@@ -49,7 +34,7 @@
 	}
 	width: 100%;
 	&:after {
-		@extend %text-divider;
+		@extend %ornament-divider;
 		margin-top: 2rem;
 		margin-bottom: 1.5rem;
 	}
@@ -61,12 +46,15 @@
 
 .post-content {
 	p {
-		$font-size: 1.125rem;
-		$line-height: 1.5;
 		text-align: justify;
 		text-indent: 1.5em;
-		font-size: $font-size;
-		line-height: $line-height;
+		font-size: 1.2rem;
+		line-height: 1.4;
+		hyphens: auto;
+		@include media($tablet) {
+			line-height: 1.5;
+			font-size: 1.125rem;
+		}
 		&:first-of-type {
 			@extend %drop-cap;
 		}
@@ -80,27 +68,34 @@
 	}
 	.post-embed {
 		margin: 1em 0 1em;
-		display: flex;
 		justify-content: center;
 		background-color: black;
+		width: 100%;
+		clear: both;
+		> * {
+			width: 100%;
+			// flex: 1;
+		}
 		&:first-child {
+			background-color: white;
 			margin-top: .4rem;
 			&:after {
-				@extend %text-divider;
+				@extend %ornament-divider;
 				margin-top: 2rem;
 				margin-bottom: 1.5rem;
 			}
 		}
 		&:last-child {
+			background-color: white;
 			&:before {
-				@extend %text-divider;
+				@extend %ornament-divider;
 				margin-top: 1.5rem;
 				margin-bottom: 2rem;
 			}
 		}
 	}
 	hr {
-		@extend %text-divider;
+		@extend %ornament-divider;
 		margin: 0;
 		margin-bottom: 1.125rem;
 		margin-top: 1.125rem;
@@ -136,20 +131,20 @@
 	margin-bottom: 2rem;
 	padding-top: 2rem;
 	width: 100%;
-	@include media($cols-2) {
+	@include media($tablet) {
 		margin-bottom: 0;
 		padding-bottom: 0
 	}
 	&:before {
-		@extend %text-divider;
+		@extend %ornament-divider;
 		margin-bottom: 2rem;
 	}
 }
 
 .post-related .puff {
-	@include puff-row-length(2);
+	@include puff-cols(2);
 	@include media($tablet) {
-		@include puff-row-length(3);
+		@include puff-cols(3);
 	}
 }
 

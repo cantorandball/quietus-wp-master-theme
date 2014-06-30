@@ -1,68 +1,64 @@
 // ********** MODULE **********
 
 .puffs {
-	@include clearfix;
-	// max-width: $adverts-skyscraper-width;
-	// width: 100%;
+	@extend %clearfix;
+	ul {
+		@include grid-row($puffs-gutter-width);
+	}
 }
 
 // ********** ELEMENTS **********
 
-.puffs ul {
-	margin-left: 0 - $puffs-gutter-width;
-}
-
 .puff {
-	position: relative;
-	float: left;
-	margin-bottom: $puffs-gutter-width;
-	padding-left: $puffs-gutter-width;
+	@include puff-cols(1);
 	a {
+		@include aspect-ratio(2/3);
 		position: relative;
 		display: block;
 		width: 100%;
-		height: 0;
 		background-color: $black;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	@include puff-row-length(1);
 }
 
 .puff-header {
 	margin-bottom: 1ex;
 	text-align: center;
 	font-variant: small-caps;
-	&:first-of-type {
-		@include media($cols-3) {
-			margin-top: -.4em;
-		}
-	}
-}
-
-.puff-list {
-	// @include clearfix;
 }
 
 .puff-content {
 	position: absolute;
-	top: 0;
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
-	padding: .5rem .8rem .6rem;
+	overflow: hidden;
+	padding: 2rem .8rem .6rem;
+	max-height: 100%;
 	width: 100%;
 	justify-content: flex-end;
-	border-top: 1px solid fade-out(black, .95);
-	background-color: fade-out(black, .75);
-	color: fade-out(white, 0);
+	background: linear-gradient(to bottom,
+		rgba(0,0,0,.0) 0%,
+		rgba(0,0,0,.4) 70%
+	);
+	color: white;
 	text-align: left;
 	text-shadow: fade-out(black, .2) 0px 0px 1px;
 	font-size: .93rem;
 	line-height: 1.2;
 
 	a:hover & {
-		background-color: fade-out(black, .4);
+		top: 0;
+		// animation: flicker 50ms infinite alternate;
+		// animation-delay: 3s;
 	}
 }
+
+// @keyframes flicker {
+// 	0% {background-color: transparent;}
+// 	49% {background-color: transparent}
+// 	50% {background-color: black}
+// 	100% {background-color: black}
+// }

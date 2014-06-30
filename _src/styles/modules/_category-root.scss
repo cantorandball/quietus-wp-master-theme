@@ -1,0 +1,17 @@
+.sub-categories {
+	@extend %clearfix;
+	border-bottom: 1px solid $black;
+	margin-bottom: $page-gutter-width;
+
+	.category-excerpt {
+		@extend %font-xxs;
+		font-style: italic;
+		display: block;
+	}
+
+	li {
+		display: block;
+		border-top: 1px solid $black;
+		padding: .25em 0;
+	}
+}

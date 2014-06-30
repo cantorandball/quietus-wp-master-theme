@@ -1,9 +1,9 @@
 .author {}
 
 .author-leadin {
-	@extend %lead-in-title;
+	@extend .category-title;
 }
 
 .author-title {
-	@extend %main-title;
+	@extend .page-title;
 }

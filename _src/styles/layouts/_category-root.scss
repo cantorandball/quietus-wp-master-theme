@@ -1,0 +1,17 @@
+.category-secondary {
+	@include grid-row($page-gutter-width);
+}
+
+.category-listings {
+	@include grid-cols(1, $page-gutter-width);
+	@include media($desktop) {
+		@include grid-cols(1.5, $page-gutter-width);
+	}
+}
+
+.category-side-bar {
+	@include grid-cols(1, $page-gutter-width);
+	@include media($desktop) {
+		@include grid-cols(3, $page-gutter-width);
+	}
+}
