@@ -3,7 +3,7 @@
 
 .logo {
 	@include text-hide;
-	height: 7rem;
+	height: 8rem;
 	background-color: $white;
 	background-image: url("#{$images}/logo-no_url.svg");
 	background-position: center;

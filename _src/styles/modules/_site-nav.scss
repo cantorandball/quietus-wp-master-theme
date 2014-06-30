@@ -56,9 +56,6 @@ $nav-row-height: 2rem;
 
 .site-nav-secondary {
 	display: none;
-	@include media($desktop) {
-		display: block;
-	}
 	@extend %font-xs;
 	a {
 		position: relative;
