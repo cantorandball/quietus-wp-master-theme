@@ -5,34 +5,9 @@
 }
 
 .listing-featured {
-	@include grid-cols(1);
-	&:nth-child(4), &:nth-child(5) {
-		display: none;
-	}
-
-	@include media($mobile) {
-		&:first-child {
-			@include grid-cols(1);
-		}
-		&:nth-child(4), &:nth-child(5) {
-			display: none;
-		}
-		@include grid-cols(2);
-	}
-
-	@include media($desktop) {
-		@include grid-cols(3);
-		&:first-child {
-			@include grid-cols(1.5);
-			// The standard calculation is slightly off, when rounded to whole pixels in the browser.
-			a {
-				padding-bottom: percentage(2.02/3)
-			}
-		}
-	}
 
 	.post-title {
-		@extend %font-l;
+		@extend %font-s;
 		padding-bottom: 0;
 		margin-bottom: 0;
 	}
@@ -41,6 +16,33 @@
 		padding-left: 0;
 		margin-bottom: 0;
 		padding-bottom: 0;
+	}
+
+	@include grid-cols(2);
+
+	&:first-child {
+		@include grid-cols(1);
+		.post-title {
+			font-size: 2rem;
+		}
+	}
+
+	@include media($mobile) {
+		.post-title {
+			font-size: 1rem;
+		}
+	}
+
+	@include media($desktop) {
+		.post-title {
+			font-size: 1.1rem;
+		}
+		@include grid-cols(3);
+		&:first-child {
+			@include grid-cols(1.5);
+			// The standard calculation is slightly off, when rounded to whole pixels in the browser.
+			a {padding-bottom: percentage(2.02/3)}
+		}
 	}
 }
 
