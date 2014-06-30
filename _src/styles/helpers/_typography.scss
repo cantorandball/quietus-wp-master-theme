@@ -36,10 +36,15 @@
 
 // ********** GENERIC STYLES **********
 
+.post-title {
+	@extend %font-l;
+	line-height: 1.1;
+}
+
 .page-title {
+	@extend .post-title;
   @extend %font-xxl;
-  padding-bottom: 1ex;
-  line-height: 1.1;
+	margin-bottom: .4em;
 }
 
 .section-title {
@@ -58,14 +63,8 @@
   font-style: italic;
 }
 
-.post-title {
-	@extend %font-l;
-	line-height: 1.2;
-	margin-bottom: .1em;
-}
-
-.post-excerpt {
-	padding-bottom: 1rem;
+.post-standfirst {
+	margin-top: .15rem;
 	text-indent: 0;
 	font-style: italic;
 	img {

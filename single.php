@@ -10,8 +10,8 @@ get_header(); ?>
 <?php while( have_posts() ): the_post(); ?>
 <article role="main" class="post">
 	<header class="post-header">
-		<h3 class="post-category-title"><?php quietus_the_category( true ); ?></h3>
-		<h2 class="post-title"><?php the_title(); ?></h2>
+		<h3 class="category-title"><?php quietus_the_category( true ); ?></h3>
+		<h2 class="page-title"><?php the_title(); ?></h2>
 		<?php get_template_part( 'template-parts/single-standfirst' ) ?>
 		<?php get_template_part( 'template-parts/single-byline' ) ?>
 	</header>

@@ -12,5 +12,5 @@ if ( is_category() && get_queried_object_id() == get_the_category()[0]->cat_ID )
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 		<h2 class="post-title"><?php the_title(); ?></h2>
 	</a>
-	<div class="post-excerpt"><?php the_excerpt(); ?></div>
+	<div class="post-standfirst"><?php the_excerpt(); ?></div>
 </li>

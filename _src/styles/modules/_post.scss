@@ -1,26 +1,14 @@
 // ********** MODULE **********
 
-.post {
-}
+.post {}
 
 // ********** ELEMENTS **********
-
-.post-category-title {
-	@extend .category-title;
-}
-
-.post-title {
-	@extend .page-title;
-}
-
-.post-standfirst {
-	@extend .post-excerpt;
-}
 
 .post-byline {
 	@extend %font-xxs;
 	padding-bottom: 1ex;
 	border-bottom: 1px solid $grey;
+	padding-top: 1em;
 	&-author {
 		display: inline;
 		&:before {
