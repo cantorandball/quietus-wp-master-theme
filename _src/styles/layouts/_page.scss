@@ -20,21 +20,3 @@
 		width: $bp-desktop-l;
 	}
 }
-
-.layout-content-wider {
-	// @extend .layout-content;
-	max-width: $root-category-max-width;
-}
-
-.layout-sidebar-wider {
-	float: left;
-	width: 100%;
-	@include media($mobile) {
-		margin-left: 0;
-		max-width: none;
-	}
-	@include media($desktop) {
-		margin-left: 1.25rem;
-		max-width: $root-category-sidebar-max-width;
-	}
-}
