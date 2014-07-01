@@ -1,4 +1,4 @@
-.puffs-album-reviews .puff {
+.puff-album-review {
 	a {
 		@include aspect-ratio(1);
 	}
@@ -14,7 +14,6 @@
 
 .puff-artist {
 	@extend %font-xxs;
-	display: block;
 	display: block;
 	margin-bottom: .3ex;
 	text-transform: uppercase;

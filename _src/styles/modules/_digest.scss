@@ -1,0 +1,97 @@
+.digest {
+	clear: both;
+	margin-bottom: $page-gutter-width;
+}
+
+.digest h3 {
+	display: none;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.digest-sections {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.digest-section-title {
+	@extend .category-name;
+	@extend %font-s;
+	position: relative;
+	display: flex;
+	height: 2rem;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid $black;
+	flex-grow: 1;
+	cursor: pointer;
+	&.is-active, &:hover {
+		background-color: $black;
+		color: $white;
+		&:after {
+			content: '';
+		}
+	}
+	&:after {
+		position: absolute;
+		top: 0;
+		right: -.15em;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		content: '∙';
+	}
+	&:last-of-type {
+		&:after {
+			content: '';
+		}
+	}
+	&:nth-of-type(n+2) {
+		margin-left: -1px;
+	}
+}
+
+.digest-section {
+	@extend %font-xs;
+	display: none;
+	order: 4;
+	flex-basis: 100%;
+	flex-grow: 3;
+	.is-active + & {
+		display: inline-block;
+	}
+}
+
+.digest-section a {
+	@extend .post-title;	display: block;
+}
+
+.digest-section li {
+	border-bottom: 1px dotted $black;
+	padding: .5em 0;
+	&:last-child {
+		border-style: none;
+		padding-bottom: 0;
+	}
+}
+
+.digest-section-album-reviews {
+	padding-top: .5rem;
+	ul {
+		@include grid-row($puffs-gutter-width);
+	}
+	li {
+		@include puff-cols(2);
+		@include media($tablet) {
+			@include puff-cols(3);
+		}
+		@include media($desktop) {
+			@include puff-cols(2);
+		}
+		border: none;
+		padding-top: 0;
+	}
+}

@@ -1,16 +1,6 @@
 // ********** MODULE **********
 
-.puffs {
-	@extend %clearfix;
-	ul {
-		@include grid-row($puffs-gutter-width);
-	}
-}
-
-// ********** ELEMENTS **********
-
 .puff {
-	@include puff-cols(1);
 	a {
 		@include aspect-ratio(2/3);
 		position: relative;
