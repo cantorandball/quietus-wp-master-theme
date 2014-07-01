@@ -80,8 +80,17 @@
 
 .digest-section-album-reviews {
 	padding-top: .5rem;
-	.puffs-album-reviews .puff {
-	@include puff-cols(2);
+	ul {
+		@include grid-row($puffs-gutter-width);
+	}
+	li {
+		@include puff-cols(2);
+		@include media($tablet) {
+			@include puff-cols(3);
+		}
+		@include media($desktop) {
+			@include puff-cols(2);
+		}
 		border: none;
 		padding-top: 0;
 	}

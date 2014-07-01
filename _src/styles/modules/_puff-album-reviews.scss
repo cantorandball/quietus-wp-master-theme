@@ -1,5 +1,4 @@
-.puffs-album-reviews .puff {
-	@include puff-cols(1);
+.puff-album-review {
 	a {
 		@include aspect-ratio(1);
 	}
