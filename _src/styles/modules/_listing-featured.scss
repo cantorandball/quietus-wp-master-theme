@@ -5,40 +5,18 @@
 }
 
 .listing-featured {
-
-	.post-title {
-		@extend %font-s;
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
-
-	.puff {
-		padding-left: 0;
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
-
-	@media only screen and (max-width: $bp-mobile) {
-		.puff-content {
-			padding: 0.5rem;
-		}
-	};
-
 	@include grid-cols(2);
-
 	&:first-child {
 		@include grid-cols(1);
 		.post-title {
 			font-size: 2rem;
 		}
 	}
-
 	@include media($mobile) {
 		.post-title {
 			font-size: 1rem;
 		}
 	}
-
 	@include media($desktop) {
 		.post-title {
 			font-size: 1.1rem;
@@ -52,6 +30,21 @@
 	}
 }
 
+.listing-featured .post-title {
+	@extend %font-s;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
 
+.listing-featured .puff {
+	padding-left: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
 
+.listing-featured .puff-content {
+	@media only screen and (max-width: $bp-mobile) {
+		padding: 0.5rem;
+	}
+};
 
