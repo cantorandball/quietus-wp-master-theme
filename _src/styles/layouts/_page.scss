@@ -16,7 +16,7 @@
 		width: $bp-desktop;
 		max-width: none;
 	}
-	@include media($desktop-l) {
-		width: $bp-desktop-l;
-	}
+	// @include media($desktop-l) {
+	// 	width: $bp-desktop-l;
+	// }
 }
