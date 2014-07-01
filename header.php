@@ -12,11 +12,11 @@
 <body>
 	<div class="advert advert-leaderboard" id="leaderboard"></div>
 	<header class="header">
-		<h1 class="logo">
+		<div class="logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				<?php bloginfo('name'); ?>
 			</a>
-		</h1>
+		</div>
 		<div class="search-box">
 			<?php get_search_form(); ?>
 		</div>

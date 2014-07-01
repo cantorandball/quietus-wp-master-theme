@@ -10,11 +10,11 @@ get_header(); ?>
 <?php while( have_posts() ): the_post(); ?>
 <article role="main" class="post post-review" itemscope itemtype="http://schema.org/Review">
 	<header class="post-header">
-		<h3 class="post-category-title"><?php quietus_the_category( true ); ?></h3>
-		<h2 class="post-title" itemprop="itemReviewed">
+		<p class="category-title"><?php quietus_the_category( true ); ?></p>
+		<h1 itemprop="itemReviewed">
 			<span class="post-review-release" itemprop="name"><?php the_field('album_title'); ?></span>
 			<span class="post-review-artist" itemprop="creator"><?php the_field('album_artist'); ?></span>
-		</h2>
+		</h1>
 		<?php get_template_part( 'template-parts/single-standfirst' ) ?>
 		<?php get_template_part( 'template-parts/single-byline' ) ?>
 	</header>

@@ -41,15 +41,22 @@
 	line-height: 1.1;
 }
 
-.page-title {
+// Page titles
+h1 {
 	@extend .post-title;
   @extend %font-xxl;
 	margin-bottom: .4em;
 }
 
-.section-title {
+// Section titles
+h2 {
   @extend %font-xxl;
   padding-bottom: 1ex;
+  line-height: 1.1;
+}
+
+h3 {
+  @extend %font-xl;
   line-height: 1.1;
 }
 

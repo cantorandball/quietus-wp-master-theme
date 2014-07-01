@@ -10,7 +10,7 @@ get_header();
 
 <section class="category-listings-featured">
 	<header>
-		<h2 class="page-title category-name"><?php single_cat_title( '', true ); ?></h2>
+		<h1 class="category-name"><?php single_cat_title( '', true ); ?></h1>
 	</header>
 	<ul class="listings-featured">
 		<?php for ( $i=0; $i < 3; $i++ ):
@@ -24,7 +24,7 @@ get_header();
 <div class="category-secondary">
 	<section class="category-listings">
 		<header>
-			<h2 class="section-title"><?php echo __( 'Recent Articles', 'quietus' ); ?></h2>
+			<h2><?php echo __( 'Recent Articles', 'quietus' ); ?></h2>
 		</header>
 		<?php if ( have_posts() ): ?>
 			<ul class="listings">

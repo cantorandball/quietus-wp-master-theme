@@ -10,12 +10,12 @@ get_header(); ?>
 <section role="main" class="search">
 	<div class="layout-jumbotron">
 		<header>
-			<h3 class="search-leadin">
+			<p class="search-leadin">
 				<?php echo( __( 'Search Results for:', 'quietus' ) ); ?>
-			</h3>
-			<h2 class="search-title">
+			</p>
+			<h1 class="search-title">
 				<?php the_search_query(); ?>
-			</h2>
+			</h1>
 		</header>
 	</div>
 

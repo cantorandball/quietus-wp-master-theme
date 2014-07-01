@@ -10,15 +10,15 @@ get_header(); ?>
 <section role="main" class="author">
 	<div class="layout-jumbletron">
 		<header>
-			<h3 class="author-leadin">Articles from</h3>
-			<h2 class="author-title">
+			<p class="author-leadin">Articles from</p>
+			<h1>
 				<?php if ( have_posts() ): the_post(); ?>
 					<?php
 					the_author();
 					rewind_posts();
 					?>
 				<?php endif; ?>
-			</h2>
+			</h1>
 		</header>
 	</div>
 

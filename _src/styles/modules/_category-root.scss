@@ -1,17 +1,20 @@
-.sub-categories {
+.category-list {
 	@extend %clearfix;
-	border-bottom: 1px solid $black;
 	margin-bottom: $page-gutter-width;
-
-	.category-excerpt {
-		@extend %font-xxs;
-		font-style: italic;
+	padding-bottom: .25em;
+	border-bottom: 1px solid $black;
+	dt {
 		display: block;
-	}
-
-	li {
-		display: block;
+		margin-top: .25em;
+		padding-top: .25em;
 		border-top: 1px solid $black;
-		padding: .25em 0;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	dd {
+		@extend %font-xxs;
+		display: block;
+		font-style: italic;
 	}
 }

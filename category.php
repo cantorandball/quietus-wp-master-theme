@@ -19,13 +19,13 @@ get_header(); ?>
 	<div class="layout-jumbotron">
 		<header>
 			<?php if ( $parent ): ?>
-				<h3 class="category-parent-title">
+				<p class="category-title">
 					<a href="<?php echo get_category_link( $parent->cat_ID ); ?>"><?php echo $parent->name; ?></a>
-				</h3>
+				</p>
 			<?php endif; ?>
-			<h2 class="category-title">
+			<h1 class="category-name">
 				<?php single_cat_title( '', true ); ?>
-			</h2>
+			</h1>
 		</header>
 
 		<?php if ( category_description() ): ?>

@@ -2,21 +2,17 @@
 
 <aside role="complementary" class="category-side-bar">
 	<?php if ( $child_categories ): ?>
-		<div class="sub-categories">
-			<h2 class="section-title"><?php echo __( sprintf( 'Sections', single_cat_title( '', false ) ), 'quietus' ); ?></span></h2>
-			<ul>
-				<?php foreach ( $child_categories as $cat ): ?>
-					<li>
-						<a href="<?php echo esc_url( get_category_link( $cat ) ); ?>">
-							<h2 class="category-name"><?php echo $cat->name; ?></h2>
-						</a>
-						<small class="category-excerpt">
-							<?php echo $cat->description; ?>
-						</small>
-					</li>
-				<?php endforeach; ?>
-			</ul>
-		</div>
+		<h2><?php echo __( sprintf( 'Sections', single_cat_title( '', false ) ), 'quietus' ); ?></span></h2>
+		<dl class="category-list">
+			<?php foreach ( $child_categories as $cat ): ?>
+				<dt>
+					<a href="<?php echo esc_url( get_category_link( $cat ) ); ?>" class="category-name">
+						<?php echo $cat->name; ?>
+					</a>
+				</dt>
+				<dd><?php echo $cat->description; ?></dd>
+			<?php endforeach; ?>
+		</dl>
 	<?php endif; ?>
 
 	<!-- PLACEHOLDER ADVERT -->
