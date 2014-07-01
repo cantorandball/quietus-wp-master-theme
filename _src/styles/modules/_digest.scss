@@ -72,14 +72,6 @@
 }
 
 .digest-section li:not(.puff) {
-	@include media($desktop) {
-		padding-right: 0;
-		padding-left: 0;
-		width: 100%;
-		&:nth-child(n+2) {
-			border-style: dotted;
-		}
-	};
 	float: left;
 	padding: .5em 0rem .5rem .5rem;
 	width: 50%;
@@ -95,6 +87,14 @@
 	&:last-child {
 		padding-bottom: 0;
 	}
+	@include media($desktop) {
+		padding-right: 0;
+		padding-left: 0;
+		width: 100%;
+		&:nth-child(n+2) {
+			border-style: dotted;
+		}
+	};
 }
 
 .digest-section-album-reviews {
