@@ -13,7 +13,6 @@
 
 .page-footer ul {
 	display: inline;
-	// justify-content: space-between;
 }
 
 .page-footer li {
@@ -24,6 +23,7 @@
 .page-footer-social {
 	width: 50%;
 	float: left;
+	height: 0;
 	@include media($tablet) {
 		width: auto;
 		float: none;
@@ -40,6 +40,10 @@
 	}
 }
 
+.page-footer-social .icon {
+	vertical-align: middle;
+}
+
 .page-footer-links {
 	@include media($desktop) {
 		float: right;
@@ -54,14 +58,14 @@
 		width: auto;
 		float: none;
 		display: inline-block;
-		padding-left: 1ex;
-		padding-right: 0;
+		padding: 1ex 0 0 1ex;
 		&:before {
 			content: '∙';
 			padding-right: 1ex;
 		}
 	}
 	@include media($desktop) {
+		padding-top: 1em;
 		&:first-child:before {
 			display: none;
 		}
