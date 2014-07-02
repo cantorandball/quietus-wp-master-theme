@@ -1,0 +1,69 @@
+// ********** MODULE **********
+
+.page-footer {
+	@include font-collapsed;
+	@extend .page;
+	padding: 0 10px 2rem;
+	border-top: 1px solid $black;
+	@include media($tablet) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.page-footer ul {
+	display: inline;
+	// justify-content: space-between;
+}
+
+.page-footer li {
+	@extend %font-xs;
+	line-height: 1;
+}
+
+.page-footer-social {
+	width: 50%;
+	float: left;
+	@include media($tablet) {
+		width: auto;
+		float: none;
+	}
+}
+
+.page-footer-social li {
+	padding: .8em 1em 0 0;
+	display: inline-block;
+	@include media($mobile) {
+		&:last-child {
+			padding-right: 1ex;
+		}
+	}
+}
+
+.page-footer-links {
+	@include media($desktop) {
+		float: right;
+	}
+}
+
+.page-footer-links li {
+	padding: 1em 1em 0 0;
+	width: 50%;
+	float: left;
+	@include media($tablet) {
+		width: auto;
+		float: none;
+		display: inline-block;
+		padding-left: 1ex;
+		padding-right: 0;
+		&:before {
+			content: '∙';
+			padding-right: 1ex;
+		}
+	}
+	@include media($desktop) {
+		&:first-child:before {
+			display: none;
+		}
+	}
+}
