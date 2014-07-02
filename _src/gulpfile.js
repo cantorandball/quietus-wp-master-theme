@@ -132,6 +132,7 @@ gulp.task('browser-sync', function() {
     browserSync.init(null, {
         proxy: "thequietus.dev",
         files: ['../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*.css'],
+        open: false
     });
 });
 
