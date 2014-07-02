@@ -11,7 +11,7 @@
 
 <body>
 	<div class="advert advert-leaderboard" id="leaderboard"></div>
-	<header class="header">
+	<header class="page-header">
 		<div class="logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				<?php bloginfo('name'); ?>
