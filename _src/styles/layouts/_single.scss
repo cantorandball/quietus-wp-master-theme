@@ -31,44 +31,7 @@
 	// }
 }
 
-// .side-bar .puffs {
-// 	margin-bottom: 1.4rem;
-// 	width: 100%;
-// 	@include media($desktop) {
-// 		width: $advert-skyscraper-width;
-// 	}
-// 	// @include media($desktop-l) {
-// 	// 	width: $advert-skyscraper-width / 2;
-// 	// }
-// }
-
-// .side-bar .puff {
-// 	@include puff-cols(2);
-// 	@include media($tablet) {
-// 		@include puff-cols(3);
-// 	}
-// 	@include media($desktop) {
-// 		@include puff-cols(2);
-// 	}
-// 	@include media($desktop-l) {
-// 		@include puff-cols(1);
-// 	}
-// }
-
-// .side-bar .puffs-album-reviews {
-// 	float: right;
-// 	@include media($desktop) {
-// 		width: $advert-skyscraper-width;
-// 	}
-// 	.puff {
-// 		@include media($desktop-l) {
-// 			@include puff-cols(2);
-// 		}
-// 	}
-// }
-
-
-.side-bar .advert {
+.side-bar > * {
 	width: 100%;
 	// float: right;
 	&:not(:last-child) {
@@ -76,10 +39,5 @@
 	}
 	@include media($desktop) {
 		width: $advert-skyscraper-width;
-	}
-}
-.side-bar .puff-header {
-	@include media($desktop) {
-		margin-top: -.4em;
 	}
 }

@@ -1,6 +1,5 @@
 .digest {
 	clear: both;
-	margin-bottom: $page-gutter-width;
 }
 
 .digest h3 {
@@ -19,19 +18,6 @@
 .digest-section-title {
 	@extend .category-name;
 	@extend %font-s;
-	@include media($desktop) {
-		&:after {
-			position: absolute;
-			top: 0;
-			right: -.15em;
-			display: flex;
-			height: 100%;
-			align-items: center;
-			justify-content: center;
-			content: '∙';
-		}
-	}
-
 	position: relative;
 	display: flex;
 	height: 2rem;
@@ -46,13 +32,26 @@
 		&:after {
 			content: '';
 		}
-	}&:last-of-type {
+	}
+	&:last-of-type {
 		&:after {
 			content: '';
 		}
 	}
 	&:nth-of-type(n+2) {
 		margin-left: -1px;
+	}
+	@include media($desktop) {
+		&:after {
+			position: absolute;
+			top: 0;
+			right: -.15em;
+			display: flex;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			content: '∙';
+		}
 	}
 }
 
@@ -68,7 +67,8 @@
 }
 
 .digest-section a {
-	@extend .post-title;	display: block;
+	@extend .post-title;
+	display: block;
 }
 
 .digest-section li:not(.puff) {
@@ -82,17 +82,14 @@
 		padding-left: 0;
 	}
 	&:nth-child(-n+2) {
-		border-style: none;
-	}
-	&:last-child {
-		padding-bottom: 0;
+		border-color: $white;
 	}
 	@include media($desktop) {
 		padding-right: 0;
 		padding-left: 0;
 		width: 100%;
 		&:nth-child(n+2) {
-			border-style: dotted;
+			border-color: $black;
 		}
 	};
 }
