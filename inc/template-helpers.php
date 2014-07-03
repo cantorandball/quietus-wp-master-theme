@@ -26,7 +26,7 @@ function get_latest_news() {
  */
 function get_latest_reviews() {
 	$query_args = array(
-		'category_name'  => 'album-reviews',
+		'category_name'  => 'album-reviews,book-reviews,live-reports,film-tv-reviews',
 		'posts_per_page' => 20,
 		'orderby'        => 'date',
 		);
