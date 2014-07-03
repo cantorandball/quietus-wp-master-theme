@@ -89,7 +89,7 @@ h3 {
 		display: block;
 		padding-right: .1ex;
 		margin-bottom: -.1em;
-		@media only screen and (max-width: $bp-mobile) {
+		@media only screen and (max-width: $bp-tablet) {
 			line-height: .85;
 			font-size: 3em;
 		}
