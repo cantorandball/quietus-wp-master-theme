@@ -11,7 +11,7 @@
 	float: left;
 	margin-top: -.4rem; // pull content up, to handle lineheight of paras.
 	@include media($desktop) {
-		width: $bp-desktop - ($page-padding-width * 2) - ($advert-skyscraper-width * 1) - $page-gutter-width;
+		width: $bp-desktop - ($advert-skyscraper-width * 1) - $page-gutter-width;
 	}
 	// @include media($desktop-l) {
 	// 	width: $bp-desktop-l - ($page-padding-width * 2) - ($advert-skyscraper-width * 1.5) - ($page-gutter-width * 2);

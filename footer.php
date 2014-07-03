@@ -1,6 +1,20 @@
 		</div>
+		<footer class="page-footer">
+			<ul class="page-footer-social">
+				<li><a href="https://twitter.com/theQuietus" class="icon icon-twitter" title="Follow us on Twitter"><?php include(get_template_directory() . '/images/icon-twitter.svg'); ?></a></li>
+				<li><a href="https://www.facebook.com/TheQuietus" class="icon icon-facebook" title="Follow us on Facebook"><?php include(get_template_directory() . '/images/icon-facebook.svg'); ?></a></li>
+			</ul>
+			<ul class="page-footer-links">
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">Who we are</a></li>
+				<li><a href="">Code of Conduct</a></li>
+				<li><a href="">Cookie Policy</a></li>
+				<li><a href="">Terms &amp; Conditions</a></li>
+				<li><a href="">Advertise</a></li>
+			</ul>
+		</footer>
 		<?php wp_footer(); ?>
-
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];

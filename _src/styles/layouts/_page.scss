@@ -6,8 +6,8 @@
 	padding: 10px;
 	width: 100%;
 	max-width: 38rem;
-	@include media($mobile) {
-		padding: ($page-padding-width * 1.5) $page-padding-width;
+	@include media($tablet) {
+		padding: ($page-padding-width * 1.5) 0;
 	}
 	@include media($tablet) {
 		width: $bp-tablet;

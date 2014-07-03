@@ -1,0 +1,22 @@
+.icon {
+	display: inline-block;
+	path {
+		fill: $black;
+	}
+}
+
+.icon-twitter {
+	&:hover {
+		path {
+			fill: #55acee; // twitter blue
+		}
+	}
+}
+
+.icon-facebook {
+	&:hover {
+		path {
+			fill: #3b5998; // fb blue
+		}
+	}
+}
