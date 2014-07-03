@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var args = require('yargs').argv;
 
 // port number dev server runs on
 var port = 8008;
@@ -117,7 +118,6 @@ gulp.task('minify', function(){
 
 // Dev mode
 gulp.task('dev', ['clean'], function(){
-  // livereload needs the rebuild files before starting, so use runSequence till gulp 4.
   runSequence('compile', ['watch', 'browser-sync']);
 });
 
@@ -129,11 +129,17 @@ gulp.task('watch', function(){
 })
 
 gulp.task('browser-sync', function() {
-    browserSync.init(null, {
-        proxy: "thequietus.dev",
-        files: ['../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*.css'],
-        open: false
-    });
+		var opts = {
+      proxy: "thequietus.dev",
+      files: ['../**/*.php', SCRIPT_DIR + '/**/*', IMAGE_DIR + '/**/*', STYLE_DIR + '/**/*.css'],
+      open: false
+    };
+		if(args.public) {
+			opts.tunnel = true;
+			opts.open = true;
+			opts.ghostMode = false;
+		};
+    browserSync.init(null, opts);
 });
 
 // Perform a build
