@@ -1,3 +1,1 @@
-<section class="post-related">
-	<?php get_template_part( 'template-parts/related-posts' ); ?>
-</section>
+<section class="post-related"><?php get_template_part( 'template-parts/related-posts' ); ?></section>

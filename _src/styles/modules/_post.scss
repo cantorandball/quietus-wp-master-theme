@@ -44,16 +44,20 @@
 	}
 }
 
+.post-body {
+	position: relative;
+}
+
 .post-content {
 	p {
 		text-align: justify;
-		text-indent: 1.5em;
-		font-size: 1.2rem;
-		line-height: 1.4;
+		text-indent: 1em;
+		font-size: 1.125rem;
+		line-height: 1.3;
 		hyphens: auto;
 		@include media($tablet) {
+			text-indent: 1.5em;
 			line-height: 1.5;
-			font-size: 1.125rem;
 		}
 		&:first-of-type {
 			@extend %drop-cap;
@@ -63,7 +67,10 @@
 		img {
 			width: 100%;
 			height: auto;
-			margin: 1em 0 .5em;
+			margin: 1ex 0 0;
+			@include media($mobile) {
+				margin: 1em 0 .5em;
+			}
 		}
 	}
 	.post-embed {
@@ -130,7 +137,7 @@
 	}
 }
 
-.post-related {
+.post-related:not(:empty) {
 	@include grid-row($puffs-gutter-width);
 	margin-bottom: 2rem;
 	padding-top: 2rem;
