@@ -11,8 +11,6 @@
 				<li><a href="">Code of Conduct</a></li>
 				<li><a href="">Cookie Policy</a></li>
 				<li><a href="">Terms &amp; Conditions</a></li>
-				<li><a href="">Terms &amp; Conditions</a></li>
-				<li><a href="">Terms &amp; Conditions</a></li>
 				<li><a href="">Advertise</a></li>
 			</ul>
 		</footer>
