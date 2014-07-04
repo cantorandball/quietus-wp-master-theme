@@ -31,9 +31,6 @@
 		&::-webkit-search-cancel-button {
 			display: none;
 		}
-		&::placeholder {
-			color: white;
-		}
 	}
 	button {
 		@include font-collapsed;
