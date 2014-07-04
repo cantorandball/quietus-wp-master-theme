@@ -1,4 +1,7 @@
 .page-header {
+	@extend .page;
+	padding: 0;
+	position: relative;
 }
 
 .logo {

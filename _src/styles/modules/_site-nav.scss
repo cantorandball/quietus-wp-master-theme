@@ -36,9 +36,9 @@ $nav-row-height: 2rem;
 
 .site-nav-primary {
 	overflow: hidden;
-	padding-right: $nav-row-height;
+	padding-right: 2rem;
 	@include media($tablet) {
-		padding-left: $nav-row-height;
+		padding-left: 2rem;
 	}
 	height: $nav-row-height;
 	border-bottom: 1px solid $black;
