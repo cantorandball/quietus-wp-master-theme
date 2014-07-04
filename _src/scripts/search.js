@@ -4,7 +4,6 @@ var $ = require('zepto-browserify').$;
 
 var $searchInput = $('.site-search input');
 var $searchForm = $('.site-search');
-var $searchButton = $('.site-search button');
 
 module.exports = {
 	init: function(){
@@ -12,7 +11,6 @@ module.exports = {
 			e.preventDefault();
 			// Move the cursor to the end of the current value
 			var value = $searchInput.val();
-			console.log(value);
 			$searchInput.val('').val(value);
 			$searchForm.addClass('is-active').css({'position': 'relative'}).find('input').focus();
 		})
