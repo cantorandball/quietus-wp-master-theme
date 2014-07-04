@@ -29,12 +29,6 @@
 				'depth' => 1
 			) ); ?>
 	   	</ul>
-		<ul class="site-nav-secondary"><?php wp_nav_menu( array(
-				'container' => false,
-				'items_wrap' => '%3$s',
-				'depth' => 0,
-				'walker' => new quietus_sub_menu()
-			) ); ?></ul>
 	   	<div class="site-nav-overflow">
 	   		<button class="site-nav-overflow-toggle">Toggle navigation</button>
 			<ul class="site-nav-overflow-items"></ul>

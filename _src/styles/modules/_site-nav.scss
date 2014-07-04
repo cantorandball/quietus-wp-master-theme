@@ -53,22 +53,3 @@ $nav-row-height: 2rem;
 		}
 	}
 }
-
-.site-nav-secondary {
-	display: none;
-	@extend %font-xs;
-	a {
-		position: relative;
-	}
-	.active a, a:hover {
-		&:after {
-			position: absolute;
-			right: 1em;
-			bottom: 0;
-			left: 1em;
-			height: 1px;
-			background-color: $black;
-			content: '';
-		}
-	}
-}
