@@ -10,7 +10,7 @@ var digest = require('./digest');
 var attachFastClick = require('fastclick');
 attachFastClick(document.body);
 
-adverts.insert();
+window.onload = adverts.insert;
 overflowNav.init();
 search.init();
 digest.init();
