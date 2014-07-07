@@ -17,9 +17,6 @@
 				<?php bloginfo('name'); ?>
 			</a>
 		</div>
-		<div class="search-box">
-			<?php get_search_form(); ?>
-		</div>
 	</header>
 	<nav class="site-nav">
 		<ul class="site-nav-primary">
@@ -29,15 +26,10 @@
 				'depth' => 1
 			) ); ?>
 	   	</ul>
-		<ul class="site-nav-secondary"><?php wp_nav_menu( array(
-				'container' => false,
-				'items_wrap' => '%3$s',
-				'depth' => 0,
-				'walker' => new quietus_sub_menu()
-			) ); ?></ul>
 	   	<div class="site-nav-overflow">
 	   		<button class="site-nav-overflow-toggle">Toggle navigation</button>
 			<ul class="site-nav-overflow-items"></ul>
 	   	</div>
+		<?php get_search_form(); ?>
 	</nav>
 	<div class="page">

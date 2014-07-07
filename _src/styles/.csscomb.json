@@ -40,6 +40,8 @@
     "min-height",
     "max-width",
     "max-height",
+    "flex-grow",
+    "flex-basis",
     "width",
     "height",
     "align-items",

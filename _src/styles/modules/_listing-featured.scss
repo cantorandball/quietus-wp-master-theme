@@ -43,7 +43,7 @@
 }
 
 .listing-featured .puff-content {
-	@media only screen and (max-width: $bp-mobile) {
+	@include media($only-mobile) {
 		padding: 0.5rem;
 	}
 };

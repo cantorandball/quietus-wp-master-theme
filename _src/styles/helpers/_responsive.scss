@@ -3,7 +3,7 @@ $desktop-l: "(min-width: #{$bp-desktop-l})";
 $desktop: "(min-width: #{$bp-desktop})";
 $tablet: "(min-width: #{$bp-tablet})";
 $mobile: "(min-width: #{$bp-mobile})";
-
+$only-mobile: "(max-width: #{$bp-mobile})";
 
 @mixin media($media) {
   @media only screen and #{$media} { @content; }

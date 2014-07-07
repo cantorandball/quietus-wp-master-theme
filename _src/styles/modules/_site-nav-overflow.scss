@@ -1,17 +1,18 @@
 .site-nav-overflow {
 	position: absolute;
 	top: 0;
-	right: 0;
-	z-index: 1000;
+	right: 2rem;
+	z-index: 2;
 }
 
 .site-nav-overflow-items {
 	position: absolute;
-	right: 0;
+	right: -1px;
 	display: none;
 	width: 12rem;
 	border-bottom: 1px solid $black;
 	border-left: 1px solid $black;
+	border-right: 1px solid $black;
 	background-color: $white;
 	li {
 		@extend %font-reset;

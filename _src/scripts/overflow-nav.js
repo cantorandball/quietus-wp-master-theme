@@ -1,6 +1,7 @@
 var $ = require('zepto-browserify').$;
 var optimisedResize = require('./optimized-resize');
 
+var $primaryNav = $('.site-nav-primary');
 var items = $('.site-nav-primary li');
 var $overflowNav = $('.site-nav-overflow');
 var $overflowNavList = $('.site-nav-overflow-items');
@@ -24,7 +25,8 @@ var flowNavItems = function(){
 		}
 	};
 	$overflowNav.toggle(visible);
-	$toggle.toggleClass('highlight', highlight)
+	$toggle.toggleClass('highlight', highlight);
+	$primaryNav.css('padding-right', (visible ? '4rem' : '2rem'))
 };
 
 module.exports = {

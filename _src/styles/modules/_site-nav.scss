@@ -36,39 +36,22 @@ $nav-row-height: 2rem;
 
 .site-nav-primary {
 	overflow: hidden;
-	padding-right: $nav-row-height;
+	padding-right: 2rem;
 	@include media($tablet) {
-		padding-left: $nav-row-height;
+		padding-left: 2rem;
 	}
 	height: $nav-row-height;
 	border-bottom: 1px solid $black;
 	li {
 		@extend %font-reset;
+		position: relative;
+		z-index: 2;
 	}
 	.active a, a:hover {
 		background-color: $black;
 		color: $white;
 		&:before {
 			color: $black;
-		}
-	}
-}
-
-.site-nav-secondary {
-	display: none;
-	@extend %font-xs;
-	a {
-		position: relative;
-	}
-	.active a, a:hover {
-		&:after {
-			position: absolute;
-			right: 1em;
-			bottom: 0;
-			left: 1em;
-			height: 1px;
-			background-color: $black;
-			content: '';
 		}
 	}
 }
