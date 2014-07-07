@@ -17,6 +17,7 @@
   "homepage": "https://github.com/cantorandball/quietus-wp-master-theme",
   "devDependencies": {
     "browser-sync": "^1.1.2",
+    "browsernizr2": "^1.0.5",
     "connect": "^2.14.4",
     "connect-livereload": "^0.3.2",
     "fastclick": "^1.0.0",
