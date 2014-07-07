@@ -44,6 +44,8 @@ $nav-row-height: 2rem;
 	border-bottom: 1px solid $black;
 	li {
 		@extend %font-reset;
+		position: relative;
+		z-index: 2;
 	}
 	.active a, a:hover {
 		background-color: $black;
