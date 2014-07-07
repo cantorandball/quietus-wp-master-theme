@@ -1,4 +1,3 @@
-var $ = require('zepto-browserify').$;
 var adverts = require('./adverts');
 var overflowNav = require('./overflow-nav');
 var digest = require('./digest');
@@ -7,8 +6,6 @@ var digest = require('./digest');
 var attachFastClick = require('fastclick');
 attachFastClick(document.body);
 
-$(function(){
-	adverts.insert();
-	overflowNav.init();
-	digest.init();
-});
+window.onload = adverts.insert;
+overflowNav.init();
+digest.init();
