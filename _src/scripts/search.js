@@ -11,9 +11,9 @@ module.exports = {
 		if(!!searchInput && !!searchForm) {
 			$(document).on('click', '#site-search:not(.is-active) button[type=submit]', function(e) {
 				e.preventDefault();
-				searchForm.classList.add('is-active');
+				raf(function(){searchForm.classList.add('is-active')});
 				searchInput.focus();
-				searchInput.value = searchInput.value;
+				searchInput.value = searchInput.value; // move cursor to the end
 			})
 
 			$(document).on('click', '#site-search button[type=button]', function(e) {

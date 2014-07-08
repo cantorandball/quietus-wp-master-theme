@@ -10,10 +10,10 @@
 	// on text over semi-opaque backgrounds (e.g. puffs)
 	// while the searchbox transitions in safari
 	transform: translateZ(0);
-	transition: z-index .1s;
+	transition: z-index .650s step-end;
 	&.is-active {
 		z-index: 2;
-		transition: z-index .1s step-end;
+		transition: none;
 	}
 }
 
@@ -70,6 +70,9 @@
 	}
 	.no-touchevents & {
 		transition:	transform .1s ease-out;
+	}
+	.touchevents & {
+		transition:	transform .650s cubic-bezier(0.23,1,0.32,1);
 	}
 }
 
