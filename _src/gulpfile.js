@@ -27,7 +27,8 @@ gulp.task('styles', function () {
     .pipe($.plumber())
     .pipe($.rubySass({
     	sourcemap: true,
-    	style: 'expanded'
+    	style: 'expanded',
+    	loadPath: process.cwd() + '/styles',
     }))
     .on("error", $.notify.onError('Sass failed…'))
     .on('error', $.util.log)
