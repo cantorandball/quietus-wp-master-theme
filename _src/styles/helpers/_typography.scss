@@ -1,32 +1,33 @@
+
+
 // ********** FONT SIZES **********
 
-%font-s {
-	font-size: .9rem;
+@mixin font-xxl {
+	@include set-font-size(32);
 }
 
-%font-xs {
-	font-size: .8rem;
+@mixin font-xl {
+	@include set-font-size(24);
 }
 
-%font-xxs {
-	font-size: .7rem;
+@mixin font-l {
+	@include set-font-size(20);
 }
 
-%font-l {
-	font-size: 1.1rem;
+@mixin font-reset {
+	@include set-font-size(16);
 }
 
-%font-xl {
-	font-size: 1.3rem;
+@mixin font-s {
+	@include set-font-size(14);
 }
 
-%font-xxl {
-	font-size: 2rem;
+@mixin font-xs {
+	@include set-font-size(13);
 }
 
-%font-reset {
-	font-size: 1rem;
-	line-height: $line-height;
+@mixin font-xxs {
+	@include set-font-size(12);
 }
 
 @mixin font-collapsed {
@@ -37,30 +38,27 @@
 // ********** GENERIC STYLES **********
 
 .post-title {
-	line-height: 1.1;
 	display: block;
 }
 
 // Page titles
 h1 {
 	@extend .post-title;
-  @extend %font-xxl;
-	margin-bottom: .2em;
+  @include font-xxl;
 	@include media($tablet) {
-		margin-bottom: .4em;
+		@include trailer();
 	}
 }
 
 // Section titles
 h2 {
-  @extend %font-xxl;
-  padding-bottom: 1ex;
-  line-height: 1.1;
+  @include font-xxl;
+	@include margin-border(bottom, .5);
 }
 
 h3 {
-  @extend %font-xl;
-  line-height: 1.1;
+  @include font-xl;
+  // line-height: 1.1;
 }
 
 .category-name {
@@ -69,7 +67,7 @@ h3 {
 
 .category-title {
   @extend .category-name;
-  @extend %font-xs;
+  @include font-xs;
   font-style: italic;
 }
 
@@ -83,12 +81,11 @@ h3 {
 	text-indent: 0;
 	&:first-letter {
 		overflow: hidden;
-		font-size: 3.2em;
-		line-height: .92;
+		font-size: 5em;
+		line-height: .8374;
 		float: left;
 		display: block;
 		padding-right: .1ex;
-		margin-bottom: -.1em;
 		@media only screen and (max-width: $bp-tablet) {
 			line-height: .85;
 			font-size: 3em;
@@ -107,6 +104,8 @@ h3 {
 	background-size: 50%;
 	background-repeat: no-repeat;
 	content: '';
+	margin-top: rhythm(1.5);
+	margin-bottom: rhythm();
 }
 
 %no-hightlight {

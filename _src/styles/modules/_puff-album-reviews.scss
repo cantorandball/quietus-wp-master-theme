@@ -5,17 +5,17 @@
 }
 
 .puff-release {
-	@extend %font-l;
+	@include font-l;
+	@include trailer(.15);
 	display: block;
-	margin-bottom: .5ex;
 	font-style: italic;
-	line-height: 1;
+	// line-height: 1;
 }
 
 .puff-artist {
-	@extend %font-xxs;
+	@include set-font-size(11);
 	display: block;
-	margin-bottom: .3ex;
+	// margin-bottom: .3ex;
 	text-transform: uppercase;
 	font-family: Helvetica;
 }

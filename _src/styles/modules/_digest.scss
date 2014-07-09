@@ -4,7 +4,6 @@
 
 .digest h3 {
 	display: none;
-	margin-bottom: 1rem;
 	text-align: center;
 }
 
@@ -17,13 +16,13 @@
 
 .digest-section-title {
 	@extend .category-name;
-	@extend %font-s;
+	@include font-s;
+	@include leading(1.5);
+	@include border;
 	position: relative;
 	display: flex;
-	height: 2rem;
 	align-items: center;
 	justify-content: center;
-	border-bottom: 1px solid $black;
 	cursor: pointer;
 	flex-grow: 1;
 	&.is-active, &:hover {
@@ -56,7 +55,8 @@
 }
 
 .digest-section {
-	@extend %font-xs;
+	@include leader(.25);
+	@include font-xs;
 	display: none;
 	order: 4;
 	flex-basis: 100%;
@@ -72,21 +72,23 @@
 }
 
 .digest-section li:not(.puff) {
+	@include padding-border(top, .25);
+	@include trailer(.25);
+	@include leading(.75);
 	float: left;
-	padding: .5em 0rem .5rem .5rem;
+	// padding: .5em 0rem .5rem .5rem;
 	width: 50%;
-	border-top: 1px solid $black;
 	&:nth-child(odd) {
 		clear: left;
-		padding-right: .5rem;
-		padding-left: 0;
+		// padding-right: .5rem;
+		// padding-left: 0;
 	}
 	&:nth-child(-n+2) {
 		border-color: $white;
 	}
 	@include media($desktop) {
-		padding-right: 0;
-		padding-left: 0;
+		// padding-right: 0;
+		// padding-left: 0;
 		width: 100%;
 		&:nth-child(n+2) {
 			border-color: $black;
@@ -95,7 +97,7 @@
 }
 
 .digest-section-album-reviews {
-	padding-top: .5rem;
+	// padding-top: .5rem;
 	ul {
 		@include grid-row($puffs-gutter-width);
 	}
@@ -107,6 +109,7 @@
 		@include media($desktop) {
 			@include puff-cols(2);
 		}
-		padding-top: 0;border: none;
+		// padding-top: 0;
+		// border: none;
 	}
 }

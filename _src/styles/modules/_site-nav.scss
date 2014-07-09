@@ -1,5 +1,5 @@
 // ********** MODULE **********
-$nav-row-height: 2rem;
+$nav-row-height: rhythm(1.5);
 
 .site-nav {
 	@include font-collapsed;
@@ -36,14 +36,14 @@ $nav-row-height: 2rem;
 
 .site-nav-primary {
 	overflow: hidden;
-	padding-right: 2rem;
+	padding-right: $nav-row-height;
 	@include media($tablet) {
-		padding-left: 2rem;
+		padding-left: $nav-row-height;
 	}
 	height: $nav-row-height;
 	border-bottom: 1px solid $black;
 	li {
-		@extend %font-reset;
+		@include font-reset;
 		position: relative;
 		z-index: 2;
 	}

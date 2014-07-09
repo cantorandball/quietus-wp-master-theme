@@ -8,7 +8,7 @@
 	<title><?php wp_title('|', true, 'right'); ?></title>
 	<meta http-equiv="author" content="The Quietus" />
 	<meta http-equiv="contact" content="editor@thequietus.com" />
-	<meta name="copyright" content="Copyright (c)2007-<?php echo date("Y"); ?> The Quietus. All Rights Reserved." />
+	<meta name="copyright" content="Copyright (c)2007-<?= date("Y"); ?> The Quietus. All Rights Reserved." />
 	<meta name="description" content="A new rock music and pop culture website. Editorial independent music website offering news, reviews, features, interviews, videos and pictures" />
 	<meta name="keywords" content="quietus, thequietus.com, get music videos, photos, reviews, interviews, newsletters, info on festivals, tours, clubs, concerts, releases, cd, indie, rock, pop, film, books, metal, rap, see photos, music videos, hip hop, dance, mash up, john doran, luke turner" />
 	<?php wp_head(); ?>

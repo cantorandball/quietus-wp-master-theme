@@ -1,7 +1,7 @@
 .site-nav-overflow {
 	position: absolute;
 	top: 0;
-	right: 2rem;
+	right: $nav-row-height;
 	z-index: 2;
 }
 
@@ -15,7 +15,7 @@
 	border-right: 1px solid $black;
 	background-color: $white;
 	li {
-		@extend %font-reset;
+		@include font-reset;
 		display: block;
 		text-align: left;
 		white-space: nowrap;
@@ -38,8 +38,8 @@
 .site-nav-overflow-toggle {
 	@include text-hide;
 	padding: 0;
-	width: 2rem;
-	height: 2rem;
+	width: $nav-row-height;
+	height: $nav-row-height;
 	outline: none;
 	border-bottom: 1px solid $black;
 	background-color: $white;
@@ -50,7 +50,7 @@
 		color: $white;
 	}
 	&:after {
-		@extend %font-reset;
+		@include font-reset;
 		display: block;
 		content: '…';
 	}

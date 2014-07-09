@@ -1,7 +1,9 @@
-*, *:before, *:after {box-sizing: border-box}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 
 html {
-	font-size: 100%;
+	font-size: percentage($base-font-size / 16);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -10,7 +12,7 @@ body {
 	background-color: #fff;
 	color: $black;
 	font-family: "Times New Roman", serif;
-	line-height: $line-height;
+	line-height: $base-line-height;
 }
 
 p {

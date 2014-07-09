@@ -14,18 +14,21 @@
 }
 
 .puff-header {
-	margin-bottom: 1ex;
+	@include trailer;
 	text-align: center;
 	font-variant: small-caps;
 }
 
 .puff-content {
+	@include font-s;
+	@include leading(.75);
 	position: absolute;
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	padding: 2rem .8rem .6rem;
+	padding: rhythm(.5);
+	padding-top: 2em;
 	max-height: 100%;
 	width: 100%;
 	justify-content: flex-end;
@@ -36,8 +39,6 @@
 	color: white;
 	text-align: left;
 	text-shadow: fade-out(black, .2) 0px 0px 1px;
-	font-size: .93rem;
-	line-height: 1.2;
 
 	a:hover & {
 		top: 0;

@@ -1,13 +1,10 @@
 .listings {
 	@extend %clearfix;
-	border-bottom: 1px solid $black;
-	margin-bottom: $page-gutter-width;
 }
 
 .listing {
 	@extend %clearfix;
-	padding: 1rem 0;
-	border-top: 1px solid $black;
+	@include margin-border(bottom, .5);
 }
 
 .listing-category-title {
@@ -15,12 +12,13 @@
 }
 
 .listing .post-title {
-	@extend %font-xl;
-	padding-bottom: 0;
+	@include font-xl;
+	@include trailer(.5);
 }
 
 .listing .post-standfirst {
-	@extend %font-s;
+	@include font-s;
+	@include leading(.75);
 }
 
 .listing:nth-of-type(n+4) {
@@ -28,11 +26,11 @@
 	width: 100%;
 	@include media($tablet) {
 		width: 50%;
-		padding-left: .5em;
+		padding-left: rhythm(.25);
 		&:nth-of-type(even){
 			clear: right;
 			padding-left: 0;
-			padding-right: .5em;
+			padding-right: rhythm(.25);
 			&:last-child {
 				width: 100%;
 			}
@@ -42,6 +40,7 @@
 	 	display: none;
 	}
 	.post-title {
-		@extend %font-s;
+		@include font-s;
+		@include leading(.75);
 	}
 }
