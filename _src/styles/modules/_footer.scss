@@ -3,11 +3,11 @@
 .page-footer {
 	@include font-collapsed;
 	@extend .page;
-	padding: 0 10px 2rem;
-	border-top: 1px solid $black;
+	@include margin-border(1, top);
+	padding: 0;
 	@include media($tablet) {
-		padding-left: 0;
-		padding-right: 0;
+		// padding-left: 0;
+		// padding-right: 0;
 	}
 }
 
@@ -16,14 +16,14 @@
 }
 
 .page-footer li {
-	@extend %font-xs;
-	line-height: 1;
+	@include font-xs;
+	// line-height: 1;
 }
 
 .page-footer-social {
 	width: 50%;
 	float: left;
-	height: 1rem;
+	// height: 1rem;
 	@include media($tablet) {
 		width: auto;
 		float: none;
@@ -31,8 +31,6 @@
 }
 
 .page-footer-social li {
-	padding: .8em 1em 0 0;
-	padding: 0;
 	display: inline-block;
 	a {
 		display: block;
@@ -61,7 +59,7 @@
 }
 
 .page-footer-links li {
-	padding: 1em 1em 0 0;
+	// padding: 1em 1em 0 0;
 	width: 50%;
 	float: left;
 	&:nth-child(odd) {
@@ -78,7 +76,7 @@
 		}
 	}
 	@include media($desktop) {
-		padding-top: 1em;
+		// padding-top: 1em;
 		&:first-child:before {
 			display: none;
 		}

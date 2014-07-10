@@ -8,35 +8,26 @@
 get_header(); ?>
 
 <section role="main" class="search">
-	<div class="layout-jumbotron">
-		<header>
-			<p class="search-leadin">
-				<?php echo( __( 'Search Results for:', 'quietus' ) ); ?>
-			</p>
-			<h1 class="search-title">
-				<?php the_search_query(); ?>
-			</h1>
-		</header>
-	</div>
+	<header>
+		<h1>Search results for <span class="search-term"><?php the_search_query(); ?></span></h1>
+	</header>
 
-	<div class="layout-content">
-		<?php if ( have_posts() ): ?>
-			<div class="search-post-listing">
-				<ul>
-					<?php
-					while( have_posts() ): the_post();
-					get_template_part( 'template-parts/listing' );
-					endwhile;
-					?>
-				</ul>
-			</div>
-			<?php get_template_part( 'template-parts/pagination' ); ?>
-		<?php else: ?>
-			<div class="search-no-posts">
-				<p><?php echo( __( 'No results found', 'quietus' ) ); ?>.</p>
-			</div>
-		<?php endif; ?>
-	</div>
+	<?php if ( have_posts() ): ?>
+		<div class="search-post-listing">
+			<ul>
+				<?php
+				while( have_posts() ): the_post();
+				get_template_part( 'template-parts/listing' );
+				endwhile;
+				?>
+			</ul>
+		</div>
+		<?php get_template_part( 'template-parts/pagination' ); ?>
+	<?php else: ?>
+		<div class="search-no-posts">
+			<p><?php echo( __( 'No results found', 'quietus' ) ); ?>.</p>
+		</div>
+	<?php endif; ?>
 </section>
 
 <?php

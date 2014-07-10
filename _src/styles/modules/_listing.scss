@@ -1,13 +1,14 @@
 .listings {
 	@extend %clearfix;
-	border-bottom: 1px solid $black;
-	margin-bottom: $page-gutter-width;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .listing {
 	@extend %clearfix;
-	padding: 1rem 0;
-	border-top: 1px solid $black;
+	@include padding-border();
+	@include leader();
+	flex-basis: 100%;
 }
 
 .listing-category-title {
@@ -15,26 +16,25 @@
 }
 
 .listing .post-title {
-	@extend %font-xl;
-	padding-bottom: 0;
+	@include font-l;
+	@include trailer(.1);
 }
 
 .listing .post-standfirst {
-	@extend %font-s;
+	@include font-s;
+	@include trailer(0);
 }
 
 .listing:nth-of-type(n+4) {
-	float: left;
-	width: 100%;
 	@include media($tablet) {
-		width: 50%;
-		padding-left: .5em;
-		&:nth-of-type(even){
-			clear: right;
+		flex-basis: 50%;
+		padding-left: rhythm(.5);
+		&:nth-of-type(even) {
+			clear: both;
 			padding-left: 0;
-			padding-right: .5em;
+			padding-right: rhythm(.5);
 			&:last-child {
-				width: 100%;
+				flex-basis: 100%;
 			}
 		}
 	}
@@ -42,6 +42,7 @@
 	 	display: none;
 	}
 	.post-title {
-		@extend %font-s;
+		@include font-reset;
+		@include trailer(0);
 	}
 }

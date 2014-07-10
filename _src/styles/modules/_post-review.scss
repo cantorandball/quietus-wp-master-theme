@@ -3,9 +3,8 @@
 }
 
 .post-review-artist {
-	@extend %font-xxs;
+	@include font-xxs;
 	display: block;
-	margin-top: 1ex;
 	text-transform: uppercase;
 	font-family: Helvetica;
 }
@@ -14,12 +13,11 @@
 	width: 100%;
 	float: left;
 	margin-right: 1rem;
-	// margin-top: .45em;
-	// display: inline;
+	margin-top: .45rem;
 	&:after {
 		display: none;
 	}
 	@include media($mobile) {
-		width: 14.3em;
+		width: 14.2rem;
 	}
 }

@@ -1,7 +1,6 @@
 .listings-featured {
 	@include grid-row;
 	@extend %antialias-hidpi;
-	margin-bottom: 1rem;
 }
 
 .listing-featured {
@@ -9,42 +8,38 @@
 	&:first-child {
 		@include grid-cols(1);
 		.post-title {
-			font-size: 2rem;
+			@include font-xl;
 		}
 	}
 	@include media($mobile) {
 		.post-title {
-			font-size: 1rem;
+			@include font-l;
 		}
 	}
 	@include media($desktop) {
 		.post-title {
-			font-size: 1.1rem;
+			@include font-l;
 		}
 		@include grid-cols(3);
 		&:first-child {
 			@include grid-cols(1.5);
 			// The standard calculation is slightly off, when rounded to whole pixels in the browser.
-			a {padding-bottom: percentage(2.02/3)}
+			a {padding-bottom: percentage(2.035/3)}
 		}
 	}
 }
 
 .listing-featured .post-title {
-	@extend %font-s;
-	padding-bottom: 0;
-	margin-bottom: 0;
+	@include font-s;
 }
 
 .listing-featured .puff {
 	padding-left: 0;
-	margin-bottom: 0;
-	padding-bottom: 0;
 }
 
 .listing-featured .puff-content {
 	@include media($only-mobile) {
-		padding: 0.5rem;
+		padding: rhythm(.25);
 	}
 };
 

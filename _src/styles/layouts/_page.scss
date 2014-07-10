@@ -7,7 +7,7 @@
 	width: 100%;
 	max-width: 38rem;
 	@include media($tablet) {
-		padding: ($page-padding-width * 1.5) 0;
+		padding: rhythm(2) 0 0;
 	}
 	@include media($tablet) {
 		width: $bp-tablet;
@@ -16,7 +16,4 @@
 		width: $bp-desktop;
 		max-width: none;
 	}
-	// @include media($desktop-l) {
-	// 	width: $bp-desktop-l;
-	// }
 }

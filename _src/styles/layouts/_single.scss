@@ -2,20 +2,17 @@
 
 .post-header {
 	clear: both;
-	margin-bottom: 1rem;
+	// margin-bottom: 1rem;
 }
 
 .post-body {
 	@extend %clearfix;
 	width: 100%;
 	float: left;
-	margin-top: -.4rem; // pull content up, to handle lineheight of paras.
+	margin-top: -.4em; // pull content up, to handle lineheight of paras.
 	@include media($desktop) {
 		width: $bp-desktop - ($advert-skyscraper-width * 1) - $page-gutter-width;
 	}
-	// @include media($desktop-l) {
-	// 	width: $bp-desktop-l - ($page-padding-width * 2) - ($advert-skyscraper-width * 1.5) - ($page-gutter-width * 2);
-	// }
 }
 
 // ********** SIDE BAR **********
@@ -26,16 +23,13 @@
 	@include media($desktop) {
 		width: $advert-skyscraper-width;
 	}
-	// @include media($desktop-l) {
-	// 	width: $advert-skyscraper-width * 1.5 + $page-gutter-width;
-	// }
 }
 
 .side-bar > * {
 	width: 100%;
 	// float: right;
 	&:not(:last-child) {
-		margin-bottom: 2rem;
+		margin-bottom: rhythm();
 	}
 	@include media($desktop) {
 		width: $advert-skyscraper-width;

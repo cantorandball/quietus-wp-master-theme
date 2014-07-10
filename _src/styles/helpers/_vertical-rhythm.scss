@@ -1,0 +1,39 @@
+@function rhythm($lines: 1) {
+	@return 1rem * $base-line-height * $lines;
+}
+
+@mixin leader($lines: 1) {
+	padding-top: rhythm($lines);
+}
+
+@mixin trailer($lines: 1) {
+	padding-bottom: rhythm($lines);
+}
+
+@mixin leading($lines: 1) {
+	line-height: px-to-rem($base-line-height-px * $lines);
+}
+
+@mixin set-font-size($font-size) {
+	font-size: $font-size * 1px;
+	font-size: px-to-rem($font-size);
+
+	// lineheight is the lowest multiple of lineheight/$lineheight-division that is larger than font size
+	$lineheight-division: 4;
+	@include leading(ceil($lineheight-division * $font-size / $base-line-height-px) / $lineheight-division);
+}
+
+@mixin padding-border($lines: 1, $side: bottom) {
+	border-#{$side}: 1px solid $black;
+	padding-#{$side}: px-to-rem($base-line-height-px * $lines - 1) !important;
+}
+
+@mixin margin-border($lines: 1, $side: bottom) {
+	border-#{$side}: 1px solid $black;
+	margin-#{$side}: px-to-rem($base-line-height-px * $lines - 1) !important;
+}
+
+@mixin border($side: bottom) {
+	border-#{$side}: 1px solid $black;
+	margin-#{$side}: -1px !important;
+}

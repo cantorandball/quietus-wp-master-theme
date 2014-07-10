@@ -9,21 +9,20 @@ $advert-bg: darken(white, 7%);
 
 // ********** FONT SIZES **********
 
-$line-height: 1.4;
-$grid-gutter-width: 1rem;
+$base-font-size: 16;
+$base-line-height-px: 22;
+$base-line-height: $base-line-height-px / $base-font-size;
+$grid-gutter-width: rhythm();
 
 // ********** MODULE SIZES **********
 
-$page-gutter-width: 2rem;
-$page-padding-width: 2rem;
+$page-gutter-width: rhythm(2);
+$page-padding-width: rhythm(2);
 
-$puffs-gutter-width: .5rem;
+$puffs-gutter-width: rhythm(.25);
 
-$advert-border-width: px-to-rem(5);
+$advert-border-width: rhythm(.25);
 $advert-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
-
-$root-category-max-width: px-to-rem(830);
-$root-category-sidebar-max-width: px-to-rem(404);
 
 
 // ********** DEVICE BREAKPOINTS **********

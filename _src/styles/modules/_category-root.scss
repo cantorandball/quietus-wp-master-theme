@@ -1,20 +1,20 @@
 .category-list {
 	@extend %clearfix;
-	margin-bottom: $page-gutter-width;
-	padding-bottom: .25em;
-	border-bottom: 1px solid $black;
+	@include margin-border();
+	@include trailer();
+	@include leader(.75);
 	dt {
 		display: block;
-		margin-top: .25em;
-		padding-top: .25em;
-		border-top: 1px solid $black;
-		&:first-child {
-			margin-top: 0;
-		}
+		@include leader(.25);
 	}
 	dd {
-		@extend %font-xxs;
+		@include font-xxs;
 		display: block;
-		font-style: italic;
+	}
+}
+
+.category-listings {
+	.post-standfirst {
+		font-style: normal;
 	}
 }
