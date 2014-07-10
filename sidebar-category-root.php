@@ -1,6 +1,6 @@
 <?php global $child_categories; ?>
 
-<aside role="complementary" class="category-side-bar">
+<aside role="complementary" class="side-bar category-side-bar">
 	<?php if ( $child_categories ): ?>
 		<h2><?php echo __( sprintf( 'Sections', single_cat_title( '', false ) ), 'quietus' ); ?></span></h2>
 		<dl class="category-list">
@@ -17,4 +17,7 @@
 
 	<!-- PLACEHOLDER ADVERT -->
 	<div id="skyscraper-mini" class="advert"></div>
+	<?php get_template_part( 'template-parts/digest' ); ?>
+	<!-- PLACEHOLDER ADVERT -->
+	<div id="skyscraper" class="advert"></div>
 </aside>

@@ -4,8 +4,8 @@
 	@include trailer();
 	@include leader(.75);
 	dt {
-		display: block;
 		@include leader(.25);
+		display: block;
 	}
 	dd {
 		@include font-xxs;

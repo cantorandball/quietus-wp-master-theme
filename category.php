@@ -15,47 +15,22 @@ if ( $current_category->category_parent != '0' )
 
 get_header(); ?>
 
-<section role="main" class="category">
-	<div class="layout-jumbotron">
-		<header>
-			<?php if ( $parent ): ?>
-				<p class="category-title">
-					<a href="<?php echo get_category_link( $parent->cat_ID ); ?>"><?php echo $parent->name; ?></a>
-				</p>
-			<?php endif; ?>
-			<h1 class="category-name">
-				<?php single_cat_title( '', true ); ?>
-			</h1>
-		</header>
+	<header>
+		<h1 class="category-name"><?php single_cat_title( '', true ); ?></h1>
+	</header>
 
-		<?php if ( category_description() ): ?>
-			<section class="category-description">
-				<?php echo category_description(); ?>
-			</section>
-		<?php endif ?>
-	</div>
 
-	<div class="layout-content">
-		<?php if ( have_posts() ): ?>
-			<div class="category-post-listing">
-				<ul>
-					<?php
-					while( have_posts() ): the_post();
-					get_template_part( 'template-parts/listing' );
-					endwhile;
-					?>
-				</ul>
-			</div>
-			<?php get_template_part( 'template-parts/pagination' ); ?>
-		<?php else: ?>
-			<div class="category-no-posts">
-				<p>There are no articles in this category.</p>
-			</div>
-		<?php endif; ?>
-	</div>
-</section>
+	<?php if ( have_posts() ): ?>
+		<ul class="listings">
+			<?php
+			while( have_posts() ): the_post();
+			get_template_part( 'template-parts/listing' );
+			endwhile;
+			?>
+		</ul>
+		<?php get_template_part( 'template-parts/pagination' ); ?>
+	<?php endif; ?>
 
-<?php
-get_sidebar();
-get_footer();
-?>
+<?php get_sidebar( 'category' ); ?>
+
+<?php get_footer(); ?>

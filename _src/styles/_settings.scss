@@ -21,7 +21,7 @@ $page-padding-width: rhythm(2);
 
 $puffs-gutter-width: rhythm(.25);
 
-$advert-border-width: rhythm(.25);
+$advert-border-width: rhythm(.58);
 $advert-skyscraper-width: px-to-rem(300) + ($advert-border-width * 2);
 
 
@@ -32,3 +32,4 @@ $bp-tablet: px-to-rem(740);
 $bp-mobile: px-to-rem(480);
 
 $images: "/wp-content/themes/quietus-wp-master-theme/images";
+$dot: '∙';

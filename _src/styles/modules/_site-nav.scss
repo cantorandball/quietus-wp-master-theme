@@ -26,7 +26,7 @@ $nav-row-height: rhythm(1.5);
 		&:before {
 			display: inline-block;
 			width: .8em;
-			content: '∙';
+			content: $dot;
 			text-align: left;
 		}
 	}

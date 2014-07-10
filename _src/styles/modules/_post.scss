@@ -5,7 +5,7 @@
 // ********** ELEMENTS **********
 
 .post-header {
-	@include margin-border(.5);
+	@include margin-border(1);
 }
 
 .post-standfirst {
@@ -107,14 +107,14 @@
 		margin: rhythm(.25) 0 0;
 		&:nth-of-type(even) {
 			float: left;
-			margin-right: 1rem;
+			margin-right: rhythm(.5);
 			& + p {
-				text-indent: rhythm(.5);
+				// text-indent: rhythm(0);
 			}
 		}
 		&:nth-of-type(odd) {
 			float: right;
-			margin-left: 1rem;
+			margin-left: rhythm(.5);
 		}
 	}
 }
