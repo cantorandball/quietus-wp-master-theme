@@ -45,6 +45,7 @@
 h1 {
 	@extend .post-title;
   @include font-xxl;
+	@include trailer(.5);
 	@include media($tablet) {
 		@include trailer();
 	}
@@ -53,12 +54,15 @@ h1 {
 // Section titles
 h2 {
   @include font-xxl;
-	@include margin-border(bottom, .5);
+	@include border();
+	@include leader();
+	@include media($desktop) {
+		@include leader(0);
+	}
 }
 
 h3 {
   @include font-xl;
-  // line-height: 1.1;
 }
 
 .category-name {
@@ -87,7 +91,7 @@ h3 {
 		display: block;
 		padding-right: .1ex;
 		@media only screen and (max-width: $bp-tablet) {
-			line-height: .85;
+			line-height: .9374;
 			font-size: 3em;
 		}
 	}
@@ -105,7 +109,11 @@ h3 {
 	background-repeat: no-repeat;
 	content: '';
 	margin-top: rhythm(1.5);
-	margin-bottom: rhythm();
+	margin-bottom: rhythm(1);
+	@include media($tablet) {
+		margin-top: rhythm(2);
+		margin-bottom: rhythm(1.5);
+	}
 }
 
 %no-hightlight {

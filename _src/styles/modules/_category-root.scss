@@ -1,15 +1,15 @@
 .category-list {
 	@extend %clearfix;
+	@include margin-border();
+	@include trailer();
+	@include leader(.75);
 	dt {
 		display: block;
+		@include leader(.25);
 	}
 	dd {
 		@include font-xxs;
-		// @include margin-border(bottom, .5);
-		@include trailer(.5);
-		@include leading(.75);
 		display: block;
-		// font-style: italic;
 	}
 }
 

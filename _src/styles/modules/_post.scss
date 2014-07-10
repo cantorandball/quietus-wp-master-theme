@@ -5,11 +5,11 @@
 // ********** ELEMENTS **********
 
 .post-header {
-	@include margin-border(bottom, .5);
+	@include margin-border(.5);
 }
 
 .post-standfirst {
-	@include trailer(1);
+	@include trailer();
 }
 
 .post-byline {
@@ -48,6 +48,7 @@
 
 .post-body {
 	position: relative;
+	@include trailer;
 }
 
 .post-content {
@@ -55,57 +56,44 @@
 		text-align: justify;
 		text-indent: rhythm();
 		hyphens: auto;
-		@include media($tablet) {
-			// text-indent: 1.5em;
-			// line-height: 1.5;
-		}
 		&:first-of-type {
 			@extend %drop-cap;
 		}
+	}
+	.post-embed, figure {
+		margin: rhythm(.5) 0;
 	}
 	figure {
 		img {
 			width: 100%;
 			height: auto;
-			// margin: 1ex 0 0;
-			@include media($mobile) {
-				// margin: 1em 0 .5em;
-			}
+			display: block;
 		}
 	}
 	.post-embed {
-		// margin: 1em 0 1em;
 		justify-content: center;
 		background-color: black;
 		width: 100%;
 		clear: both;
 		> * {
 			width: 100%;
-			// flex: 1;
 		}
 		&:first-child {
 			background-color: white;
-			// margin-top: .4rem;
 			&:after {
 				@extend %ornament-divider;
-				// margin-top: 2rem;
-				// margin-bottom: 1.5rem;
 			}
 		}
 		&:last-child {
 			background-color: white;
 			&:before {
 				@extend %ornament-divider;
-				// margin-top: 1.5rem;
-				// margin-bottom: 2rem;
 			}
 		}
 	}
 	hr {
 		@extend %ornament-divider;
 		margin: 0;
-		// margin-bottom: 1.125rem;
-		// margin-top: 1.125rem;
 		border: none;
 		+ p {
 			@extend %drop-cap;
@@ -114,8 +102,9 @@
 }
 
 .post-content .advert {
-	margin-top: rhythm(.25);
+	margin: rhythm(.5) 0;
 	@include media($mobile) {
+		margin: rhythm(.25) 0 0;
 		&:nth-of-type(even) {
 			float: left;
 			margin-right: 1rem;
@@ -132,8 +121,6 @@
 
 .post-related:not(:empty) {
 	@include grid-row($puffs-gutter-width);
-	// margin-bottom: 2rem;
-	// padding-top: 2rem;
 	width: 100%;
 	@include media($tablet) {
 		margin-bottom: 0;
@@ -141,7 +128,6 @@
 	}
 	&:before {
 		@extend %ornament-divider;
-		// margin-bottom: 2rem;
 	}
 }
 

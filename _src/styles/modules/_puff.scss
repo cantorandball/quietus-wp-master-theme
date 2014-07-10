@@ -21,7 +21,6 @@
 
 .puff-content {
 	@include font-s;
-	@include leading(.75);
 	position: absolute;
 	bottom: 0;
 	display: flex;

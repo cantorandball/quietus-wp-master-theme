@@ -9,13 +9,11 @@
 	@include trailer(.15);
 	display: block;
 	font-style: italic;
-	// line-height: 1;
 }
 
 .puff-artist {
 	@include set-font-size(11);
 	display: block;
-	// margin-bottom: .3ex;
 	text-transform: uppercase;
 	font-family: Helvetica;
 }

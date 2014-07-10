@@ -23,6 +23,7 @@
 // ********** ELEMENTS **********
 
 .advert-leaderboard {
+	@include trailer;
 	position: relative;
 	overflow-x: hidden;
 	width: 100%;

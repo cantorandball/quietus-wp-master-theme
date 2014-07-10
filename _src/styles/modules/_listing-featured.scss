@@ -31,7 +31,6 @@
 
 .listing-featured .post-title {
 	@include font-s;
-	@include leading(.75);
 }
 
 .listing-featured .puff {
@@ -40,7 +39,7 @@
 
 .listing-featured .puff-content {
 	@include media($only-mobile) {
-		// padding: 0.5rem;
+		padding: rhythm(.25);
 	}
 };
 

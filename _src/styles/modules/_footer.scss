@@ -3,8 +3,8 @@
 .page-footer {
 	@include font-collapsed;
 	@extend .page;
-	// padding: 0 10px 2rem;
-	// border-top: 1px solid $black;
+	@include margin-border(1, top);
+	padding: 0;
 	@include media($tablet) {
 		// padding-left: 0;
 		// padding-right: 0;
@@ -34,16 +34,16 @@
 	display: inline-block;
 	a {
 		display: block;
-		// padding: .8em .4em;
+		padding: .8em .4em;
 	}
 	&:first-child {
 		a {
-			// margin-left: -.4em;
+			margin-left: -.4em;
 		}
 	}
 	@include media($mobile) {
 		&:last-child {
-			// padding-right: 1ex;
+			padding-right: 1ex;
 		}
 	}
 }
@@ -69,10 +69,10 @@
 		width: auto;
 		float: none;
 		display: inline-block;
-		// padding: 1ex 0 0 1ex;
+		padding: 1ex 0 0 1ex;
 		&:before {
 			content: '∙';
-			// padding-right: 1ex;
+			padding-right: 1ex;
 		}
 	}
 	@include media($desktop) {

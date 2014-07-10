@@ -1,5 +1,6 @@
 .digest {
 	clear: both;
+	margin-bottom: 0 - rhythm(.5);
 }
 
 .digest h3 {
@@ -72,23 +73,17 @@
 }
 
 .digest-section li:not(.puff) {
-	@include padding-border(top, .25);
+	@include padding-border(.25, top);
 	@include trailer(.25);
-	@include leading(.75);
 	float: left;
-	// padding: .5em 0rem .5rem .5rem;
 	width: 50%;
 	&:nth-child(odd) {
 		clear: left;
-		// padding-right: .5rem;
-		// padding-left: 0;
 	}
 	&:nth-child(-n+2) {
 		border-color: $white;
 	}
 	@include media($desktop) {
-		// padding-right: 0;
-		// padding-left: 0;
 		width: 100%;
 		&:nth-child(n+2) {
 			border-color: $black;
@@ -97,7 +92,6 @@
 }
 
 .digest-section-album-reviews {
-	// padding-top: .5rem;
 	ul {
 		@include grid-row($puffs-gutter-width);
 	}
@@ -109,7 +103,5 @@
 		@include media($desktop) {
 			@include puff-cols(2);
 		}
-		// padding-top: 0;
-		// border: none;
 	}
 }
