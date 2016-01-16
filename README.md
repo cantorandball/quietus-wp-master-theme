@@ -1,14 +1,37 @@
 quietus-wp-master-theme
 =======================
 
-## Set up
-CSS, JS and images are managed by [gulp](http://gulpjs.com) from `/_src`. See that [README](_src/README.md) for more info.
+## Theme development
 
-_tl;dr_
+### Prequisites
 
-- _do not save assets outside `/_src`_ – all files in the root-level asset directories (`/css`, `/js`, `/images` etc) will be wiped each time the assets are built.
-- you need to install npm & bower packages before working with assets.
+You’ll need node.js, gulp, and bower installed in your local environment. For Mac OS X, the easiest way is with Homebrew:
 
-## Configuration
+```
+brew install node
+npm install -g gulp
+npm install -g bower
+```
 
-For general (non-theme) tQ WP configuration, see [this document](https://docs.google.com/document/d/1FCsxd-mHS2J5g_ndOXn0R5J8wVgof9SC_TGE845oSCk/edit?usp=sharing).
+### Setup
+
+```
+git clone git@github.com:cantorandball/quietus-wp-master-theme.git quietus-wp-master-theme
+cd quietus-wp-master-theme
+npm install
+bower install
+```
+
+### Development
+
+The theme is managed by [gulp](http://gulpjs.com). It looks for assets under `/src`. See `gulpfile.js` for details.
+
+To generate a build, run:
+
+```
+gulp compile
+```
+
+The generated theme will be in `/dist`, which is not versioned.
+
+To view the theme in WordPress, either zip up the generated theme and install it, or symlink it to somewhere inside your local `WP_INSTALL/wp-content/themes` directory.
