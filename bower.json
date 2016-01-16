@@ -1,0 +1,28 @@
+{
+  "name": "the_quietus",
+  "description": "The Quietus master theme.",
+  "main": "index.js",
+  "authors": [
+    "Alex Sanders",
+    "Matt Johnson"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "homepage": "https://github.com/cantorandball/quietus-wp-master-theme",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
+    "sass-meyer-reset": "*"
+  }
+}

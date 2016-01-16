@@ -1,0 +1,43 @@
+{
+  "name": "the_quietus",
+  "version": "1.0.0",
+  "description": "The Quietus master theme.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cantorandball/quietus-wp-master-theme"
+  },
+  "homepage": "https://github.com/cantorandball/quietus-wp-master-theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "contributors": [
+    "Alex Sanders",
+    "Matt Johnson"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "browsernizr2": "^1.0.5",
+    "del": "^2.2.0",
+    "fastclick": "^1.0.6",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "modernizr": "^3.3.1",
+    "raf": "^3.1.0",
+    "run-sequence": "^1.1.5",
+    "zepto-browserify": "^1.1.6-1"
+  }
+}

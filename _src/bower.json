@@ -1,7 +1,0 @@
-{
-  "name": "quietus-wp-master-theme",
-  "devDependencies": {
-    "bootstrap-sass-official": "v3.1.1+2",
-    "sass-meyer-reset": "*"
-  }
-}

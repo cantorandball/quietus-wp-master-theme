@@ -3,6 +3,4 @@ bower_components
 .sass-cache
 
 # built by gulp
-/css
-/js
-/images
+/dist/*
