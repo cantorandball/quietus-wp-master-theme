@@ -24,7 +24,7 @@ bower install
 
 ### Development
 
-The theme is managed by [gulp](http://gulpjs.com). It looks for assets under `/src`. See `gulpfile.js` for details.
+The theme is managed by [gulp](http://gulpjs.com). It looks for assets under `/src`. See [gulpfile.js](https://github.com/cantorandball/quietus-wp-master-theme/blob/master/gulpfile.js) for details.
 
 To generate a build, run:
 
