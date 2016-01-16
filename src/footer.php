@@ -1,8 +1,8 @@
 		</div>
 		<footer class="page-footer">
 			<ul class="page-footer-social">
-				<li><a href="https://twitter.com/theQuietus" class="icon icon-twitter" title="Follow us on Twitter"><?php include(get_template_directory() . '/images/icon-twitter.svg'); ?></a></li>
-				<li><a href="https://www.facebook.com/TheQuietus" class="icon icon-facebook" title="Follow us on Facebook"><?php include(get_template_directory() . '/images/icon-facebook.svg'); ?></a></li>
+				<li><a href="https://twitter.com/theQuietus" class="icon icon-twitter" title="Follow us on Twitter" target="_blank"><?php include(get_template_directory() . '/images/icon-twitter.svg'); ?></a></li>
+				<li><a href="https://www.facebook.com/TheQuietus" class="icon icon-facebook" title="Follow us on Facebook" target="_blank"><?php include(get_template_directory() . '/images/icon-facebook.svg'); ?></a></li>
 			</ul>
 			<ul class="page-footer-links">
 				<li><a href="">About</a></li>
